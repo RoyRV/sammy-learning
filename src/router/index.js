@@ -1,16 +1,23 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import Home from '../views/Home.vue'
 import Index from '../views/Index.vue'
 import PageNotFound from '../views/PageNotFound.vue';
+import CourseDetail from '../views/courses/CourseDetail.vue';
 
 Vue.use(VueRouter)
+
 
 const routes = [
   {
     path: '/',
     name: 'Index',
     component: Index
+  },
+  {
+    path: '/course/:courseId',
+    name: 'course',
+    component: CourseDetail,
+    props: (route) => ({ courseId: parseInt(route.query.courseId) })
   },
   {
     path: '/about',

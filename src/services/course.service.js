@@ -11,6 +11,11 @@ const getCourses = function () {
     return courses;
 };
 
+const getCourseById = function (id) {
+    return courses.find(x => x.CourseId == id);
+}
+
 export const courseService = {
     getCourses,
+    getCourseById
 }

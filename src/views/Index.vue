@@ -7,7 +7,7 @@
                     <img :src="'/assets/'+course.Icon" width="40px" style="margin: 0px 0px 10px 10px;" />
                 </template>
                 <b-card-text>Header and footers using slots.</b-card-text>
-                <b-button @click="selectTheme(course.CourseId)" variant="primary">Aprender</b-button>
+                <b-button @click="selectTheme(course.CourseId)" variant="primary">Leer más</b-button>
             </b-card>
         </div>
     </div>
@@ -30,8 +30,7 @@
                 console.log('aaaa')
             },
             selectTheme(courseId) {
-                console.log('aaaa', courseId)
-                //this.$router.push({ name: 'course-detail', params: { id: courseId } })
+                this.$router.push({ name: 'course', params: { courseId: courseId } });
             }
         },
     }
