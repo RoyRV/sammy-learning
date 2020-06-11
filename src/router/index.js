@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '../views/Index.vue'
 import PageNotFound from '../views/PageNotFound.vue';
+
 import CourseDetail from '../views/courses/CourseDetail.vue';
+import Addition from '../views/themes/addition.vue';
 
 Vue.use(VueRouter)
 
@@ -18,6 +20,9 @@ const routes = [
     name: 'course',
     component: CourseDetail,
     props: (route) => ({ courseId: parseInt(route.query.courseId) })
+  },
+  {
+    path: '/addition', name: 'addition', component: Addition,
   },
   {
     path: '/about',

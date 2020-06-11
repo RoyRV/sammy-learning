@@ -10,7 +10,7 @@
                     <template v-slot:header>
                         <h4 class="mb-0 courseTitle">{{theme.ThemeTitle}}</h4>
                     </template>
-                    <b-button @click="selectTheme(theme.ThemeId)" variant="primary">Aprender</b-button>
+                    <b-button @click="selectTheme(theme.redirectTo)" variant="primary">Aprender</b-button>
                 </b-card>
             </div>
         </div>
@@ -28,12 +28,11 @@
         },
         created() {
             this.course = courseService.getCourseById(this.$route.params.courseId);
-            console.log("this.course", this.course);
             this.themes = themeService.getThemesByCourseId(this.course.CourseId);
         },
         methods: {
-            selectTheme(themeId) {
-                console.log("themeId", themeId);
+            selectTheme(redirectTo) {
+                this.$router.push({ name: redirectTo })
             }
         },
     }
