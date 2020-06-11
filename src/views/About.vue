@@ -13,7 +13,18 @@
       <p>
         <a href="https://github.com/royrv/sammy-star" target="_blank">github.com/royrv/sammy-star</a>
       </p>
+      <b-button href="#" @click="click" variant="primary">Go somewhere</b-button>
       <br />
     </div>
   </div>
 </template>
+<script>
+  export default {
+    name: 'About',
+    methods: {
+      click() {
+        console.log('aaaa')
+      }
+    },
+  }
+</script>
