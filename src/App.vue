@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
+    <navBar></navBar>
   </div>
 </template>
 
@@ -11,16 +11,7 @@
     components: {
       navBar
     },
-    data() {
-      return {
-        show: true
-      }
-    },
-    methods: {
-      toggleNavbar() {
-        this.show = !this.show;
-      }
-    },
+
   }
 </script>
 
