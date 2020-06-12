@@ -9,7 +9,7 @@
             </b-row>
             <b-row>
                 <b-col>
-                    <div v-for="theme in themes" :key="theme.ThemeId" class="card">
+                    <div v-for="theme in themes" :key="theme.ThemeId" class="card themeSection">
                         <header class="card-header">
                             <h4 class="mb-0 word-wrap">{{theme.ThemeTitle}}</h4>
                         </header>
@@ -55,7 +55,19 @@
         word-break: break-all;
     }
 
+    .themeSection {
+        display: inline-block;
+        margin: 10px;
+        min-width: 180px;
+    }
+
     .word-wrap {
         word-break: break-all;
+    }
+
+    @media (max-width: 250px) {
+        .themeSection {
+            min-width: 0px;
+        }
     }
 </style>
