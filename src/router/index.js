@@ -7,6 +7,7 @@ import CourseDetail from '../views/courses/CourseDetail.vue';
 import Addition from '../views/themes/addition.vue';
 import Substraction from '../views/themes/substraction.vue';
 import Multiplication from '../views/themes/multiplication.vue';
+import Division from '../views/themes/division.vue';
 
 Vue.use(VueRouter)
 
@@ -31,6 +32,9 @@ const routes = [
   },
   {
     path: '/multiplication', name: 'multiplication', component: Multiplication,
+  },
+  {
+    path: '/division', name: 'division', component: Division,
   },
   {
     path: '/about',
