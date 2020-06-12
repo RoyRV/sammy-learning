@@ -1,76 +1,80 @@
 <template>
     <b-container class="bv-example-row" fluid="sm">
-        <b-row>
-            <b-col>
-                <h2>Sumas</h2>
-            </b-col>
-        </b-row>
-        <b-row>
-            <b-col>
+        <b-card class="b-card">
+            <b-row>
+                <b-col>
+                    <h2>Sumas</h2>
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col>
+                    <b-container>
+                        <b-row>
+                            <b-col>
+                                <vue-slider v-model="numbers[0]" :max="10" />
+                            </b-col>
+                        </b-row>
+                        <b-row>
+                            <b-col>
+                                <span v-if="numbers[0]">{{numbers[0]}}</span>
+                            </b-col>
+                        </b-row>
+                        <b-row>
+                            <b-col>
+                                <FigureComponent v-bind:number="numbers[0]"
+                                    style="display: inline-block;margin:5px 0px" />
+                            </b-col>
+                        </b-row>
+                    </b-container>
+                </b-col>
+                <b-col>
+                    <div>
+                        <img :src="'/assets/plus.svg'" style="max-width: 60px;" />
+                    </div>
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col>
+                    <b-container>
+                        <b-row>
+                            <b-col>
+                                <vue-slider v-model="numbers[1]" :max="10" />
+                            </b-col>
+                        </b-row>
+                        <b-row>
+                            <b-col><span v-if="numbers[1]">{{numbers[1]}}</span>
+                            </b-col>
+                        </b-row>
+                        <b-row>
+                            <b-col>
+                                <FigureComponent v-bind:number="numbers[1]"
+                                    style="display: inline-block;margin:5px 0px" />
+                            </b-col>
+                        </b-row>
+                    </b-container>
+                </b-col>
+                <b-col>
+                    <div>
+                        <img :src="'/assets/equal.svg'" style="max-width: 60px;" />
+                    </div>
+                </b-col>
+            </b-row>
+            <hr />
+            <b-row>
                 <b-container>
                     <b-row>
                         <b-col>
-                            <vue-slider v-model="numbers[0]" :max="10" />
+                            <FigureComponent v-bind:number="total" style="display: inline-block;margin:5px 0px" />
                         </b-col>
                     </b-row>
-                    <b-row>
-                        <b-col>
-                            <span v-if="numbers[0]">{{numbers[0]}}</span>
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col>
-                            <FigureComponent v-bind:number="numbers[0]" style="display: inline-block;margin:5px 0px" />
-                        </b-col>
-                    </b-row>
-                </b-container>
-            </b-col>
-            <b-col>
-                <div>
-                    <img :src="'/assets/plus.svg'" style="max-width: 60px;" />
-                </div>
-            </b-col>
-        </b-row>
-        <b-row>
-            <b-col>
-                <b-container>
-                    <b-row>
-                        <b-col>
-                            <vue-slider v-model="numbers[1]" :max="10" />
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col><span v-if="numbers[1]">{{numbers[1]}}</span>
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col>
-                            <FigureComponent v-bind:number="numbers[1]" style="display: inline-block;margin:5px 0px" />
-                        </b-col>
-                    </b-row>
-                </b-container>
-            </b-col>
-            <b-col>
-                <div>
-                    <img :src="'/assets/equal.svg'" style="max-width: 60px;" />
-                </div>
-            </b-col>
-        </b-row>
-        <hr />
-        <b-row>
-            <b-container>
-                <b-row>
-                    <b-col>
-                        <FigureComponent v-bind:number="total" style="display: inline-block;margin:5px 0px" />
-                    </b-col>
-                </b-row>
-                <!-- <b-row>
+                    <!-- <b-row>
                     <b-col>
                         <CanvasDrawComponent :width="480" :height="480" />
                     </b-col>
                 </b-row> -->
-            </b-container>
-        </b-row>
+                </b-container>
+            </b-row>
+        </b-card>
     </b-container>
 </template>
 <script>
@@ -96,6 +100,10 @@
     }
 </script>
 <style scoped>
+    .b-card {
+        margin-top: 30px;
+    }
+
     hr {
         border-top-width: 10px;
     }
