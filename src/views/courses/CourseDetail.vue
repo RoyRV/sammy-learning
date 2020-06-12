@@ -1,20 +1,28 @@
 <template>
-    <div class="container">
-        <div class="section">
-            <h2>{{course.Title}}</h2>
-            <img :src="'/assets/'+course.Icon" width="40px" style="margin: 0px 0px 10px 10px;" />
-        </div>
-        <div class="section">
-            <div v-for="theme in themes" :key="theme.ThemeId" class="section themeItem">
-                <b-card header-tag="header">
-                    <template v-slot:header>
-                        <h4 class="mb-0 courseTitle">{{theme.ThemeTitle}}</h4>
-                    </template>
-                    <b-button @click="selectTheme(theme.redirectTo)" variant="primary">Aprender</b-button>
-                </b-card>
-            </div>
-        </div>
-    </div>
+    <b-container>
+        <b-card class="b-card">
+            <b-row>
+                <b-col>
+                    <h2>{{course.Title}}</h2>
+                    <img :src="'/assets/'+course.Icon" style="max-width:40px;margin: 0px 0px 10px 10px;" />
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col>
+                    <div v-for="theme in themes" :key="theme.ThemeId" class="card">
+                        <header class="card-header">
+                            <h4 class="mb-0 word-wrap">{{theme.ThemeTitle}}</h4>
+                        </header>
+                        <div class="card-body" style="padding : 10px 0">
+                            <b-button class="word-wrap" @click="selectTheme(theme.redirectTo)" variant="primary">
+                                Aprender
+                            </b-button>
+                        </div>
+                    </div>
+                </b-col>
+            </b-row>
+        </b-card>
+    </b-container>
 </template>
 <script>
     import { courseService, themeService } from '../../services';
@@ -38,25 +46,16 @@
     }
 </script>
 <style lang="scss" scoped>
-    .container {
-        margin-top: 33px;
-        margin-bottom: 33px;
-
-        .section {
-            display: inline-block;
-            margin: 10px;
-
-            h2 {
-                display: inline-block;
-            }
-        }
-
-        .courseTitle {
-            display: inline;
-        }
+    .b-card {
+        margin-top: 30px;
     }
 
-    .themeItem {
-        /* width: 319px; */
+    h2 {
+        display: inline-block;
+        word-break: break-all;
+    }
+
+    .word-wrap {
+        word-break: break-all;
     }
 </style>
