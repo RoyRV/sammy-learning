@@ -6,6 +6,7 @@ import PageNotFound from '../views/PageNotFound.vue';
 import CourseDetail from '../views/courses/CourseDetail.vue';
 import Addition from '../views/themes/addition.vue';
 import Substraction from '../views/themes/substraction.vue';
+import Multiplication from '../views/themes/multiplication.vue';
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,9 @@ const routes = [
   },
   {
     path: '/substraction', name: 'substraction', component: Substraction,
+  },
+  {
+    path: '/multiplication', name: 'multiplication', component: Multiplication,
   },
   {
     path: '/about',
