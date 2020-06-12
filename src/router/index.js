@@ -5,6 +5,7 @@ import PageNotFound from '../views/PageNotFound.vue';
 
 import CourseDetail from '../views/courses/CourseDetail.vue';
 import Addition from '../views/themes/addition.vue';
+import Substraction from '../views/themes/substraction.vue';
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,9 @@ const routes = [
   },
   {
     path: '/addition', name: 'addition', component: Addition,
+  },
+  {
+    path: '/substraction', name: 'substraction', component: Substraction,
   },
   {
     path: '/about',
