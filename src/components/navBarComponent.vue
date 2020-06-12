@@ -10,6 +10,7 @@
                         <b-nav vertical>
                             <b-nav-item v-for="course in courses" :key="course.CourseId"
                                 @click="selectTheme(course.CourseId);hide()">{{course.Title}}
+                                <img :src="'/assets/'+course.Icon" width="40px" style="margin-left: 10px;" />
                             </b-nav-item>
                         </b-nav>
                     </nav>
@@ -31,11 +32,10 @@
         },
         created() {
             this.courses = courseService.getCourses();
-            console.log(this.courses);
         },
         methods: {
             selectTheme(courseId) {
-                console.log("selectTheme", courseId);
+                this.$router.push({ name: 'course', params: { courseId: courseId } });
             }
         },
     }
