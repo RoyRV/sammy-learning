@@ -27,7 +27,7 @@
             </b-col>
             <b-col>
                 <div>
-                    <img :src="'/assets/minus.svg'" style="width: 60px;" />
+                    <img :src="'/assets/minus.svg'" style="max-width: 60px;" />
                 </div>
             </b-col>
         </b-row>
@@ -54,7 +54,7 @@
             </b-col>
             <b-col>
                 <div>
-                    <img :src="'/assets/equal.svg'" style="width: 60px;" />
+                    <img :src="'/assets/equal.svg'" style="max-width: 60px;" />
                 </div>
             </b-col>
         </b-row>
