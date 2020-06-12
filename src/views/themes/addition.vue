@@ -64,15 +64,21 @@
                         <FigureComponent v-bind:number="total" style="display: inline-block;margin:5px 0px" />
                     </b-col>
                 </b-row>
+                <!-- <b-row>
+                    <b-col>
+                        <CanvasDrawComponent :width="480" :height="480" />
+                    </b-col>
+                </b-row> -->
             </b-container>
         </b-row>
     </b-container>
 </template>
 <script>
     import FigureComponent from '../../components/figureComponent.vue';
+    // import CanvasDrawComponent from '../../components/canvasDrawComponent.vue';
     export default {
         name: 'Addition',
-        components: { FigureComponent },
+        components: { FigureComponent, /*CanvasDrawComponent */ },
         data() {
             return {
                 numbers: [2, 4]
@@ -89,3 +95,8 @@
         },
     }
 </script>
+<style scoped>
+    hr {
+        border-top-width: 10px;
+    }
+</style>
