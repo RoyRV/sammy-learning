@@ -7,7 +7,7 @@
                     <img :src="'/assets/'+course.Icon" width="40px" style="margin: 0px 0px 10px 10px;" />
                 </template>
                 <b-card-text>Header and footers using slots.</b-card-text>
-                <b-button @click="selectTheme(course.CourseId)" variant="primary">Leer más</b-button>
+                <b-button @click="selectTheme(course.CourseId)" variant="info">Leer más</b-button>
             </b-card>
         </div>
     </div>

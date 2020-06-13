@@ -4,8 +4,8 @@
             <b-col>
                 <div v-if="number">
                     <div v-if="number>0">
-                        <div v-for="index in number" :key="index" style="display: inline-block;">
-                            <img :src="iconSvg" style="width: 50px;" />
+                        <div v-for="index in number" :key="index" style="display: contents;">
+                            <img :src="iconSvg" class="iconSvg" />
                         </div>
                     </div>
                     <div v-if="number<0" style="display: inline-block;align-items: center;">
@@ -39,3 +39,9 @@
         }
     }
 </script>
+<style scoped>
+    .iconSvg {
+        max-width: 50px;
+        min-width: 30px;
+    }
+</style>

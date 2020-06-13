@@ -14,7 +14,7 @@
         <p>
           <a href="https://github.com/royrv/sammy-star" target="_blank">github.com/royrv/sammy-star</a>
         </p>
-        <b-button href="#" @click="click" variant="primary">Go somewhere</b-button>
+        <b-button href="#" @click="click" variant="info">Go somewhere</b-button>
         <br />
       </div>
     </b-card>
@@ -25,7 +25,7 @@
     name: 'About',
     methods: {
       click() {
-        console.log('aaaa')
+        console.log('')
       }
     },
   }

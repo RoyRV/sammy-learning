@@ -8,6 +8,8 @@ import Addition from '../views/themes/addition.vue';
 import Substraction from '../views/themes/substraction.vue';
 import Multiplication from '../views/themes/multiplication.vue';
 import Division from '../views/themes/division.vue';
+import GreaterOrLess from '../views/themes/greaterOrLess.vue';
+import MixinOperations from '../views/themes/mixinOperations.vue';
 
 Vue.use(VueRouter)
 
@@ -35,6 +37,12 @@ const routes = [
   },
   {
     path: '/division', name: 'division', component: Division,
+  },
+  {
+    path: '/greaterOrLess', name: 'greaterOrLess', component: GreaterOrLess,
+  },
+  {
+    path: '/mixedOperations', name: 'mixedOperations', component: MixinOperations,
   },
   {
     path: '/about',

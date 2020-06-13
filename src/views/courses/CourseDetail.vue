@@ -14,7 +14,7 @@
                             <h4 class="mb-0 word-wrap">{{theme.ThemeTitle}}</h4>
                         </header>
                         <div class="card-body themeBody">
-                            <b-button class="word-wrap" @click="selectTheme(theme.redirectTo)" variant="primary">
+                            <b-button class="word-wrap" @click="selectTheme(theme.redirectTo)" variant="info">
                                 Aprender
                             </b-button>
                         </div>
