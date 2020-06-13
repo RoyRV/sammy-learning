@@ -1,28 +1,26 @@
 <template>
-    <b-container>
-        <b-card class="b-card">
-            <b-row>
-                <b-col>
-                    <h2>{{course.Title}}</h2>
-                    <img :src="'/assets/'+course.Icon" style="max-width:40px;margin: 0px 0px 10px 10px;" />
-                </b-col>
-            </b-row>
-            <b-row>
-                <b-col>
-                    <div v-for="theme in themes" :key="theme.ThemeId" class="card themeSection">
-                        <header class="card-header">
-                            <h4 class="mb-0 word-wrap">{{theme.ThemeTitle}}</h4>
-                        </header>
-                        <div class="card-body themeBody">
-                            <b-button class="word-wrap" @click="selectTheme(theme.redirectTo)" variant="info">
-                                Aprender
-                            </b-button>
-                        </div>
+    <div>
+        <b-row>
+            <b-col>
+                <h2>{{course.Title}}</h2>
+                <img :src="'/assets/'+course.Icon" style="max-width:40px;margin: 0px 0px 10px 10px;" />
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col>
+                <div v-for="theme in themes" :key="theme.ThemeId" class="card themeSection">
+                    <header class="card-header">
+                        <h4 class="mb-0 word-wrap">{{theme.ThemeTitle}}</h4>
+                    </header>
+                    <div class="card-body themeBody">
+                        <b-button class="word-wrap" @click="selectTheme(theme.redirectTo)" variant="info">
+                            Aprender
+                        </b-button>
                     </div>
-                </b-col>
-            </b-row>
-        </b-card>
-    </b-container>
+                </div>
+            </b-col>
+        </b-row>
+    </div>
 </template>
 <script>
     import { courseService, themeService } from '../../services';

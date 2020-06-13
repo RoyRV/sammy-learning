@@ -1,6 +1,6 @@
 <template>
-    <div v-if="courses" class="container">
-        <div v-for="course in courses" :key="course.CourseId" class="section">
+    <div v-if="courses">
+        <div v-for="course in courses" :key="course.CourseId" class="courseItem">
             <b-card header-tag="header">
                 <template v-slot:header>
                     <h4 class="mb-0 courseTitle">{{course.Title}}</h4>
@@ -36,17 +36,18 @@
     }
 </script>
 <style lang="scss" scoped>
-    .container {
-        margin-top: 33px;
-        margin-bottom: 33px;
+    .courseItem {
+        display: inline-flex;
+        margin: 10px;
+    }
 
-        .section {
-            display: inline-block;
-            margin: 10px;
-        }
+    .courseTitle {
+        display: inline;
+    }
 
-        .courseTitle {
-            display: inline;
+    @media (max-width:298px) {
+        .courseItem {
+            display: block;
         }
     }
 </style>

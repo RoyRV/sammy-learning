@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <navBar></navBar>
-    <router-view :key="$route.fullPath" />
+    <b-container>
+      <b-card class="b-card">
+        <router-view :key="$route.fullPath" />
+      </b-card>
+    </b-container>
   </div>
 </template>
 
@@ -23,5 +27,9 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+  }
+
+  .b-card {
+    margin-top: 30px;
   }
 </style>
