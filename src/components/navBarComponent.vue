@@ -46,6 +46,7 @@
         },
         methods: {
             selectTheme(courseId) {
+                console.log("courseId", courseId)
                 this.$router.push({ name: 'course', params: { courseId: courseId } });
             },
             goHome() {
