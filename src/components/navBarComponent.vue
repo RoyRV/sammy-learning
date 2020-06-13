@@ -40,18 +40,24 @@
 
         mounted() {
             let element = document.getElementById("sidebar-backdrop___title__");
-            console.log("e");
             element.style.width = '100%';
             element.style.cursor = "pointer";
         },
         methods: {
-            selectTheme(courseId) {
-                console.log("courseId", courseId)
-                this.$router.push({ name: 'course', params: { courseId: courseId } });
+            async selectTheme(courseId) {
+                await this.redirectTo({ name: 'course', params: { courseId: courseId } });
             },
-            goHome() {
-                this.$router.push("/");
+            async goHome() {
+                await this.redirectTo("/");
+            },
+            async redirectTo(newLocation) {
+                try {
+                    await this.$router.push(newLocation);
+                } catch (error) {
+                    /*eslint no-empty: "error"*/
+                }
             }
+
         },
     }
 </script>
