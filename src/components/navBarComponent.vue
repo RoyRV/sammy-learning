@@ -3,7 +3,11 @@
         <button id="btnToogleHamburger" class="navbar-toggler" type="button" v-b-toggle.sidebar-backdrop>
             <span class="navbar-toggler-icon"></span>
         </button>
-        <b-sidebar id="sidebar-backdrop" title="Sammy Learning" backdrop shadow>
+        <b-sidebar id="sidebar-backdrop" backdrop shadow lazy>
+            <template v-slot:title>
+                <span id="title" @click="goHome">Sammy Learning</span>
+                <b-icon-house />
+            </template>
             <template v-slot:default="{ hide }">
                 <div class="p-3">
                     <nav class="mb-3">
@@ -33,9 +37,19 @@
         created() {
             this.courses = courseService.getCourses();
         },
+
+        mounted() {
+            let element = document.getElementById("sidebar-backdrop___title__");
+            console.log("e");
+            element.style.width = '100%';
+            element.style.cursor = "pointer";
+        },
         methods: {
             selectTheme(courseId) {
                 this.$router.push({ name: 'course', params: { courseId: courseId } });
+            },
+            goHome() {
+                this.$router.push("/");
             }
         },
     }
@@ -44,5 +58,9 @@
 <style scoped>
     #btnToogleHamburger {
         display: block;
+    }
+
+    #title {
+        margin-right: 10px;
     }
 </style>

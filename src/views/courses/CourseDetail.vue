@@ -13,7 +13,7 @@
                         <header class="card-header">
                             <h4 class="mb-0 word-wrap">{{theme.ThemeTitle}}</h4>
                         </header>
-                        <div class="card-body" style="padding : 10px 0">
+                        <div class="card-body themeBody">
                             <b-button class="word-wrap" @click="selectTheme(theme.redirectTo)" variant="primary">
                                 Aprender
                             </b-button>
@@ -56,13 +56,22 @@
     }
 
     .themeSection {
-        display: inline-block;
+        display: inline-flex;
         margin: 10px;
         min-width: 180px;
+        max-width: 250px;
+        min-height: 140px;
+
+        .themeBody {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding: 10px 0;
+        }
     }
 
     .word-wrap {
-        word-break: break-all;
+        word-break: break-word;
     }
 
     @media (max-width: 250px) {
