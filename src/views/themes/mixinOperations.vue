@@ -320,7 +320,7 @@
         }
 
         .notAvailableOperationContainer {
-            display: flex;
+            display: block;
         }
 
         .operationContainer {
