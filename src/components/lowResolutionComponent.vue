@@ -26,7 +26,7 @@
         }
     }
 </script>
-<style>
+<style scoped>
     @media (max-width:780px) {
         .sorryIcon {
             max-width: 200px;
