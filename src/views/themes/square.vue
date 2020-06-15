@@ -33,7 +33,7 @@
                                     <b-row class="mt-4">
                                         <b-col>
                                             <span>Se expresa </span><sup>2</sup><span>√</span><span
-                                                style="border-top:1px solid">{{cubicNumber}}</span>
+                                                style="border-top:1px solid">{{squareNumber}}</span>
                                         </b-col>
                                     </b-row>
                                     <b-row class="mt-4">
