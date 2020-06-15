@@ -6,45 +6,39 @@
             </b-col>
         </b-row>
         <b-row>
-            <b-col>
-                <b-container>
-                    <b-row>
-                        <b-col>
-                            <vue-slider v-model="numbers[0]" :max="50" />
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col>
-                            <span>Tengo {{numbers[0]}} manzana{{numbers[0]==1?'':'s'}}</span>
-                        </b-col>
-                    </b-row>
-                </b-container>
+            <b-col cols="6" md="3">
+                <b-row>
+                    <b-col>
+                        <vue-slider v-model="numbers[0]" :max="50" />
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col>
+                        <span>Tengo {{numbers[0]}} manzana{{numbers[0]==1?'':'s'}}</span>
+                    </b-col>
+                </b-row>
             </b-col>
-            <b-col>
+            <b-col cols="6" md="3">
                 <div>
                     <img :src="'/assets/division.svg'" style="max-width: 60px;" />
                 </div>
             </b-col>
-        </b-row>
-        <b-row>
-            <b-col>
-                <b-container>
-                    <b-row>
-                        <b-col>
-                            <vue-slider v-model="numbers[1]" :max="50" />
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col>
-                            <span>Debo repartirlas entre {{numbers[1]}}
-                                persona{{numbers[1]==1?'':'s'}}</span>
-                        </b-col>
-                    </b-row>
-                </b-container>
+            <b-col cols="6" md="3">
+                <b-row>
+                    <b-col>
+                        <vue-slider v-model="numbers[1]" :max="50" />
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col>
+                        <span>Debo repartirlas entre {{numbers[1]}}
+                            persona{{numbers[1]==1?'':'s'}}</span>
+                    </b-col>
+                </b-row>
             </b-col>
             <b-col>
                 <div>
-                    <img :src="'/assets/equal.svg'" style="max-width: 60px;" />
+                    <img :src="'/assets/base icon.svg'" style="max-width: 60px;" />
                 </div>
             </b-col>
         </b-row>
