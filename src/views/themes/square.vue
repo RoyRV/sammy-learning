@@ -17,27 +17,73 @@
                                 <b-card-text>
                                     <b-row>
                                         <b-col>
-                                            <vue-slider v-model="number" :data="data" :marks="true" />
+                                            <vue-slider v-model="squareNumber" :data="squareData" :marks="true" />
                                         </b-col>
                                     </b-row>
                                     <b-row class="mt-5">
                                         <b-col>
-                                            <span>Radicando : {{number}}</span>
+                                            <span>Radicando : {{squareNumber}}</span>
                                         </b-col>
                                     </b-row>
                                     <b-row class="mt-4">
                                         <b-col>
-                                            <span>Se lee: raíz cuadrada(indice 2) de {{number}}</span>
+                                            <span>Se lee: raíz cuadrada(indice 2) de {{squareNumber}}</span>
                                         </b-col>
                                     </b-row>
                                     <b-row class="mt-4">
                                         <b-col>
-                                            <span>Es {{result}}</span>
+                                            <span>Se expresa </span><sup>2</sup><span>√</span><span
+                                                style="border-top:1px solid">{{cubicNumber}}</span>
                                         </b-col>
                                     </b-row>
                                     <b-row class="mt-4">
                                         <b-col>
-                                            <span>Porque {{result}} x {{result}} = {{number}}</span>
+                                            <span>Es {{squareResult}}</span>
+                                        </b-col>
+                                    </b-row>
+                                    <b-row class="mt-4">
+                                        <b-col>
+                                            <p>El resultado es {{squareResult}} </p>
+                                            <p>Porque {{squareResult}} x {{squareResult}} = {{squareNumber}}</p>
+                                        </b-col>
+                                    </b-row>
+                                </b-card-text>
+                            </b-card-body>
+                        </b-collapse>
+                    </b-card>
+                    <b-card no-body class="mb-1">
+                        <b-card-header header-tag="header" role="tab">
+                            <b-button block v-b-toggle.accordion-2 variant="info">Raices Cubicas</b-button>
+                        </b-card-header>
+                        <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+                            <b-card-body>
+                                <b-card-text>
+                                    <b-row>
+                                        <b-col>
+                                            <vue-slider v-model="cubicNumber" :data="cubicData" :marks="true" />
+                                        </b-col>
+                                    </b-row>
+                                    <b-row class="mt-5">
+                                        <b-col>
+                                            <span>Radicando : {{cubicNumber}}</span>
+                                        </b-col>
+                                    </b-row>
+                                    <b-row class="mt-4">
+                                        <b-col>
+                                            <span>Se lee: raíz cuadrada(indice 3) de {{cubicNumber}}</span>
+                                        </b-col>
+                                    </b-row>
+                                    <b-row class="mt-4">
+                                        <b-col>
+                                            <span>Se expresa </span><sup>3</sup><span>√</span><span
+                                                style="border-top:1px solid">{{cubicNumber}}</span>
+                                        </b-col>
+                                    </b-row>
+                                    <b-row class="mt-4">
+                                        <b-col>
+                                            <p>El resultado es {{cubicResult}} </p>
+                                            <p>Porque {{cubicResult}} x {{cubicResult}} x {{cubicResult}} =
+                                                {{cubicNumber}}</p>
                                         </b-col>
                                     </b-row>
                                 </b-card-text>
@@ -54,13 +100,18 @@
         name: 'Square',
         data() {
             return {
-                number: 0,
-                data: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+                squareNumber: 0,
+                squareData: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100],
+                cubicNumber: 0,
+                cubicData: [0, 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000],
             }
         },
         computed: {
-            result() {
-                return Math.sqrt(this.number, 2)
+            squareResult() {
+                return Math.sqrt(this.squareNumber, 2)
+            },
+            cubicResult() {
+                return Math.ceil(Math.pow(this.cubicNumber, 1 / 3))
             }
         }
     }
