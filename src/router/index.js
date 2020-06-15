@@ -10,6 +10,7 @@ import Multiplication from '../views/themes/multiplication.vue';
 import Division from '../views/themes/division.vue';
 import GreaterOrLess from '../views/themes/greaterOrLess.vue';
 import MixinOperations from '../views/themes/mixinOperations.vue';
+import Exponentiation from '../views/themes/exponentiation.vue';
 
 Vue.use(VueRouter)
 
@@ -43,6 +44,9 @@ const routes = [
   },
   {
     path: '/mixedOperations', name: 'mixedOperations', component: MixinOperations,
+  },
+  {
+    path: '/exponentiation', name: 'exponentiation', component: Exponentiation,
   },
   {
     path: '/about',

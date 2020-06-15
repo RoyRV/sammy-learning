@@ -15,7 +15,7 @@
                     </b-row>
                     <b-row>
                         <b-col>
-                            <span v-if="numbers[0]">{{numbers[0]}}</span>
+                            <span>Tengo {{numbers[0]}} manzana{{numbers[0]==1?'':'s'}}</span>
                         </b-col>
                     </b-row>
                 </b-container>
@@ -36,7 +36,8 @@
                     </b-row>
                     <b-row>
                         <b-col>
-                            <span v-if="numbers[1]">{{numbers[1]}}</span>
+                            <span>Debo repartirlas entre {{numbers[1]}}
+                                persona{{numbers[1]==1?'':'s'}}</span>
                         </b-col>
                     </b-row>
                 </b-container>
@@ -51,32 +52,35 @@
         <b-row>
             <b-col>
                 <b-container>
-                    <b-row v-if="numbers[1]==0">
+                    <b-row v-if="numbers[1]===0">
                         <b-col>
                             <FigureComponent v-bind:number="-1" errormsg='Operación no permitida' />
                         </b-col>
                     </b-row>
-                    <b-row v-if="numbers[0]==0 && numbers[1]!=0">
+                    <b-row v-else>
                         <b-col>
-                            <FigureComponent v-bind:number="0" />
-                        </b-col>
-                    </b-row>
-                    <b-row v-if="numbers[0]!=0 && numbers[1]!=0">
-                        <b-col>
-                            <div v-if="numbers[0]<numbers[1]">
-                                <FigureComponent v-bind:number="0" />
-                            </div>
-                            <div v-if="numbers[0]>=numbers[1]">
-                                <h4>Cociente</h4>
-                                <div style="display: inline-block;" v-for="(number,index) in numbers[1]" :key="number">
-                                    <span>Grupo {{index+1}}</span>
-                                    <FigureComponent v-bind:number="quotient" />
+                            <div style="margin:0 10px">
+                                <h4>Le tocaria a cada uno {{quotient}}</h4>
+                                <div v-if="numbers[0]<numbers[1]">
+                                    <div style="display: inline-block;">
+                                        <FigureComponent v-bind:number="quotient" />
+                                    </div>
+                                </div>
+                                <div v-else>
+                                    <div style="display: inline-block;" v-for="(number,index) in numbers[1]"
+                                        :key="number">
+                                        <span>Persona {{index+1}}</span>
+                                        <FigureComponent v-bind:number="quotient" />
+                                    </div>
                                 </div>
                             </div>
                         </b-col>
-                        <b-col v-if="residue!=0">
+                        <b-col cols="1" v-if="residue">
+                            <h4>Y</h4>
+                        </b-col>
+                        <b-col cols="5" v-if="residue">
                             <div>
-                                <h4>Residuo</h4>
+                                <h4>Me sobrarian {{residue}} (Residuo)</h4>
                                 <FigureComponent v-bind:number="residue" />
                             </div>
                         </b-col>
