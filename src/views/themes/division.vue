@@ -38,7 +38,7 @@
             </b-col>
             <b-col>
                 <div>
-                    <img :src="'/assets/base icon.svg'" style="max-width: 60px;" />
+                    <img :src="'/assets/equal.svg'" style="max-width: 60px;" />
                 </div>
             </b-col>
         </b-row>
