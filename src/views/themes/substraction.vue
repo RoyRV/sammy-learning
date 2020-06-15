@@ -14,7 +14,7 @@
                 </b-row>
                 <b-row>
                     <b-col>
-                        <span v-if="numbers[0]">{{numbers[0]}}</span>
+                        <span>Si tengo {{numbers[0]}} manzana{{numbers[0]==1?'':'s'}}</span>
                     </b-col>
                 </b-row>
                 <b-row>
@@ -36,7 +36,7 @@
                 </b-row>
                 <b-row>
                     <b-col>
-                        <span v-if="numbers[1]">{{numbers[1]}}</span>
+                        <span>Y me como {{numbers[1]}} manzana{{numbers[1]==1?'':'s'}}</span>
                     </b-col>
                 </b-row>
                 <b-row>
@@ -54,13 +54,14 @@
         </b-row>
         <hr />
         <b-row>
-            <b-container>
-                <b-row>
-                    <b-col>
-                        <FigureComponent v-bind:number="total" style="display: inline-block;margin:5px 0px" />
-                    </b-col>
-                </b-row>
-            </b-container>
+            <b-col>
+                Tendré en total
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col>
+                <FigureComponent v-bind:number="total" style="display: inline-block;margin:5px 0px" />
+            </b-col>
         </b-row>
     </div>
 </template>

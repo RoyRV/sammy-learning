@@ -8,9 +8,9 @@
                             <img :src="iconSvg" class="iconSvg" />
                         </div>
                     </div>
-                    <div v-if="number<0" style="display: inline-block;align-items: center;">
-                        <img :src="'/assets/stop.svg'" style="width: 50px;" />
-                        <div style="display: inline-block;margin:10px;">
+                    <div v-if="number<0">
+                        <img :src="'/assets/stop.svg'" style="max-width: 50px;" />
+                        <div>
                             <small>{{errormsg}}</small>
                         </div>
                     </div>
