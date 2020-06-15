@@ -12,7 +12,7 @@
                         <b-card-header header-tag="header" role="tab">
                             <b-button block v-b-toggle.accordion-2 variant="info">Ejemplo 1</b-button>
                         </b-card-header>
-                        <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+                        <b-collapse id="accordion-2" visible accordion="my-accordion" role="tabpanel">
                             <b-card-body>
                                 <b-card-text>
                                     <div class="notAvailableOperationContainer">
@@ -23,7 +23,80 @@
                                         </b-row>
                                     </div>
                                     <div class="operationContainer">
-                                        aaa
+                                        <b-row class="operationRow">
+                                            <b-col cols="3">
+                                                <b-row>
+                                                    <b-col>
+                                                        <vue-slider v-model="exerciseOne.number1" :max="10" />
+                                                    </b-col>
+                                                </b-row>
+                                                <b-row>
+                                                    <b-col>
+                                                        <span>{{exerciseOne.number1}}</span>
+                                                    </b-col>
+                                                </b-row>
+                                            </b-col>
+                                            <b-col>
+                                                <div>
+                                                    <img :src="'/assets/minus.svg'" class="iconSvg operationIcon" />
+                                                </div>
+                                            </b-col>
+                                            <b-col>
+                                                (
+                                            </b-col>
+                                            <b-col cols="3">
+                                                <b-row>
+                                                    <b-col>
+                                                        <vue-slider v-model="exerciseOne.number2" :max="10" />
+                                                    </b-col>
+                                                </b-row>
+                                                <b-row>
+                                                    <b-col>
+                                                        <span>{{exerciseOne.number2}}</span>
+                                                    </b-col>
+                                                </b-row>
+                                            </b-col>
+                                            <b-col>
+                                                <div>
+                                                    <img :src="'/assets/plus.svg'" class="iconSvg operationIcon" />
+                                                </div>
+                                            </b-col>
+                                            <b-col cols="3">
+                                                <b-row>
+                                                    <b-col>
+                                                        <vue-slider v-model="exerciseOne.number3" :max="10" />
+                                                    </b-col>
+                                                </b-row>
+                                                <b-row>
+                                                    <b-col>
+                                                        <span>{{exerciseOne.number3}}</span>
+                                                    </b-col>
+                                                </b-row>
+                                            </b-col>
+                                            <b-col>
+                                                )
+                                            </b-col>
+                                        </b-row>
+                                        <b-row class="operationRow">
+                                            <b-col cols="3">
+                                                <span>{{exerciseOne.number1}}</span>
+                                            </b-col>
+                                            <b-col>
+                                                <div>
+                                                    <img :src="'/assets/minus.svg'" class="iconSvg operationIcon" />
+                                                </div>
+                                            </b-col>
+                                            <b-col cols="8">
+                                                (
+                                                <span>{{exerciseOne.number2 + exerciseOne.number3}}</span>
+                                                )
+                                            </b-col>
+                                        </b-row>
+                                        <b-row class="operationRow">
+                                            <b-col>
+                                                <span>{{exerciseOne.number1 - (exerciseOne.number2 + exerciseOne.number3)}}</span>
+                                            </b-col>
+                                        </b-row>
                                     </div>
                                 </b-card-text>
                             </b-card-body>
@@ -33,7 +106,7 @@
                         <b-card-header header-tag="header" role="tab">
                             <b-button block v-b-toggle.accordion-1 variant="info">Ejemplo 2</b-button>
                         </b-card-header>
-                        <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+                        <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
                             <b-card-body>
                                 <b-card-text>
                                     <div class="notAvailableOperationContainer">
@@ -43,16 +116,13 @@
                                             </b-col>
                                         </b-row>
                                     </div>
-                                    <!--Primera expresion-->
                                     <div class="operationContainer">
+                                        <!--Primera expresion-->
                                         <b-row class="operationRow">
                                             <b-col cols="3">
                                                 <b-row>
                                                     <b-col>
-                                                        <div>
-                                                            <img :src="'/assets/parenthesis-open.svg'"
-                                                                class="iconSvg" />
-                                                        </div>
+                                                        (
                                                     </b-col>
                                                     <b-col>
                                                         <b-row>
@@ -84,10 +154,7 @@
                                                         </b-row>
                                                     </b-col>
                                                     <b-col>
-                                                        <div>
-                                                            <img :src="'/assets/parenthesis-close.svg'"
-                                                                class="iconSvg" />
-                                                        </div>
+                                                        )
                                                     </b-col>
                                                 </b-row>
                                             </b-col>
@@ -99,10 +166,7 @@
                                             <b-col cols="3">
                                                 <b-row>
                                                     <b-col>
-                                                        <div>
-                                                            <img :src="'/assets/parenthesis-open.svg'"
-                                                                class="iconSvg" />
-                                                        </div>
+                                                        (
                                                     </b-col>
                                                     <b-col>
                                                         <b-row>
@@ -134,10 +198,7 @@
                                                         </b-row>
                                                     </b-col>
                                                     <b-col>
-                                                        <div>
-                                                            <img :src="'/assets/parenthesis-close.svg'"
-                                                                class="iconSvg" />
-                                                        </div>
+                                                        )
                                                     </b-col>
                                                 </b-row>
                                             </b-col>
@@ -149,10 +210,7 @@
                                             <b-col cols="3">
                                                 <b-row>
                                                     <b-col>
-                                                        <div>
-                                                            <img :src="'/assets/parenthesis-open.svg'"
-                                                                class="iconSvg" />
-                                                        </div>
+                                                        (
                                                     </b-col>
                                                     <b-col>
                                                         <b-row>
@@ -185,14 +243,12 @@
                                                         </b-row>
                                                     </b-col>
                                                     <b-col>
-                                                        <div>
-                                                            <img :src="'/assets/parenthesis-close.svg'"
-                                                                class="iconSvg" />
-                                                        </div>
+                                                        )
                                                     </b-col>
                                                 </b-row>
                                             </b-col>
                                         </b-row>
+                                        <!--Segunda expresion-->
                                         <b-row class="operationRow">
                                             <b-col cols="3">
                                                 <span>{{exerciseOne.number1+exerciseOne.number2}}</span>
@@ -214,15 +270,10 @@
                                                 <span>{{exerciseOne.number5*exerciseOne.number6}}</span>
                                             </b-col>
                                         </b-row>
+                                        <!--Tercera expresion-->
                                         <b-row class="operationRow">
-                                            <b-col cols="3">
-
-                                            </b-col>
-                                            <b-col>
+                                            <b-col cols="7">
                                                 <span>{{exerciseOne.number1+exerciseOne.number2 - (exerciseOne.number3+exerciseOne.number4)}}</span>
-                                            </b-col>
-                                            <b-col cols="3">
-
                                             </b-col>
                                             <b-col>
                                                 <div>
@@ -233,7 +284,8 @@
                                                 <span>{{exerciseOne.number5*exerciseOne.number6}}</span>
                                             </b-col>
                                         </b-row>
-                                        <b-row class="operationRow last">
+                                        <!--Cuarta expresion-->
+                                        <b-row class="operationRow">
                                             <b-col>
                                                 <span>{{exerciseOne.number1+exerciseOne.number2 - (exerciseOne.number3+exerciseOne.number4) +exerciseOne.number5*exerciseOne.number6}}</span>
                                             </b-col>
@@ -276,6 +328,16 @@
 
     .operationContainer {
         display: block;
+
+        .operationRow {
+            border: solid 2px #17a2b8;
+            border-bottom: none;
+
+            &:last-child {
+                border-bottom: solid 2px #17a2b8;
+            }
+        }
+
     }
 
     .iconSvg {
@@ -293,15 +355,6 @@
         max-width: 60px;
     }
 
-    .operationRow {
-        border: solid 2px #17a2b8;
-        border-bottom: none;
-
-        &.last {
-
-            border-bottom: solid 2px #17a2b8;
-        }
-    }
 
     @media (max-width:1200px) {
         .iconSvg {
