@@ -7,32 +7,28 @@
         </b-row>
         <b-row class="mt-4">
             <b-col cols="12" md="6">
-                <b-container>
-                    <b-row>
-                        <b-col>
-                            <vue-slider v-model="number" :max="10" />
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col>
-                            <span>Base : {{number}}</span>
-                        </b-col>
-                    </b-row>
-                </b-container>
+                <b-row>
+                    <b-col>
+                        <vue-slider v-model="number" :max="10" />
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col>
+                        <span>Base : {{number}}</span>
+                    </b-col>
+                </b-row>
             </b-col>
             <b-col cols="12" md="6">
-                <b-container>
-                    <b-row>
-                        <b-col>
-                            <vue-slider v-model="exponentialFactor" :max="6" />
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col>
-                            <span>Exponente {{exponentialFactor}}</span>
-                        </b-col>
-                    </b-row>
-                </b-container>
+                <b-row>
+                    <b-col>
+                        <vue-slider v-model="exponentialFactor" :max="6" />
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col>
+                        <span>Exponente {{exponentialFactor}}</span>
+                    </b-col>
+                </b-row>
             </b-col>
         </b-row>
         <b-row class="mt-4">

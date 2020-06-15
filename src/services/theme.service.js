@@ -5,7 +5,7 @@ const themes = [
     { CourseId: 1, ThemeId: 4, ThemeTitle: 'División', redirectTo: 'division' },
     { CourseId: 1, ThemeId: 11, ThemeTitle: 'Mayor/Menor', redirectTo: 'greaterOrLess' },
     { CourseId: 1, ThemeId: 6, ThemeTitle: 'Exponenciación', redirectTo: 'exponentiation' },
-    { CourseId: 1, ThemeId: 7, ThemeTitle: 'Raices', redirectTo: 'division' },
+    { CourseId: 1, ThemeId: 7, ThemeTitle: 'Raices', redirectTo: 'square' },
     { CourseId: 1, ThemeId: 10, ThemeTitle: 'Porcentaje', redirectTo: 'percentage' },
     { CourseId: 1, ThemeId: 8, ThemeTitle: 'MCM', redirectTo: 'division' },
     { CourseId: 1, ThemeId: 9, ThemeTitle: 'MCD', redirectTo: 'division' },
