@@ -6,51 +6,46 @@
             </b-col>
         </b-row>
         <b-row>
-            <b-col>
-                <b-container>
-                    <b-row>
-                        <b-col>
-                            <vue-slider v-model="numbers[0]" :max="10" />
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col>
-                            <span v-if="numbers[0]">{{numbers[0]}}</span>
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col>
-                            <FigureComponent v-bind:number="numbers[0]" style="display: inline-block;margin:5px 0px" />
-                        </b-col>
-                    </b-row>
-                </b-container>
+            <b-col cols="6" md="3">
+                <b-row>
+                    <b-col>
+                        <vue-slider v-model="numbers[0]" :max="10" />
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col>
+                        <span v-if="numbers[0]">{{numbers[0]}}</span>
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col>
+                        <FigureComponent v-bind:number="numbers[0]" style="display: inline-block;margin:5px 0px" />
+                    </b-col>
+                </b-row>
             </b-col>
-            <b-col>
+            <b-col cols="6" md="3">
                 <div>
                     <img :src="'/assets/plus.svg'" style="max-width: 60px;" />
                 </div>
             </b-col>
-        </b-row>
-        <b-row>
-            <b-col>
-                <b-container>
-                    <b-row>
-                        <b-col>
-                            <vue-slider v-model="numbers[1]" :max="10" />
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col><span v-if="numbers[1]">{{numbers[1]}}</span>
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col>
-                            <FigureComponent v-bind:number="numbers[1]" style="display: inline-block;margin:5px 0px" />
-                        </b-col>
-                    </b-row>
-                </b-container>
+
+            <b-col cols="6" md="3">
+                <b-row>
+                    <b-col>
+                        <vue-slider v-model="numbers[1]" :max="10" />
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col><span v-if="numbers[1]">{{numbers[1]}}</span>
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col>
+                        <FigureComponent v-bind:number="numbers[1]" style="display: inline-block;margin:5px 0px" />
+                    </b-col>
+                </b-row>
             </b-col>
-            <b-col>
+            <b-col cols="6" md="3">
                 <div>
                     <img :src="'/assets/equal.svg'" style="max-width: 60px;" />
                 </div>
@@ -58,18 +53,9 @@
         </b-row>
         <hr />
         <b-row>
-            <b-container>
-                <b-row>
-                    <b-col>
-                        <FigureComponent v-bind:number="total" style="display: inline-block;margin:5px 0px" />
-                    </b-col>
-                </b-row>
-                <!-- <b-row>
-                    <b-col>
-                        <CanvasDrawComponent :width="480" :height="480" />
-                    </b-col>
-                </b-row> -->
-            </b-container>
+            <b-col>
+                <FigureComponent v-bind:number="total" style="display: inline-block;margin:5px 0px" />
+            </b-col>
         </b-row>
     </div>
 </template>
