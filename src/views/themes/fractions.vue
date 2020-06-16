@@ -24,7 +24,7 @@
                                             </b-row>
                                             <b-row>
                                                 <b-col>
-                                                    <vue-slider v-model="homogenean.numeratorOne" :max="10" />
+                                                    <vue-slider v-model="homogenean.numeratorOne" :max="10" :min="1" />
                                                 </b-col>
                                             </b-row>
                                         </b-col>
@@ -36,7 +36,7 @@
                                             </b-row>
                                             <b-row>
                                                 <b-col>
-                                                    <vue-slider v-model="homogenean.numeratorTwo" :max="10" />
+                                                    <vue-slider v-model="homogenean.numeratorTwo" :max="10" :min="1" />
                                                 </b-col>
                                             </b-row>
                                         </b-col>
