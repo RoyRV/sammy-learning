@@ -9,7 +9,8 @@
                     <b-icon icon="house-fill" scale="1.25" shift-v="1.25" aria-hidden="true"></b-icon>
                     Home
                 </b-breadcrumb-item>
-                <b-breadcrumb-item v-if="selectedCourse">{{selectedCourse.Title}}</b-breadcrumb-item>
+                <b-breadcrumb-item v-if="selectedCourse" @click="selectCourse(selectedCourse)">{{selectedCourse.Title}}
+                </b-breadcrumb-item>
             </b-breadcrumb>
         </div>
         <!-- <div>
@@ -29,7 +30,7 @@
                     <nav class="mb-3">
                         <b-nav vertical>
                             <b-nav-item v-for="course in courses" :key="course.CourseId"
-                                @click="selectTheme(course);hide()">{{course.Title}}
+                                @click="selectCourse(course);hide()">{{course.Title}}
                                 <img :src="'/assets/'+course.Icon" width="40px" style="margin-left: 10px;" />
                             </b-nav-item>
                         </b-nav>
@@ -65,7 +66,7 @@
             })
         },
         methods: {
-            async selectTheme(course) {
+            async selectCourse(course) {
                 sessionService.setSelectedCourse(course);
                 this.selectedCourse = course;
                 await this.redirectTo({ name: 'course', params: { courseId: course.CourseId } });
