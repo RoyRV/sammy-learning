@@ -77,10 +77,10 @@
                                     <hr />
                                     <b-row>
                                         <b-col>
-                                            <FractionComponent id="button-1"
+                                            <FractionComponent id="homogeneanResult"
                                                 :numerator="(homogenean.numeratorOne + homogenean.numeratorTwo)"
                                                 :denominator="homogenean.denominator"></FractionComponent>
-                                            <b-tooltip target="button-1" :title="homogeneanOperation"></b-tooltip>
+                                            <b-tooltip target="homogeneanResult" :title="homogeneanOperation" />
                                         </b-col>
                                     </b-row>
                                 </b-card-text>
@@ -174,19 +174,24 @@
                                     <hr />
                                     <b-row>
                                         <b-col cols="12" md="3">
-                                            <FractionComponent :numerator="heterogeneanEnumerator"
+                                            <FractionComponent id="heterogeneanOperation"
+                                                :numerator="heterogeneanEnumerator"
                                                 :denominator="heterogeneanDenominator">
                                             </FractionComponent>
+                                            <b-tooltip target="heterogeneanOperation"
+                                                :title="heterogeneanOperationDesc" />
                                         </b-col>
                                         <b-col cols="12" md="1" class="thenSymbol">
                                             <span class="symbol">=></span>
                                             <hr class="separator" />
                                         </b-col>
                                         <b-col cols="12" md="3">
-                                            <FractionComponent
+                                            <FractionComponent id="heterogeneanResolution"
                                                 :numerator="heterogenean.numeratorOne*heterogenean.denominatorTwo + '+' + heterogenean.denominatorOne*heterogenean.numeratorTwo"
                                                 :denominator="heterogenean.denominatorOne*heterogenean.denominatorTwo">
                                             </FractionComponent>
+                                            <b-tooltip target="heterogeneanResolution"
+                                                :title="heterogeneanResolutionDesc" />
                                         </b-col>
                                         <b-col cols="12" md="1" class="thenSymbol">
                                             <span class="symbol">=></span>
@@ -237,6 +242,12 @@
             },
             heterogeneanDenominator() {
                 return `${this.heterogenean.denominatorOne} x ${this.heterogenean.denominatorTwo}`;
+            },
+            heterogeneanOperationDesc() {
+                return 'Multiplicamos en aspa y aplicamos el mismo operador (+),los denominadores se multiplican';
+            },
+            heterogeneanResolutionDesc() {
+                return 'Resolvemos la operación'
             }
         },
     }
