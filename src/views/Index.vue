@@ -7,13 +7,13 @@
                     <img :src="'/assets/'+course.Icon" width="40px" style="margin: 0px 0px 10px 10px;" />
                 </template>
                 <b-card-text>Header and footers using slots.</b-card-text>
-                <b-button @click="selectTheme(course.CourseId)" variant="info">Leer más</b-button>
+                <b-button @click="selectTheme(course)" variant="info">Leer más</b-button>
             </b-card>
         </div>
     </div>
 </template>
 <script>
-    import { courseService } from '../services';
+    import { courseService, sessionService } from '../services';
 
     export default {
         name: 'Index',
@@ -26,11 +26,11 @@
             this.courses = courseService.getCourses();
         },
         methods: {
-            click() {
-                console.log('aaaa')
-            },
-            selectTheme(courseId) {
-                this.$router.push({ name: 'course', params: { courseId: courseId } });
+            selectTheme(course) {
+                console.log("course", course)
+                sessionService.setSelectedCourse(course);
+                this.$root.$emit('selectCourse', course);
+                this.$router.push({ name: 'course', params: { courseId: course.CourseId } });
             }
         },
     }
