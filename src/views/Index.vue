@@ -27,7 +27,6 @@
         },
         methods: {
             selectTheme(course) {
-                console.log("course", course)
                 sessionService.setSelectedCourse(course);
                 this.$root.$emit('selectCourse', course);
                 this.$router.push({ name: 'course', params: { courseId: course.CourseId } });
