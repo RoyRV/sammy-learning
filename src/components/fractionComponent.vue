@@ -1,8 +1,5 @@
 <template>
     <div>
-        <!-- <span>{{numerator}}</span>
-        <span>----</span>
-        <span>{{denominator}}</span> -->
         <b-row>
             <b-col>
                 <span>{{numerator}}</span>

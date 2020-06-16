@@ -77,9 +77,10 @@
                                     <hr />
                                     <b-row>
                                         <b-col>
-                                            <FractionComponent
+                                            <FractionComponent id="button-1"
                                                 :numerator="(homogenean.numeratorOne + homogenean.numeratorTwo)"
                                                 :denominator="homogenean.denominator"></FractionComponent>
+                                            <b-tooltip target="button-1" :title="homogeneanOperation"></b-tooltip>
                                         </b-col>
                                     </b-row>
                                 </b-card-text>
@@ -115,6 +116,11 @@
                     numeratorTwo: 2,
                     denominator: 8
                 }
+            }
+        },
+        computed: {
+            homogeneanOperation() {
+                return `Hacemos una suma simple entre ${this.homogenean.numeratorOne} y ${this.homogenean.numeratorTwo}, mantenemos denominador igual`;
             }
         },
     }
