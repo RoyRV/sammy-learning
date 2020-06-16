@@ -15,7 +15,73 @@
                         <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
                             <b-card-body>
                                 <b-card-text>
-                                    a
+                                    <b-row>
+                                        <b-col cols="12" md="4">
+                                            <b-row>
+                                                <b-col>
+                                                    <span>Primer Numerador : {{homogenean.numeratorOne}}</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <vue-slider v-model="homogenean.numeratorOne" :max="10" />
+                                                </b-col>
+                                            </b-row>
+                                        </b-col>
+                                        <b-col cols="12" md="4">
+                                            <b-row>
+                                                <b-col>
+                                                    <span>Segundo Numerador : {{homogenean.numeratorTwo}}</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <vue-slider v-model="homogenean.numeratorTwo" :max="10" />
+                                                </b-col>
+                                            </b-row>
+                                        </b-col>
+                                        <b-col cols="12" md="4">
+                                            <b-row>
+                                                <b-col>
+                                                    <span>Denominador : {{homogenean.denominator}}</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <vue-slider v-model="homogenean.denominator" :max="10" :min="2" />
+                                                </b-col>
+                                            </b-row>
+                                        </b-col>
+                                    </b-row>
+                                    <hr />
+                                    <b-row>
+                                        <b-col cols="6" md="4">
+                                            <FractionComponent :numerator="homogenean.numeratorOne"
+                                                :denominator="homogenean.denominator"></FractionComponent>
+                                        </b-col>
+                                        <b-col cols="6" md="2">
+                                            <div>
+                                                <img :src="'/assets/plus.svg'" style="max-width: 60px;" />
+                                            </div>
+                                        </b-col>
+                                        <b-col cols="6" md="4">
+                                            <FractionComponent :numerator="homogenean.numeratorTwo"
+                                                :denominator="homogenean.denominator"></FractionComponent>
+                                        </b-col>
+                                        <b-col cols="6" md="2">
+                                            <div>
+                                                <img :src="'/assets/equal.svg'" style="max-width: 60px;" />
+                                            </div>
+                                        </b-col>
+                                    </b-row>
+                                    <hr />
+                                    <b-row>
+                                        <b-col>
+                                            <FractionComponent
+                                                :numerator="(homogenean.numeratorOne + homogenean.numeratorTwo)"
+                                                :denominator="homogenean.denominator"></FractionComponent>
+                                        </b-col>
+                                    </b-row>
                                 </b-card-text>
                             </b-card-body>
                         </b-collapse>
@@ -38,7 +104,23 @@
     </div>
 </template>
 <script>
+    import FractionComponent from '../../components/fractionComponent.vue';
     export default {
-        name: 'Fractions'
+        name: 'Fractions',
+        components: { FractionComponent, },
+        data() {
+            return {
+                homogenean: {
+                    numeratorOne: 1,
+                    numeratorTwo: 2,
+                    denominator: 8
+                }
+            }
+        },
     }
 </script>
+<style scoped>
+    hr {
+        border-top-width: 10px;
+    }
+</style>
