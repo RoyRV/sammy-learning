@@ -43,7 +43,7 @@
                                         <b-col cols="12" md="4">
                                             <b-row>
                                                 <b-col>
-                                                    <span>Denominador : {{homogenean.denominator}}</span>
+                                                    <span>Denominador Común : {{homogenean.denominator}}</span>
                                                 </b-col>
                                             </b-row>
                                             <b-row>
