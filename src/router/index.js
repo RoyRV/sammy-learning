@@ -12,6 +12,7 @@ import GreaterOrLess from '../views/themes/greaterOrLess.vue';
 import MixinOperations from '../views/themes/mixinOperations.vue';
 import Exponentiation from '../views/themes/exponentiation.vue';
 import Square from '../views/themes/square.vue';
+import Fractions from '../views/themes/fractions.vue';
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,9 @@ const routes = [
   },
   {
     path: '/square', name: 'square', component: Square,
+  },
+  {
+    path: '/fractions', name: 'fractions', component: Fractions,
   },
   {
     path: '/about',
