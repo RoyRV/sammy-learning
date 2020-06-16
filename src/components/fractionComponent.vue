@@ -7,7 +7,8 @@
         </b-row>
         <b-row>
             <b-col>
-                <span>——</span>
+                <span v-if="numerator.length">——————</span>
+                <span v-else>—</span>
             </b-col>
         </b-row>
         <b-row>
@@ -23,11 +24,11 @@
         name: 'FractionComponent',
         props: {
             numerator: {
-                type: Number,
+                // type: String,
                 required: true
             },
             denominator: {
-                type: Number,
+                // type: String,
                 required: true
             },
         }
