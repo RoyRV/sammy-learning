@@ -43,19 +43,29 @@
         </b-row>
         <b-row cols="12" class="mt-5">
             <b-col>
-
+                <b-row>
+                    <b-col>
+                        <span>Resultado: {{mcmResult}} </span>
+                    </b-col>
+                </b-row>
             </b-col>
         </b-row>
     </div>
 </template>
 <script>
     import PrimeFactorComponent from '../../components/primeFactorComponent.vue';
+    import { mathHelper } from '../../helpers';
     export default {
         components: { PrimeFactorComponent },
         name: 'MCM',
         data() {
             return {
                 numbers: [24, 36]
+            }
+        },
+        computed: {
+            mcmResult() {
+                return mathHelper.getMcm(this.numbers);
             }
         },
     }
