@@ -48,6 +48,11 @@
                         <span>Resultado: {{mcmResult}} </span>
                     </b-col>
                 </b-row>
+                <b-row>
+                    <b-col>
+                        <PrimeFactorComponent :number="mcmResult" />
+                    </b-col>
+                </b-row>
             </b-col>
         </b-row>
     </div>
