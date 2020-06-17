@@ -1,4 +1,3 @@
-
 import { localStorageService } from './localStorage.service';
 
 const setSelectedCourse = (course) => {
