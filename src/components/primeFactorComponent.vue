@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <b-row v-for="(factors,index) in primeFactors" :key="index" class="primeFactorRow">
-            <b-col class="factor">122</b-col>
-            <b-col class="factor">|</b-col>
-            <b-col class="factor">1</b-col>
-        </b-row>
+    <div class="mt-2">
+        <div class="mt-2">Factores Primos : </div>
+        <div v-for="(factor,index) in primeFactors" :key="index" class="factor mt-2">
+            <span>{{factor.base}}<sup>{{factor.exponential}}</sup></span>
+            <span v-if="index!=primeFactors.length-1">x</span>
+        </div>
     </div>
 </template>
 <script>
@@ -18,23 +18,32 @@
         },
         props: {
             number: {
-                // type: String,
                 required: true
             },
         },
+        created() {
+            this.decomposePrimeFactor();
+        },
         methods: {
             decomposePrimeFactor() {
-                return mathHelper.decomposePrimeFactor(this.number);
-            }
-
+                this.primeFactors = [];
+                let newFactors = mathHelper.decomposePrimeFactor(this.number);
+                let primeFactors = newFactors.split(' ');
+                primeFactors.forEach(factor => {
+                    let number = factor.split('*');
+                    this.primeFactors.push({ base: number[0], exponential: number[1] });
+                });
+            },
+            // getFactors(primeFactor) {
+            //     return primeFactor.split('*');
+            // }
         },
         watch: {
             number: {
                 immediate: false,
                 deep: true,
-                handler(newValue) {
-                    let newFactors = this.decomposePrimeFactor(newValue);
-                    this.primeFactors = newFactors.split(' ');
+                handler() {
+                    this.decomposePrimeFactor();
                 }
             }
         },
@@ -42,12 +51,10 @@
 </script>
 <style lang="scss">
     .factor {
-        &:first-child {
-            text-align: right;
+        span {
+            margin: 0 10px;
         }
 
-        &:last-child {
-            text-align: left;
-        }
+        display: inline-block;
     }
 </style>

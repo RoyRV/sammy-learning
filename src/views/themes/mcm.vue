@@ -9,7 +9,7 @@
             <b-col cols="12" md="6">
                 <b-row>
                     <b-col>
-                        <vue-slider v-model="numbers[0]" />
+                        <vue-slider v-model="numbers[0]" :min="2" />
                     </b-col>
                 </b-row>
                 <b-row>
@@ -26,7 +26,7 @@
             <b-col cols="12" md="6">
                 <b-row>
                     <b-col>
-                        <vue-slider v-model="numbers[1]" />
+                        <vue-slider v-model="numbers[1]" :min="2" />
                     </b-col>
                 </b-row>
                 <b-row>
@@ -55,7 +55,7 @@
         name: 'MCM',
         data() {
             return {
-                numbers: [2, 4]
+                numbers: [24, 36]
             }
         },
     }
