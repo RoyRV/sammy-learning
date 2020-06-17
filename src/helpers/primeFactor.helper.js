@@ -13,11 +13,11 @@ const decomposePrimeFactor = (number) => {
         }
 
         if (factorCounter > 0) {
-            output = output + " " + ("(" + primeFactor + "*" + (factorCounter) + ") ");
+            output = output + " " + primeFactor + "*" + (factorCounter);
         }
         primeFactor++;
     }
-    return output;
+    return output.trim();
 }
 export const primeFactorHelper = {
     decomposePrimeFactor

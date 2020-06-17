@@ -5,7 +5,7 @@
                 <h2>Mínimo común múltiplo</h2>
             </b-col>
         </b-row>
-        <b-row>
+        <b-row class="mt-5">
             <b-col cols="12" md="6">
                 <b-row>
                     <b-col>
@@ -14,12 +14,12 @@
                 </b-row>
                 <b-row>
                     <b-col>
-                        <span> {{numbers[0]}} </span>
+                        <span>Primer Número: {{numbers[0]}} </span>
                     </b-col>
                 </b-row>
                 <b-row>
                     <b-col>
-                        <PrimeFactor />
+                        <PrimeFactorComponent :number="numbers[0]" />
                     </b-col>
                 </b-row>
             </b-col>
@@ -31,27 +31,32 @@
                 </b-row>
                 <b-row>
                     <b-col>
-                        <span> {{numbers[1]}} </span>
+                        <span>Segundo Número: {{numbers[1]}} </span>
                     </b-col>
                 </b-row>
+                <b-row>
+                    <b-col>
+                        <PrimeFactorComponent :number="numbers[1]" />
+                    </b-col>
+                </b-row>
+            </b-col>
+        </b-row>
+        <b-row cols="12" class="mt-5">
+            <b-col>
+
             </b-col>
         </b-row>
     </div>
 </template>
 <script>
-    import PrimeFactor from '../../components/primeFactorComponent.vue';
-    // import { mathHelper } from '../../helpers';
+    import PrimeFactorComponent from '../../components/primeFactorComponent.vue';
     export default {
-        components: { PrimeFactor },
+        components: { PrimeFactorComponent },
         name: 'MCM',
         data() {
             return {
                 numbers: [2, 4]
             }
         },
-        // created() {
-        //     let factor = mathHelper.decomposePrimeFactor(4984);
-        //     console.log(factor)
-        // },
     }
 </script>
