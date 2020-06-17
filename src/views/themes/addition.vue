@@ -5,7 +5,7 @@
                 <h2>Sumas</h2>
             </b-col>
         </b-row>
-        <b-row>
+        <b-row class="mt-5">
             <b-col cols="6" md="3">
                 <b-row>
                     <b-col>
@@ -55,7 +55,9 @@
         <hr />
         <b-row>
             <b-col>
-                Tendré en total
+                <span>Tendré en total </span>
+                <b-icon id="additionResult" icon="question-circle" font-scale="1" />
+                <b-tooltip target="additionResult" :title="total.toString()" />
             </b-col>
         </b-row>
         <b-row>

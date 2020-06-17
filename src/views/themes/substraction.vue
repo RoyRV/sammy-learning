@@ -5,7 +5,7 @@
                 <h2>Restas</h2>
             </b-col>
         </b-row>
-        <b-row>
+        <b-row class="mt-5">
             <b-col cols="6" md="3">
                 <b-row>
                     <b-col>
@@ -53,14 +53,16 @@
             </b-col>
         </b-row>
         <hr />
-        <b-row>
+        <b-row v-if="total>=0">
             <b-col>
-                Tendré en total
+                <span>Me quedara en total </span>
+                <b-icon id="substractionResult" icon="question-circle" font-scale="1" />
+                <b-tooltip target="substractionResult" :title="total.toString()" />
             </b-col>
         </b-row>
         <b-row>
             <b-col>
-                <FigureComponent v-bind:number="total" style="display: inline-block;margin:5px 0px" />
+                <FigureComponent :number="total" style="display: inline-block;margin:5px 0px" />
             </b-col>
         </b-row>
     </div>

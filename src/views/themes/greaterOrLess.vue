@@ -1,8 +1,8 @@
 <template>
     <div>
-        <b-row>
+        <b-row class="mt-5">
             <b-col>
-                <h2>Mayor , Menor o Igual</h2>
+                <h2>Mayor , Igual o Menor</h2>
             </b-col>
         </b-row>
         <b-row>
