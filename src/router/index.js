@@ -5,20 +5,20 @@ import PageNotFound from '../views/PageNotFound.vue';
 
 import CourseDetail from '../views/courses/CourseDetail.vue';
 
-import Addition from '../views/themes/math/addition.vue';
-import Substraction from '../views/themes/substraction.vue';
-import Multiplication from '../views/themes/multiplication.vue';
-import Division from '../views/themes/division.vue';
-import GreaterOrLess from '../views/themes/greaterOrLess.vue';
-import MixinOperations from '../views/themes/mixinOperations.vue';
-import Exponentiation from '../views/themes/exponentiation.vue';
-import Square from '../views/themes/square.vue';
-import Fractions from '../views/themes/fractions.vue';
-import Mcm from '../views/themes/mcm.vue';
-import Mcd from '../views/themes/mcd.vue';
+//MATH
+import Addition from '@/views/themes/math/addition.vue';
+import Substraction from '@/views/themes/math/substraction.vue';
+import Multiplication from '@/views/themes/math/multiplication.vue';
+import Division from '@/views/themes/math/division.vue';
+import GreaterOrLess from '@/views/themes/math/greaterOrLess.vue';
+import MixinOperations from '@/views/themes/math/mixinOperations.vue';
+import Exponentiation from '@/views/themes/math/exponentiation.vue';
+import Square from '@/views/themes/math/square.vue';
+import Fractions from '@/views/themes/math/fractions.vue';
+import Mcm from '@/views/themes/math/mcm.vue';
+import Mcd from '@/views/themes/math/mcd.vue';
 
 Vue.use(VueRouter)
-
 
 const routes = [
   {
