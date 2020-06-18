@@ -1,6 +1,6 @@
 <template>
     <div class="mt-2">
-        <div class="mt-2">Factores Primos : </div>
+        <div class="mt-2">{{desc}} </div>
         <div v-for="(factor,index) in primeFactors" :key="index" class="factor mt-2">
             <span>{{factor.base}}<sup>{{factor.exponential}}</sup></span>
             <span v-if="index!=primeFactors.length-1">x</span>
@@ -20,6 +20,10 @@
             number: {
                 required: true
             },
+            desc: {
+                type: String,
+                default: "Factores Primos :"
+            }
         },
         created() {
             this.decomposePrimeFactor();

@@ -1,11 +1,11 @@
-const getMcm = (arr) => {
+const getMcm = (numbers) => {
     var min, range;
-    range = arr;
-    if (arr[0] > arr[1]) {
-        min = arr[1];
+    range = numbers;
+    if (numbers[0] > numbers[1]) {
+        min = numbers[1];
     }
     else {
-        min = arr[0]
+        min = numbers[0]
     }
 
     function gcd(a, b) {
