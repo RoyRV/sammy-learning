@@ -7,7 +7,7 @@
         </b-row>
         <b-row class="mt-5">
             <b-col cols="6" md="3">
-                <b-row>
+                <b-row>x
                     <b-col>
                         <vue-slider v-model="numbers[0]" :max="10" />
                     </b-col>
@@ -44,6 +44,7 @@
         <hr />
         <b-row class="mt-4">
             <b-col>
+                <p>Serian {{numbers[0]}} veces {{numbers[1]}}</p>
                 <span>Tendré en total</span>
                 <b-icon id="multiplicationResult" icon="question-circle" font-scale="1" />
                 <b-tooltip target="multiplicationResult" :title="(numbers[0]*numbers[1]).toString()" />
