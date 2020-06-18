@@ -2,7 +2,7 @@
     <div>
         <b-row class="mt-5">
             <b-col>
-                <h2>Mayor , Igual o Menor</h2>
+                <h2>Menor , Igual o Mayor</h2>
             </b-col>
         </b-row>
         <b-row>

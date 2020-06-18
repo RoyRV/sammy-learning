@@ -14,6 +14,7 @@ import Exponentiation from '../views/themes/exponentiation.vue';
 import Square from '../views/themes/square.vue';
 import Fractions from '../views/themes/fractions.vue';
 import Mcm from '../views/themes/mcm.vue';
+import Mcd from '../views/themes/mcd.vue';
 
 Vue.use(VueRouter)
 
@@ -59,6 +60,9 @@ const routes = [
   },
   {
     path: '/mcm', name: 'mcm', component: Mcm,
+  },
+  {
+    path: '/mcd', name: 'mcd', component: Mcd,
   },
   {
     path: '/about',
