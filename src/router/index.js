@@ -17,6 +17,7 @@ import Square from '@/views/themes/math/square.vue';
 import Fractions from '@/views/themes/math/fractions.vue';
 import Mcm from '@/views/themes/math/mcm.vue';
 import Mcd from '@/views/themes/math/mcd.vue';
+import Percentage from '@/views/themes/math/percentage.vue';
 
 Vue.use(VueRouter)
 
@@ -64,6 +65,9 @@ const routes = [
   },
   {
     path: '/mcd', name: 'mcd', component: Mcd,
+  },
+  {
+    path: '/percentage', name: 'percentage', component: Percentage,
   },
   {
     path: '/about',

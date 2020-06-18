@@ -1,0 +1,9 @@
+<template>
+    <div>
+        <b-row>
+            <b-col>
+                <h2>Porcentajes</h2>
+            </b-col>
+        </b-row>
+    </div>
+</template>
