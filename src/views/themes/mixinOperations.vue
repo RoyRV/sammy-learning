@@ -303,7 +303,7 @@
     </div>
 </template>
 <script>
-    import LowResolutionComponent from '../../components/lowResolutionComponent.vue';
+    import LowResolutionComponent from '@/components/lowResolutionComponent.vue';
     export default {
         name: 'MixinOperations',
         components: { LowResolutionComponent, },

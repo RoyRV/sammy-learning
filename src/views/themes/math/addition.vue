@@ -68,7 +68,7 @@
     </div>
 </template>
 <script>
-    import FigureComponent from '../../components/figureComponent.vue';
+    import FigureComponent from '@/components/figureComponent.vue';
     // import CanvasDrawComponent from '../../components/canvasDrawComponent.vue';
     export default {
         name: 'Addition',

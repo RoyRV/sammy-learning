@@ -63,8 +63,8 @@
 </template>
 
 <script>
-    import PrimeFactorComponent from '../../components/primeFactorComponent.vue';
-    import { mathHelper } from '../../helpers';
+    import PrimeFactorComponent from '@/components/primeFactorComponent.vue';
+    import { mathHelper } from '@/helpers';
     export default {
         name: 'MCD',
         components: { PrimeFactorComponent },

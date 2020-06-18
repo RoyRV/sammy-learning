@@ -54,10 +54,10 @@
     </div>
 </template>
 <script>
-    import FigureComponent from '../../components/figureComponent.vue';
+    import FigureComponent from '@/components/figureComponent.vue';
     export default {
         name: 'GreaterOrLess',
-        components: { FigureComponent, /*CanvasDrawComponent */ },
+        components: { FigureComponent },
         data() {
             return {
                 numbers: [2, 4]

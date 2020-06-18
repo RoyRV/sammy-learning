@@ -214,7 +214,7 @@
     </div>
 </template>
 <script>
-    import FractionComponent from '../../components/fractionComponent.vue';
+    import FractionComponent from '@/components/fractionComponent.vue';
     export default {
         name: 'Fractions',
         components: { FractionComponent, },

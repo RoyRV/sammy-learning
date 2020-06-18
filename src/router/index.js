@@ -4,7 +4,8 @@ import Index from '../views/Index.vue'
 import PageNotFound from '../views/PageNotFound.vue';
 
 import CourseDetail from '../views/courses/CourseDetail.vue';
-import Addition from '../views/themes/addition.vue';
+
+import Addition from '../views/themes/math/addition.vue';
 import Substraction from '../views/themes/substraction.vue';
 import Multiplication from '../views/themes/multiplication.vue';
 import Division from '../views/themes/division.vue';

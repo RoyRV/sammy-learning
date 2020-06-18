@@ -82,7 +82,7 @@
     </div>
 </template>
 <script>
-    import FigureComponent from '../../components/figureComponent.vue';
+    import FigureComponent from '@/components/figureComponent.vue';
     export default {
         name: 'Division',
         components: { FigureComponent },
