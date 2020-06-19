@@ -69,10 +69,9 @@
 </template>
 <script>
     import FigureComponent from '@/components/figureComponent.vue';
-    // import CanvasDrawComponent from '../../components/canvasDrawComponent.vue';
     export default {
         name: 'Addition',
-        components: { FigureComponent, /*CanvasDrawComponent */ },
+        components: { FigureComponent },
         data() {
             return {
                 numbers: [2, 4]

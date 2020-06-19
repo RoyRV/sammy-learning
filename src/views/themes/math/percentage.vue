@@ -88,6 +88,48 @@
                             </b-card-body>
                         </b-collapse>
                     </b-card>
+
+                    <b-card no-body class="mb-1">
+                        <b-card-header header-tag="header" role="tab">
+                            <b-button block v-b-toggle.accordion-2 variant="info">Porcentaje Compuesto</b-button>
+                        </b-card-header>
+                        <b-collapse id="accordion-2" visible accordion="my-accordion" role="tabpanel">
+                            <b-card-body>
+                                <b-card-text>
+                                    <b-row>
+                                        <b-col cols="12" md="5">
+                                            <b-row>
+                                                <b-col>
+                                                    <span>{{simplePercentageValue}} % </span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <vue-slider v-model="simplePercentageValue" />
+                                                </b-col>
+                                            </b-row>
+                                        </b-col>
+                                        <b-col class="mt-3">
+                                            <span>de</span>
+                                        </b-col>
+                                        <b-col cols="12" md="5">
+                                            <b-row>
+                                                <b-col>
+                                                    <span>{{simplePercentageOf}}</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <vue-slider v-model="simplePercentageOf" />
+                                                </b-col>
+                                            </b-row>
+                                        </b-col>
+                                    </b-row>
+                                    <hr />
+                                </b-card-text>
+                            </b-card-body>
+                        </b-collapse>
+                    </b-card>
                 </div>
             </b-col>
         </b-row>
