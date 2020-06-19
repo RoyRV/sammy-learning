@@ -90,6 +90,72 @@
                             </b-card-body>
                         </b-collapse>
                     </b-card>
+                    <b-card no-body class="mb-1">
+                        <b-card-header header-tag="header" role="tab">
+                            <b-button block v-b-toggle.accordion-3 variant="info">Raices Inexactas</b-button>
+                        </b-card-header>
+                        <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+                            <b-card-body>
+                                <b-card-text>
+                                    <b-row>
+                                        <b-col>
+                                            <b-row class="mt-5">
+                                                <b-col>
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="number" :min="2" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row>
+                                                        <b-col>
+                                                            <span>Radicando : {{number}}</span>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                                <b-col>
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="radix" :min="2" :max="8" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row>
+                                                        <b-col>
+                                                            <span>Raiz : {{radix}}</span>
+                                                        </b-col>
+                                                    </b-row>
+
+                                                </b-col>
+                                            </b-row>
+
+                                        </b-col>
+                                    </b-row>
+
+                                    <b-row class="mt-4">
+                                        <b-col>
+                                            <span>Se lee: raíz {{radix}} de {{number}}</span>
+                                        </b-col>
+                                    </b-row>
+                                    <b-row class="mt-4">
+                                        <b-col>
+                                            <span>Se expresa </span><sup>{{radix}}</sup><span>√</span><span
+                                                style="border-top:1px solid">{{number}}</span>
+                                        </b-col>
+                                    </b-row>
+                                    <b-row class="mt-4">
+                                        <b-col>
+                                            <p>El resultado es {{inexactResult}} </p>
+                                            <span>Porque</span>
+                                            <span v-for="(index) in radix" :key="index">
+                                                {{inexactResult}}
+                                                <span v-if="index!= radix">x</span>
+                                            </span>
+                                            <span> = {{number}}</span>
+                                        </b-col>
+                                    </b-row>
+                                </b-card-text>
+                            </b-card-body>
+                        </b-collapse>
+                    </b-card>
                 </div>
             </b-col>
         </b-row>
@@ -104,6 +170,8 @@
                 squareData: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100],
                 cubicNumber: 0,
                 cubicData: [0, 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000],
+                number: 20,
+                radix: 4
             }
         },
         computed: {
@@ -112,6 +180,9 @@
             },
             cubicResult() {
                 return Math.ceil(Math.pow(this.cubicNumber, 1 / 3))
+            },
+            inexactResult() {
+                return (Math.pow(this.number, 1 / this.radix)).toFixed(2);
             }
         }
     }
