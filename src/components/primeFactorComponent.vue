@@ -38,9 +38,6 @@
                     this.primeFactors.push({ base: number[0], exponential: number[1] });
                 });
             },
-            // getFactors(primeFactor) {
-            //     return primeFactor.split('*');
-            // }
         },
         watch: {
             number: {

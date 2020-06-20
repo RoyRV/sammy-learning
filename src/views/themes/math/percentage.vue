@@ -12,7 +12,7 @@
                         <b-card-header header-tag="header" role="tab">
                             <b-button block v-b-toggle.accordion-1 variant="info">Porcentaje simple</b-button>
                         </b-card-header>
-                        <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+                        <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
                             <b-card-body>
                                 <b-card-text>
                                     <b-row>
@@ -97,30 +97,27 @@
                             <b-card-body>
                                 <b-card-text>
                                     <b-row>
-                                        <b-col cols="12" md="5">
+                                        <b-col cols="12" md="6">
                                             <b-row>
                                                 <b-col>
-                                                    <span>{{simplePercentageValue}} % </span>
+                                                    <span>{{mixedPercentageValues[0]}} % de</span>
                                                 </b-col>
                                             </b-row>
                                             <b-row>
                                                 <b-col>
-                                                    <vue-slider v-model="simplePercentageValue" />
+                                                    <vue-slider v-model="mixedPercentageValues[0]" />
                                                 </b-col>
                                             </b-row>
                                         </b-col>
-                                        <b-col class="mt-3">
-                                            <span>de</span>
-                                        </b-col>
-                                        <b-col cols="12" md="5">
+                                        <b-col cols="12" md="6">
                                             <b-row>
                                                 <b-col>
-                                                    <span>{{simplePercentageOf}}</span>
+                                                    <span>{{mixedPercentageOf}}</span>
                                                 </b-col>
                                             </b-row>
                                             <b-row>
                                                 <b-col>
-                                                    <vue-slider v-model="simplePercentageOf" />
+                                                    <vue-slider v-model="mixedPercentageOf" />
                                                 </b-col>
                                             </b-row>
                                         </b-col>
@@ -143,7 +140,11 @@
         data() {
             return {
                 simplePercentageValue: 1,
-                simplePercentageOf: 10
+                simplePercentageOf: 10,
+                mixedPercentageValues: [
+                    10
+                ],
+                mixedPercentageOf: 100
             }
         },
         computed: {
