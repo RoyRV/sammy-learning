@@ -98,16 +98,19 @@
                                 <b-card-text>
                                     <b-row>
                                         <b-col cols="12" md="6">
-                                            <b-row>
-                                                <b-col>
-                                                    <span>{{mixedPercentageValues[0]}} % de</span>
-                                                </b-col>
-                                            </b-row>
-                                            <b-row>
-                                                <b-col>
-                                                    <vue-slider v-model="mixedPercentageValues[0]" />
-                                                </b-col>
-                                            </b-row>
+                                            <div v-for="(value, index) in mixedPercentageValues" :key="index">
+                                                <b-row>
+                                                    <b-col>
+                                                        <span>{{mixedPercentageValues[index]}} % de</span>
+                                                        <span>{{index==mixedPercentageValues.length-1?'':'l'}}</span>
+                                                    </b-col>
+                                                </b-row>
+                                                <b-row>
+                                                    <b-col>
+                                                        <vue-slider v-model="mixedPercentageValues[index]" />
+                                                    </b-col>
+                                                </b-row>
+                                            </div>
                                         </b-col>
                                         <b-col cols="12" md="6">
                                             <b-row>
@@ -142,7 +145,7 @@
                 simplePercentageValue: 1,
                 simplePercentageOf: 10,
                 mixedPercentageValues: [
-                    10
+                    10, 20, 30
                 ],
                 mixedPercentageOf: 100
             }
