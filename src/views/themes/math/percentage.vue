@@ -98,9 +98,19 @@
                                 <b-card-text>
                                     <b-row>
                                         <b-col cols="12" md="6">
+                                            <b-row class="mb-4">
+                                                <b-col>
+                                                    <b-button variant="info" class="mt-2"
+                                                        @click="addMixedPercentageValue">
+                                                        <span>Agregar un nuevo interes</span>
+                                                        <b-icon icon="plus-circle" class="ml-2">
+                                                        </b-icon>
+                                                    </b-button>
+                                                </b-col>
+                                            </b-row>
                                             <draggable v-model="mixedPercentageValues">
                                                 <div v-for="(value, index) in mixedPercentageValues" :key="index"
-                                                    class="draggablePercentage">
+                                                    :id="'mixedPercentageValues' + index" class="draggablePercentage">
                                                     <b-row>
                                                         <b-col>
                                                             <span>{{mixedPercentageValues[index]}} % de</span>
@@ -115,30 +125,25 @@
                                                             <vue-slider v-model="mixedPercentageValues[index]" />
                                                         </b-col>
                                                     </b-row>
+                                                    <b-tooltip v-if="mixedPercentageValues.length>1"
+                                                        :target="'mixedPercentageValues' + index"
+                                                        title="Puedes cambiar el orden, solo arrastrame arriba o abajo" />
                                                 </div>
                                             </draggable>
-                                            <b-row>
-                                                <b-col>
-                                                    <b-button variant="info" class="mt-2"
-                                                        @click="addMixedPercentageValue">
-                                                        <span>Agregar un nuevo interes</span>
-                                                        <b-icon icon="plus-circle" class="ml-2">
-                                                        </b-icon>
-                                                    </b-button>
-                                                </b-col>
-                                            </b-row>
                                         </b-col>
                                         <b-col cols="12" md="6">
-                                            <b-row>
-                                                <b-col>
-                                                    <span>{{mixedPercentageOf}}</span>
-                                                </b-col>
-                                            </b-row>
-                                            <b-row>
-                                                <b-col>
-                                                    <vue-slider v-model="mixedPercentageOf" />
-                                                </b-col>
-                                            </b-row>
+                                            <div>
+                                                <b-row>
+                                                    <b-col>
+                                                        <span>Número : {{mixedPercentageOf}}</span>
+                                                    </b-col>
+                                                </b-row>
+                                                <b-row>
+                                                    <b-col>
+                                                        <vue-slider v-model="mixedPercentageOf" />
+                                                    </b-col>
+                                                </b-row>
+                                            </div>
                                         </b-col>
                                     </b-row>
                                     <hr />
