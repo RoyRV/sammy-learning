@@ -11,10 +11,14 @@ const getMcm = (numbers) => {
 const getMcd = (numbers) => {
     return mcdHelper.getMcd(numbers);
 }
+const getRandomNumber = () => {
+    return Math.floor(Math.random() * (100 - 1)) + 1;
+}
 
 
 export const mathHelper = {
     decomposePrimeFactor,
     getMcm,
-    getMcd
+    getMcd,
+    getRandomNumber
 }

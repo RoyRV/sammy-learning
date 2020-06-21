@@ -100,16 +100,6 @@
                                 <b-card-text>
                                     <b-row>
                                         <b-col cols="12" md="6">
-                                            <!-- <b-row class="mb-4">
-                                                <b-col>
-                                                    <b-button variant="info" class="mt-2"
-                                                        @click="addMixedPercentageValue">
-                                                        <span>Agregar un nuevo interes</span>
-                                                        <b-icon icon="plus-circle" class="ml-2">
-                                                        </b-icon>
-                                                    </b-button>
-                                                </b-col>
-                                            </b-row> -->
                                             <draggable v-model="mixedPercentageValues">
                                                 <div v-for="(value, index) in mixedPercentageValues" :key="index"
                                                     class="draggablePercentage">
@@ -157,8 +147,27 @@
                                     <hr />
                                     <b-row>
                                         <b-col>
-                                            <!--TODO : repetir las fracciones segun la cantidad en el arreglo-->
-                                            <span>AA</span>
+                                            <div class="row">
+                                                <div v-for="(value, index) in mixedPercentageValues" :key="index"
+                                                    class="mixedPercentageContainer"
+                                                    v-bind:style="{ width: 100/mixedPercentageValues.length + '%' }">
+                                                    <div class="percentageProp" :id="'mixedFractionValue_' + index">
+                                                        <FractionComponent :numerator="value" :denominator="100">
+                                                        </FractionComponent>
+                                                        <b-tooltip :target="'mixedFractionValue_' + index"
+                                                            :title="'ó '+(value/100).toFixed(2)" />
+                                                    </div>
+                                                    <div class="percentageProp">
+                                                        <span v-if="index!=mixedPercentageValues.length-1">x</span>
+                                                        <span v-else>=</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </b-col>
+                                        <b-col>
+                                            <div class="mixedPercentageResult">
+                                                <span>Resultado : {{mixedPercentageResult}}</span>
+                                            </div>
                                         </b-col>
                                     </b-row>
                                 </b-card-text>
@@ -171,8 +180,9 @@
     </div>
 </template>
 <script>
-    import FractionComponent from '@/components/fractionComponent.vue';
     import draggable from 'vuedraggable'
+    import FractionComponent from '@/components/fractionComponent.vue';
+    import { mathHelper } from '@/helpers';
     export default {
         name: 'Percentage',
         components: { FractionComponent, draggable },
@@ -196,6 +206,14 @@
             simplePercentageValueDesc() {
                 let value = (this.simplePercentageValue / 100).toFixed(2);
                 return "ó también " + value;
+            },
+            mixedPercentageResult() {
+                let percentageResult = 1;
+                this.mixedPercentageValues.forEach(val => {
+                    percentageResult = percentageResult * val / 100;
+                });
+                let result = percentageResult * this.mixedPercentageOf;
+                return result.toFixed(2);
             }
         },
         methods: {
@@ -203,9 +221,7 @@
                 this.mixedPercentageValues.splice(index, 1);
             },
             addMixedPercentageValue() {
-                //TODO : move to math library
-                let randomNumber = Math.floor(Math.random() * (100 - 1)) + 1;
-                this.mixedPercentageValues.push(randomNumber);
+                this.mixedPercentageValues.push(mathHelper.getRandomNumber());
             }
         },
     }
@@ -234,6 +250,11 @@
         padding: 10px;
         border-radius: 10px;
         cursor: pointer;
+        background-color: white;
+    }
+
+    .mixedPercentageContainer {
+        display: flex;
     }
 
     .movePercentage {
@@ -244,5 +265,12 @@
     .removePercentage {
         height: 100%;
         float: right;
+    }
+
+    .mixedPercentageResult {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
     }
 </style>
