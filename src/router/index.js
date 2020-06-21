@@ -18,6 +18,7 @@ import Fractions from '@/views/themes/math/fractions.vue';
 import Mcm from '@/views/themes/math/mcm.vue';
 import Mcd from '@/views/themes/math/mcd.vue';
 import Percentage from '@/views/themes/math/percentage.vue';
+import NumericSystem from '@/views/themes/math/numericSystem.vue';
 
 Vue.use(VueRouter)
 
@@ -68,6 +69,9 @@ const routes = [
   },
   {
     path: '/percentage', name: 'percentage', component: Percentage,
+  },
+  {
+    path: '/numericSystem', name: 'numericSystem', component: NumericSystem,
   },
   {
     path: '/about',
