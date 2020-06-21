@@ -98,19 +98,23 @@
                                 <b-card-text>
                                     <b-row>
                                         <b-col cols="12" md="6">
-                                            <div v-for="(value, index) in mixedPercentageValues" :key="index">
-                                                <b-row>
-                                                    <b-col>
-                                                        <span>{{mixedPercentageValues[index]}} % de</span>
-                                                        <span>{{index==mixedPercentageValues.length-1?'':'l'}}</span>
-                                                    </b-col>
-                                                </b-row>
-                                                <b-row>
-                                                    <b-col>
-                                                        <vue-slider v-model="mixedPercentageValues[index]" />
-                                                    </b-col>
-                                                </b-row>
-                                            </div>
+                                            <draggable v-model="mixedPercentageValues">
+                                                <div v-for="(value, index) in mixedPercentageValues" :key="index">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <span>{{mixedPercentageValues[index]}} % de</span>
+                                                            <span>{{index==mixedPercentageValues.length-1?'':'l'}}</span>
+                                                            <b-icon icon="trash" style="float:right;"></b-icon>
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="mixedPercentageValues[index]" />
+                                                        </b-col>
+                                                    </b-row>
+                                                </div>
+                                            </draggable>
+
                                         </b-col>
                                         <b-col cols="12" md="6">
                                             <b-row>
@@ -137,9 +141,10 @@
 </template>
 <script>
     import FractionComponent from '@/components/fractionComponent.vue';
+    import draggable from 'vuedraggable'
     export default {
         name: 'Percentage',
-        components: { FractionComponent, },
+        components: { FractionComponent, draggable },
         data() {
             return {
                 simplePercentageValue: 1,

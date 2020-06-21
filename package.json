@@ -17,7 +17,8 @@
     "sass-loader": "^8.0.2",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vue-slider-component": "^3.1.5"
+    "vue-slider-component": "^3.1.5",
+    "vuedraggable": "^2.23.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
