@@ -8,7 +8,7 @@
         <b-row>
             <b-col>
                 <span v-if="numerator.length">——————</span>
-                <span v-else>—</span>
+                <span v-else>——</span>
             </b-col>
         </b-row>
         <b-row>

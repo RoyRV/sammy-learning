@@ -49,9 +49,11 @@
                                         <b-col>
                                             <div class="row">
                                                 <div class="percentageProp">
-                                                    <FractionComponent :numerator="simplePercentageValue"
-                                                        :denominator="100">
+                                                    <FractionComponent id="simplePercentageValue"
+                                                        :numerator="simplePercentageValue" :denominator="100">
                                                     </FractionComponent>
+                                                    <b-tooltip target="simplePercentageValue"
+                                                        :title="simplePercentageValueDesc" />
                                                 </div>
                                                 <div class="percentageProp">
                                                     <span>x</span>
@@ -98,7 +100,7 @@
                                 <b-card-text>
                                     <b-row>
                                         <b-col cols="12" md="6">
-                                            <b-row class="mb-4">
+                                            <!-- <b-row class="mb-4">
                                                 <b-col>
                                                     <b-button variant="info" class="mt-2"
                                                         @click="addMixedPercentageValue">
@@ -107,14 +109,20 @@
                                                         </b-icon>
                                                     </b-button>
                                                 </b-col>
-                                            </b-row>
+                                            </b-row> -->
                                             <draggable v-model="mixedPercentageValues">
                                                 <div v-for="(value, index) in mixedPercentageValues" :key="index"
-                                                    :id="'mixedPercentageValues' + index" class="draggablePercentage">
+                                                    class="draggablePercentage">
                                                     <b-row>
                                                         <b-col>
+                                                            <b-icon :id="'mixedPercentageValues' + index"
+                                                                icon="arrows-move" class="movePercentage"></b-icon>
                                                             <span>{{mixedPercentageValues[index]}} % de</span>
                                                             <span>{{index==mixedPercentageValues.length-1?'':'l'}}</span>
+                                                            <b-icon icon="plus-circle"
+                                                                class="removePercentage right ml-2"
+                                                                @click="addMixedPercentageValue">
+                                                            </b-icon>
                                                             <b-icon v-if="mixedPercentageValues.length>1" icon="trash"
                                                                 class="removePercentage"
                                                                 @click="removePercentage(index)"></b-icon>
@@ -147,6 +155,12 @@
                                         </b-col>
                                     </b-row>
                                     <hr />
+                                    <b-row>
+                                        <b-col>
+                                            <!--TODO : repetir las fracciones segun la cantidad en el arreglo-->
+                                            <span>AA</span>
+                                        </b-col>
+                                    </b-row>
                                 </b-card-text>
                             </b-card-body>
                         </b-collapse>
@@ -179,13 +193,19 @@
             simplePercentageResult() {
                 return this.simplePercentageValue * this.simplePercentageOf / 100;
             },
+            simplePercentageValueDesc() {
+                let value = (this.simplePercentageValue / 100).toFixed(2);
+                return "ó también " + value;
+            }
         },
         methods: {
             removePercentage(index) {
                 this.mixedPercentageValues.splice(index, 1);
             },
             addMixedPercentageValue() {
-                this.mixedPercentageValues.push(20);
+                //TODO : move to math library
+                let randomNumber = Math.floor(Math.random() * (100 - 1)) + 1;
+                this.mixedPercentageValues.push(randomNumber);
             }
         },
     }
@@ -214,6 +234,11 @@
         padding: 10px;
         border-radius: 10px;
         cursor: pointer;
+    }
+
+    .movePercentage {
+        height: 100%;
+        float: left;
     }
 
     .removePercentage {
