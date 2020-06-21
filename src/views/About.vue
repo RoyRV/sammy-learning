@@ -10,7 +10,7 @@
     <h3 class="title sub-title">Source Code</h3>
     <p>You can find the source code for this project at the link below</p>
     <p>
-      <a href="https://github.com/royrv/sammy-star" target="_blank">github.com/royrv/sammy-star</a>
+      <a href="https://github.com/RoyRV/sammy-learning" target="_blank">github.com/royrv/sammy-learning</a>
     </p>
     <b-button href="#" @click="click" variant="info">Go somewhere</b-button>
     <br />
