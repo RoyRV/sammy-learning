@@ -99,12 +99,15 @@
                                     <b-row>
                                         <b-col cols="12" md="6">
                                             <draggable v-model="mixedPercentageValues">
-                                                <div v-for="(value, index) in mixedPercentageValues" :key="index">
+                                                <div v-for="(value, index) in mixedPercentageValues" :key="index"
+                                                    class="draggablePercentage">
                                                     <b-row>
                                                         <b-col>
                                                             <span>{{mixedPercentageValues[index]}} % de</span>
                                                             <span>{{index==mixedPercentageValues.length-1?'':'l'}}</span>
-                                                            <b-icon icon="trash" style="float:right;"></b-icon>
+                                                            <b-icon v-if="mixedPercentageValues.length>1" icon="trash"
+                                                                class="removePercentage"
+                                                                @click="removePercentage(index)"></b-icon>
                                                         </b-col>
                                                     </b-row>
                                                     <b-row>
@@ -114,7 +117,16 @@
                                                     </b-row>
                                                 </div>
                                             </draggable>
-
+                                            <b-row>
+                                                <b-col>
+                                                    <b-button variant="info" class="mt-2"
+                                                        @click="addMixedPercentageValue">
+                                                        <span>Agregar un nuevo interes</span>
+                                                        <b-icon icon="plus-circle" class="ml-2">
+                                                        </b-icon>
+                                                    </b-button>
+                                                </b-col>
+                                            </b-row>
                                         </b-col>
                                         <b-col cols="12" md="6">
                                             <b-row>
@@ -163,6 +175,14 @@
                 return this.simplePercentageValue * this.simplePercentageOf / 100;
             },
         },
+        methods: {
+            removePercentage(index) {
+                this.mixedPercentageValues.splice(index, 1);
+            },
+            addMixedPercentageValue() {
+                this.mixedPercentageValues.push(20);
+            }
+        },
     }
 </script>
 <style scoped>
@@ -181,5 +201,18 @@
 
     .percentageResult {
         height: 100%;
+    }
+
+    .draggablePercentage {
+        border: 1px solid #ced4da;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .removePercentage {
+        height: 100%;
+        float: right;
     }
 </style>
