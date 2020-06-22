@@ -12,17 +12,24 @@
     <p>
       <a href="https://github.com/RoyRV/sammy-learning" target="_blank">github.com/royrv/sammy-learning</a>
     </p>
-    <b-button href="#" @click="click" variant="info">Go somewhere</b-button>
+    <b-button @click="goHome" variant="info">Go home</b-button>
     <br />
   </div>
 </template>
 <script>
+  import { sessionService } from '../services';
   export default {
     name: 'About',
     methods: {
-      click() {
-        console.log('')
-      }
+      async goHome() {
+        try {
+          this.$root.$emit('selectCourse', null);
+          sessionService.setSelectedCourse(null);
+          await this.$router.push("/");
+        } catch (error) {
+          /*eslint no-empty: "error"*/
+        }
+      },
     },
   }
 </script>

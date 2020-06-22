@@ -5,6 +5,7 @@ const courses = [
     { CourseId: 4, Title: "Trigonometria", Icon: 'trigonometry.svg' },
     { CourseId: 5, Title: "Geometria", Icon: 'geometry.svg' },
     { CourseId: 6, Title: "Fisica", Icon: 'physics.svg' },
+    // { CourseId: 7, Title: "Acerca de", Icon: 'info.svg' },
 ];
 
 const getCourses = function () {

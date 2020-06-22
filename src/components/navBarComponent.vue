@@ -13,12 +13,6 @@
                 </b-breadcrumb-item>
             </b-breadcrumb>
         </div>
-        <!-- <div>
-            <b-nav-form class="right">
-                <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-                <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-            </b-nav-form>
-        </div> -->
 
         <b-sidebar id="sidebar-backdrop" backdrop shadow lazy>
             <template v-slot:title>
@@ -32,6 +26,9 @@
                             <b-nav-item v-for="course in courses" :key="course.CourseId"
                                 @click="selectCourse(course);hide()">{{course.Title}}
                                 <img :src="'/assets/'+course.Icon" width="40px" style="margin-left: 10px;" />
+                            </b-nav-item>
+                            <b-nav-item @click="goAbout">Acerca de
+                                <img :src="'/assets/info.svg'" width="40px" style="margin-left: 10px;" />
                             </b-nav-item>
                         </b-nav>
                     </nav>
@@ -75,6 +72,11 @@
                 sessionService.setSelectedCourse(null);
                 this.selectedCourse = null;
                 await this.redirectTo("/");
+            },
+            async goAbout() {
+                sessionService.setSelectedCourse(null);
+                this.selectedCourse = null;
+                await this.redirectTo("/about");
             },
             async redirectTo(newLocation) {
                 try {
