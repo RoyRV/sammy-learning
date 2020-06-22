@@ -61,13 +61,11 @@
                             <b-card-body>
                                 <b-card-text>
                                     <!--TODO : generar el arbol de exponentes para convertir al sistema decimal-->
-                                    <!--TODO : prevenir la escritura de letras en el input-->
-                                    <!--TODO : mostrar una alerta cuando escriba un numero superior a la base-->
-                                    <!-- ejemplo : si está en base 3 no deberia poder poner el # 4-->
                                     <b-row>
                                         <b-col cols="12" md="6">
                                             <b-row>
                                                 <b-col>
+                                                    <!--TODO : prevenir la escritura de letras en el input-->
                                                     <b-form-input v-model="notDecimalNumber"
                                                         placeholder="Enter your name"></b-form-input>
                                                 </b-col>
@@ -86,6 +84,8 @@
                                             </b-row>
                                             <b-row>
                                                 <b-col>
+                                                    <!--TODO : mostrar una alerta cuando escriba un numero superior a la base-->
+                                                    <!-- ejemplo : si está en base 3 no deberia poder poner el # 4-->
                                                     <span>En base : {{notDecimalRadix}} </span>
                                                 </b-col>
                                             </b-row>
