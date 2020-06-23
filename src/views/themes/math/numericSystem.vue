@@ -10,8 +10,7 @@
                 <div role="tablist">
                     <b-card no-body class="mb-1">
                         <b-card-header header-tag="header" role="tab">
-                            <b-button block v-b-toggle.accordion-1 variant="info">Convertir a sistemas menores que el
-                                decimal (base 10)</b-button>
+                            <b-button block v-b-toggle.accordion-1 variant="info">De base 10 a base n</b-button>
                         </b-card-header>
                         <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
                             <b-card-body>
@@ -54,7 +53,7 @@
                     </b-card>
                     <b-card no-body class="mb-1">
                         <b-card-header header-tag="header" role="tab">
-                            <b-button block v-b-toggle.accordion-2 variant="info">Convertir al sistema decimal (base 10)
+                            <b-button block v-b-toggle.accordion-2 variant="info">De base n a base 10
                             </b-button>
                         </b-card-header>
                         <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
@@ -67,7 +66,8 @@
                                                 <b-col>
                                                     <!--TODO : prevenir la escritura de letras en el input-->
                                                     <b-form-input v-model="notDecimalNumber"
-                                                        placeholder="Enter your name"></b-form-input>
+                                                        @keypress="isNumber($event)" placeholder="Enter your name">
+                                                    </b-form-input>
                                                 </b-col>
                                             </b-row>
                                             <b-row>
@@ -127,7 +127,15 @@
             }
         },
         methods: {
-
+            isNumber: function (evt) {
+                evt = (evt) ? evt : window.event;
+                var charCode = (evt.which) ? evt.which : evt.keyCode;
+                if ((charCode > 31 && (charCode < 48 || charCode > 57))) {
+                    evt.preventDefault();
+                } else {
+                    return true;
+                }
+            }
         },
     }
 </script>
