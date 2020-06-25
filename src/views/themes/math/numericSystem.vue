@@ -126,6 +126,22 @@
                 return mathHelper.convert_base(this.notDecimalNumber, this.notDecimalRadix, 10);
             }
         },
+        watch: {
+            notDecimalNumber: {
+                immediate: false,
+                deep: true,
+                handler(newValue, oldValue) {
+                    console.log("oldValue", oldValue)
+                    if (newValue === '' || oldValue === '') {
+                        this.notDecimalNumber = 0;
+                    }
+                    else {
+                        this.notDecimalNumber = parseInt(newValue);
+                    }
+
+                }
+            }
+        },
         methods: {
             isNumber: function (evt) {
                 evt = (evt) ? evt : window.event;
