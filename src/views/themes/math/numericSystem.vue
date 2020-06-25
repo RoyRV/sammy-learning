@@ -131,14 +131,12 @@
                 immediate: false,
                 deep: true,
                 handler(newValue, oldValue) {
-                    console.log("oldValue", oldValue)
                     if (newValue === '' || oldValue === '') {
                         this.notDecimalNumber = 0;
                     }
                     else {
                         this.notDecimalNumber = parseInt(newValue);
                     }
-
                 }
             }
         },
