@@ -64,10 +64,9 @@
                                         <b-col cols="12" md="6">
                                             <b-row>
                                                 <b-col>
-                                                    <!--TODO : prevenir la escritura de letras en el input-->
-                                                    <b-form-input v-model="notDecimalNumber"
-                                                        @keypress="isNumber($event)" placeholder="Enter your name">
-                                                    </b-form-input>
+                                                    <InputNumberComponent v-model="notDecimalNumber" inline controls
+                                                        :min="0" :center="true">
+                                                    </InputNumberComponent>
                                                 </b-col>
                                             </b-row>
                                             <b-row>
@@ -108,8 +107,10 @@
 </template>
 <script>
     import { mathHelper } from '@/helpers';
+    import InputNumberComponent from '@/components/inputNumberComponent.vue'
     export default {
         name: 'NumericSystem',
+        components: { InputNumberComponent },
         data() {
             return {
                 decimalNumber: 10,
