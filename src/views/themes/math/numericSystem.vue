@@ -124,21 +124,16 @@
                 return this.decimalNumber.toString(this.decimalRadix);
             },
             inDecimalResult() {
-                return mathHelper.convert_base(this.notDecimalNumber, this.notDecimalRadix, 10);
-            }
-        },
-        watch: {
-            notDecimalNumber: {
-                immediate: false,
-                deep: true,
-                handler(newValue, oldValue) {
-                    if (newValue === '' || oldValue === '') {
-                        this.notDecimalNumber = 0;
-                    }
-                    else {
-                        this.notDecimalNumber = parseInt(newValue);
-                    }
+                let errorMessage = `No podemos convertir este número a la base ${this.notDecimalRadix}`;
+                if (!mathHelper.canConvertBase(this.notDecimalNumber, this.notDecimalRadix)) {
+                    return errorMessage;
                 }
+
+                let newNumber = mathHelper.convertNumberToBase(this.notDecimalNumber, this.notDecimalRadix, 10);
+                if (isNaN(newNumber)) {
+                    return errorMessage;
+                }
+                return newNumber;
             }
         },
         methods: {
