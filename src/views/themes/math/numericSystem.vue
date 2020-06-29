@@ -111,9 +111,22 @@
                             </b-card-body>
                         </b-collapse>
                     </b-card>
+                    <b-card no-body class="mb-1">
+                        <b-card-header header-tag="header" role="tab">
+                            <b-button block v-b-toggle.accordion-3 variant="info">De base n a base x</b-button>
+                        </b-card-header>
+                        <b-collapse id="accordion-3" visible accordion="my-accordion" role="tabpanel">
+                            <b-card-body>
+                                <b-card-text>
+                                    <p>Es muy simple!</p>
+                                    <p>Convertir primero de la base N a la base 10</p>
+                                    <p>Luego convertir primero de la base 10 a la base x</p>
+                                </b-card-text>
+                            </b-card-body>
+                        </b-collapse>
+                    </b-card>
                 </div>
             </b-col>
-
         </b-row>
     </div>
 </template>
