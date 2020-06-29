@@ -15,7 +15,6 @@
                         <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
                             <b-card-body>
                                 <b-card-text>
-                                    <!--TODO : generar el arbol de divisiones con los residuos-->
                                     <b-row>
                                         <b-col cols="12" md="6">
                                             <b-row>
@@ -42,8 +41,12 @@
                                             </b-row>
                                         </b-col>
                                     </b-row>
-                                    <b-row cols="12" class="mt-5">
-                                        <b-col>
+                                    <b-row>
+                                        <b-col cols="12" md="6" class="mt-4">
+                                            <ContinueDivisionComponent :number="decimalNumber" :base="decimalRadix">
+                                            </ContinueDivisionComponent>
+                                        </b-col>
+                                        <b-col cols="12" md="6" class="mt-4">
                                             <span>Resultado: {{result}} </span>
                                         </b-col>
                                     </b-row>
@@ -83,8 +86,6 @@
                                             </b-row>
                                             <b-row>
                                                 <b-col>
-                                                    <!--TODO : mostrar una alerta cuando escriba un numero superior a la base-->
-                                                    <!-- ejemplo : si está en base 3 no deberia poder poner el # 4-->
                                                     <span>En base : {{notDecimalRadix}} </span>
                                                 </b-col>
                                             </b-row>
@@ -108,9 +109,10 @@
 <script>
     import { mathHelper } from '@/helpers';
     import InputNumberComponent from '@/components/inputNumberComponent.vue'
+    import ContinueDivisionComponent from '@/components/continueDivisionComponent.vue'
     export default {
         name: 'NumericSystem',
-        components: { InputNumberComponent },
+        components: { InputNumberComponent, ContinueDivisionComponent },
         data() {
             return {
                 decimalNumber: 10,
