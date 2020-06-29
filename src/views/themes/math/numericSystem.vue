@@ -62,7 +62,6 @@
                         <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
                             <b-card-body>
                                 <b-card-text>
-                                    <!--TODO : generar el arbol de exponentes para convertir al sistema decimal-->
                                     <b-row>
                                         <b-col cols="12" md="6">
                                             <b-row>
@@ -130,8 +129,8 @@
             return {
                 decimalNumber: 10,
                 decimalRadix: 2,
-                notDecimalNumber: 10,
-                notDecimalRadix: 2
+                notDecimalNumber: 12345,
+                notDecimalRadix: 6
             }
         },
         computed: {
