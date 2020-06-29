@@ -1,4 +1,5 @@
 const themes = [
+    //Matematica
     { CourseId: 1, ThemeId: 1, ThemeTitle: 'Sumas', redirectTo: 'addition' },
     { CourseId: 1, ThemeId: 2, ThemeTitle: 'Resta', redirectTo: 'substraction' },
     { CourseId: 1, ThemeId: 3, ThemeTitle: 'Multiplicación', redirectTo: 'multiplication' },
@@ -12,6 +13,8 @@ const themes = [
     { CourseId: 1, ThemeId: 11, ThemeTitle: 'MCD', redirectTo: 'mcd' },
     { CourseId: 1, ThemeId: 12, ThemeTitle: 'Operaciones Combinadas', redirectTo: 'mixedOperations' },
     { CourseId: 1, ThemeId: 13, ThemeTitle: 'Sistemas Númericos', redirectTo: 'numericSystem' },
+    //Algebra
+    { CourseId: 3, ThemeId: 14, ThemeTitle: 'Teoria de Exponentes', redirectTo: 'exponentPower' },
 ];
 
 const getThemesByCourseId = function (courseId) {

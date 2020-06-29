@@ -20,6 +20,9 @@ import Mcd from '@/views/themes/math/mcd.vue';
 import Percentage from '@/views/themes/math/percentage.vue';
 import NumericSystem from '@/views/themes/math/numericSystem.vue';
 
+//ALGEBRA
+import ExponentPower from '@/views/themes/algebra/exponentPower.vue';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -72,6 +75,9 @@ const routes = [
   },
   {
     path: '/numericSystem', name: 'numericSystem', component: NumericSystem,
+  },
+  {
+    path: '/exponentPower', name: 'exponentPower', component: ExponentPower,
   },
   {
     path: '/about',
