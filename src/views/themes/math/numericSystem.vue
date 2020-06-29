@@ -86,14 +86,26 @@
                                             </b-row>
                                             <b-row>
                                                 <b-col>
-                                                    <span>En base : {{notDecimalRadix}} </span>
+                                                    <span>De base : {{notDecimalRadix}} a base 10</span>
                                                 </b-col>
                                             </b-row>
                                         </b-col>
                                     </b-row>
-                                    <b-row cols="12" class="mt-5">
+                                    <b-row v-if="canConvertToDecimal">
+                                        <b-col cols="12" md="6" class="mt-4">
+                                            <ContinueExponentComponent :number="notDecimalNumber"
+                                                :base="notDecimalRadix">
+                                            </ContinueExponentComponent>
+                                        </b-col>
+                                        <b-col cols="12" md="6" class="mt-4">
+                                            <span>Resultado (en base 10): {{inDecimalResult}} </span>
+                                        </b-col>
+                                    </b-row>
+                                    <b-row v-else class="mt-4">
                                         <b-col>
-                                            <span>En sistema decimal: {{inDecimalResult}} </span>
+                                            <span>No podemos convertir {{notDecimalNumber}} desde la base
+                                                {{notDecimalRadix}}
+                                                a base 10</span>
                                         </b-col>
                                     </b-row>
                                 </b-card-text>
@@ -110,9 +122,10 @@
     import { mathHelper } from '@/helpers';
     import InputNumberComponent from '@/components/inputNumberComponent.vue'
     import ContinueDivisionComponent from '@/components/continueDivisionComponent.vue'
+    import ContinueExponentComponent from '@/components/continueExponentComponent.vue'
     export default {
         name: 'NumericSystem',
-        components: { InputNumberComponent, ContinueDivisionComponent },
+        components: { InputNumberComponent, ContinueDivisionComponent, ContinueExponentComponent },
         data() {
             return {
                 decimalNumber: 10,
@@ -125,9 +138,12 @@
             result() {
                 return this.decimalNumber.toString(this.decimalRadix);
             },
+            canConvertToDecimal() {
+                return mathHelper.canConvertBase(this.notDecimalNumber, this.notDecimalRadix);
+            },
             inDecimalResult() {
                 let errorMessage = `No podemos convertir este número a la base ${this.notDecimalRadix}`;
-                if (!mathHelper.canConvertBase(this.notDecimalNumber, this.notDecimalRadix)) {
+                if (!this.canConvertToDecimal) {
                     return errorMessage;
                 }
 
