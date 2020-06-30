@@ -7,7 +7,7 @@
         </b-row>
         <b-row class="mt-5">
             <b-col cols="6" md="3">
-                <b-row>x
+                <b-row>
                     <b-col>
                         <vue-slider v-model="numbers[0]" :max="10" />
                     </b-col>

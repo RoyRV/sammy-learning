@@ -8,11 +8,11 @@ const courses = [
     // { CourseId: 7, Title: "Acerca de", Icon: 'info.svg' },
 ];
 
-const getCourses = function () {
+const getCourses = () => {
     return courses;
 };
 
-const getCourseById = function (id) {
+const getCourseById = (id) => {
     return courses.find(x => x.CourseId == id);
 }
 
