@@ -4,16 +4,16 @@ import Index from '../views/Index.vue'
 import PageNotFound from '../views/PageNotFound.vue';
 import CourseDetail from '../views/courses/CourseDetail.vue';
 
-//ALGEBRA
-import ExponentPower from '@/views/themes/algebra/exponentPower.vue';
 
 //MathRoutes
 import { MathRouter } from './mathRouter';
+import { AlgebraRouter } from './algebraRouter';
 
 Vue.use(VueRouter)
 
 let routes = [];
 routes = routes.concat(MathRouter.getMathRouters());
+routes = routes.concat(AlgebraRouter.getAlgebraRouters());
 
 routes = routes.concat([
   {
@@ -26,10 +26,6 @@ routes = routes.concat([
     name: 'course',
     component: CourseDetail,
     props: (route) => ({ courseId: parseInt(route.query.courseId) })
-  },
-
-  {
-    path: '/exponentPower', name: 'exponentPower', component: ExponentPower,
   },
   {
     path: '/about',
