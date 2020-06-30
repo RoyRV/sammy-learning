@@ -41,7 +41,6 @@ routes = routes.concat([
   }
 ])
 
-console.log(routes)
 
 const router = new VueRouter({
   mode: 'history',
