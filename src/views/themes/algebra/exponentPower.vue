@@ -564,12 +564,11 @@
                                                     <span class="description">√</span>
                                                     <span style="border-top:1px solid" class="description">a</span>
                                                     <sup class="expo">{{sameBaseDivisionExpo2}}</sup>
-                                                    <span v-if="sameBaseDivisionExpo1 % sameBaseDivisionExpo2 == 0">
+                                                    <span>
                                                         <span> = </span>
                                                         <span class="description">a</span>
-                                                        <sup v-if="sameBaseDivisionExpo1 / sameBaseDivisionExpo2>1"
-                                                            id="multiExpoSolution"
-                                                            class="expo">{{sameBaseDivisionExpo1 / sameBaseDivisionExpo2}}</sup>
+                                                        <sup id="multiExpoSolution"
+                                                            class="expo">{{ getSimplifiedFraction(sameBaseDivisionExpo1 , sameBaseDivisionExpo2)}}</sup>
                                                     </span>
                                                 </b-col>
                                             </b-row>
@@ -585,6 +584,7 @@
     </div>
 </template>
 <script>
+    import { simplify } from 'mathjs';
     export default {
         name: 'ExponentPower',
         data() {
@@ -611,6 +611,12 @@
 
             }
         },
+        methods: {
+            getSimplifiedFraction(n1, n2) {
+                if (n1 / n2 == 1) return '';
+                return simplify(n1 + '/' + n2).toString();
+            }
+        },
         computed: {
             sumExpoSolutionDesc() {
                 return `Sumamos los exponentes ${this.sameBaseSumExpo1} y ${this.sameBaseSumExpo2}`;
@@ -620,6 +626,9 @@
             },
             multiExpoSolutionDesc() {
                 return `Multiplicamos los exponentes ${this.sameBaseMultiExpo1} y ${this.sameBaseMultiExpo2}`;
+            },
+            divisionSolutionDesc() {
+                return '';
             }
         },
     }
