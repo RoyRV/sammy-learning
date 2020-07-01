@@ -584,7 +584,7 @@
     </div>
 </template>
 <script>
-    import { simplify } from 'mathjs';
+    import { mathHelper } from '@/helpers';
     export default {
         name: 'ExponentPower',
         data() {
@@ -613,8 +613,7 @@
         },
         methods: {
             getSimplifiedFraction(n1, n2) {
-                if (n1 / n2 == 1) return '';
-                return simplify(n1 + '/' + n2).toString();
+                return mathHelper.getSimplifiedFraction(n1, n2);
             }
         },
         computed: {
