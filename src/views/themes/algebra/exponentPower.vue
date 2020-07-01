@@ -394,7 +394,7 @@
                                                     <p>Cuando tienen un producto y un exponente los afecta</p>
                                                     <span> ( </span>
                                                     <span class="description">a</span>
-                                                    <span class="">/</span>
+                                                    <span class=""> / </span>
                                                     <span class="description">b</span>
                                                     <span> ) </span>
                                                     <sup class="expo">m</sup>
@@ -468,7 +468,7 @@
                                                     <span>
                                                         <span> ( </span>
                                                         <span class="description">{{comunBaseDivisionFactor1}}</span>
-                                                        <span class="">/</span>
+                                                        <span class=""> / </span>
                                                         <span class="description">{{comunBaseDivisionFactor2}}</span>
                                                         <span> ) </span>
                                                         <sup class="expo">{{comunBaseDivisionExpo}}</sup>
@@ -478,7 +478,7 @@
                                                     <span>
                                                         <span class="description">{{comunBaseDivisionFactor1}}</span>
                                                         <sup class="expo">{{comunBaseDivisionExpo}}</sup>
-                                                        <span class="">/</span>
+                                                        <span class=""> / </span>
 
                                                         <span class="description">{{comunBaseDivisionFactor2}}</span>
                                                         <sup class="expo">{{comunBaseDivisionExpo}}</sup>
