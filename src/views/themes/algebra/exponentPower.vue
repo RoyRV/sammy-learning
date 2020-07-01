@@ -8,6 +8,7 @@
         <b-row class="mt-2">
             <b-col>
                 <div role="tablist">
+                    <!--Sum-->
                     <b-card no-body class="mb-1">
                         <b-card-header header-tag="header" role="tab">
                             <b-button block v-b-toggle.accordion-1 variant="info">Multiplicación de bases iguales
@@ -88,7 +89,7 @@
                             </b-card-body>
                         </b-collapse>
                     </b-card>
-
+                    <!--Substraction-->
                     <b-card no-body class="mb-1">
                         <b-card-header header-tag="header" role="tab">
                             <b-button block v-b-toggle.accordion-2 variant="info">División de bases iguales
@@ -185,6 +186,7 @@
                             </b-card-body>
                         </b-collapse>
                     </b-card>
+                    <!--Potencia de Potencia-->
                     <b-card no-body class="mb-1">
                         <b-card-header header-tag="header" role="tab">
                             <b-button block v-b-toggle.accordion-3 variant="info">Potencia de una potencia
@@ -272,7 +274,7 @@
                             </b-card-body>
                         </b-collapse>
                     </b-card>
-
+                    <!--Potencia de producto-->
                     <b-card no-body class="mb-1">
                         <b-card-header header-tag="header" role="tab">
                             <b-button block v-b-toggle.accordion-4 variant="info">Potencia de un Producto
@@ -312,24 +314,24 @@
                                                 <b-col cols="12" md="6">
                                                     <b-row>
                                                         <b-col>
-                                                            <vue-slider v-model="comunBasefactor1" :max="50" />
+                                                            <vue-slider v-model="comunBaseMultiFactor1" :max="50" />
                                                         </b-col>
                                                     </b-row>
                                                     <b-row class="mb-4">
                                                         <b-col>
-                                                            <span>Factor a : {{comunBasefactor1}}</span>
+                                                            <span>Factor a : {{comunBaseMultiFactor1}}</span>
                                                         </b-col>
                                                     </b-row>
                                                 </b-col>
                                                 <b-col cols="12" md="6">
                                                     <b-row>
                                                         <b-col>
-                                                            <vue-slider v-model="comunBasefactor2" :max="50" />
+                                                            <vue-slider v-model="comunBaseMultiFactor2" :max="50" />
                                                         </b-col>
                                                     </b-row>
                                                     <b-row class="mb-4">
                                                         <b-col>
-                                                            <span>Factor b : {{comunBasefactor2}}</span>
+                                                            <span>Factor b : {{comunBaseMultiFactor2}}</span>
                                                         </b-col>
                                                     </b-row>
                                                 </b-col>
@@ -338,12 +340,12 @@
                                                 <b-col cols="12">
                                                     <b-row>
                                                         <b-col>
-                                                            <vue-slider v-model="sameBaseComunExpo" :max="10" />
+                                                            <vue-slider v-model="comunBaseMultiExpo" :max="10" />
                                                         </b-col>
                                                     </b-row>
                                                     <b-row class="mb-4">
                                                         <b-col>
-                                                            <span>Exponente : {{sameBaseComunExpo}}</span>
+                                                            <span>Exponente : {{comunBaseMultiExpo}}</span>
                                                         </b-col>
                                                     </b-row>
                                                 </b-col>
@@ -352,21 +354,21 @@
                                                 <b-col>
                                                     <span>
                                                         <span> ( </span>
-                                                        <span class="description">{{comunBasefactor1}}</span>
+                                                        <span class="description">{{comunBaseMultiFactor1}}</span>
                                                         <span class="">x</span>
-                                                        <span class="description">{{comunBasefactor2}}</span>
+                                                        <span class="description">{{comunBaseMultiFactor2}}</span>
                                                         <span> ) </span>
-                                                        <sup class="expo">{{sameBaseComunExpo}}</sup>
+                                                        <sup class="expo">{{comunBaseMultiExpo}}</sup>
 
                                                     </span>
                                                     <span> = </span>
                                                     <span>
-                                                        <span class="description">{{comunBasefactor1}}</span>
-                                                        <sup class="expo">{{sameBaseComunExpo}}</sup>
+                                                        <span class="description">{{comunBaseMultiFactor1}}</span>
+                                                        <sup class="expo">{{comunBaseMultiExpo}}</sup>
                                                         <span class="">x</span>
 
-                                                        <span class="description">{{comunBasefactor2}}</span>
-                                                        <sup class="expo">{{sameBaseComunExpo}}</sup>
+                                                        <span class="description">{{comunBaseMultiFactor2}}</span>
+                                                        <sup class="expo">{{comunBaseMultiExpo}}</sup>
                                                     </span>
                                                 </b-col>
                                             </b-row>
@@ -374,6 +376,16 @@
                                     </b-row>
                                 </b-card-text>
                             </b-card-body>
+                        </b-collapse>
+                    </b-card>
+                    <!--Potencia de division-->
+                    <b-card no-body class="mb-1">
+                        <b-card-header header-tag="header" role="tab">
+                            <b-button block v-b-toggle.accordion-5 variant="info">Potencia de una división
+                            </b-button>
+                        </b-card-header>
+                        <b-collapse id="accordion-5" visible accordion="my-accordion" role="tabpanel">
+
                         </b-collapse>
                     </b-card>
                 </div>
@@ -392,9 +404,9 @@
                 sameBaseLessExpo2: 4,
                 sameBaseMultiExpo1: 3,
                 sameBaseMultiExpo2: 4,
-                sameBaseComunExpo: 5,
-                comunBasefactor1: 2,
-                comunBasefactor2: 3
+                comunBaseMultiExpo: 5,
+                comunBaseMultiFactor1: 2,
+                comunBaseMultiFactor2: 3
             }
         },
         computed: {
