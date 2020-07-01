@@ -554,9 +554,7 @@
                                                 <b-col>
                                                     <span>
                                                         <span class="description">a</span>
-                                                        <sup id="multiExpoSolution"
-                                                            class="expo">{{sameBaseDivisionExpo1}}
-                                                            /
+                                                        <sup class="expo">{{sameBaseDivisionExpo1}} /
                                                             {{sameBaseDivisionExpo2}}</sup>
                                                     </span>
                                                     <span> = </span>
@@ -567,8 +565,11 @@
                                                     <span>
                                                         <span> = </span>
                                                         <span class="description">a</span>
-                                                        <sup id="multiExpoSolution"
+                                                        <sup id="divisionSolution"
                                                             class="expo">{{ getSimplifiedFraction(sameBaseDivisionExpo1 , sameBaseDivisionExpo2)}}</sup>
+                                                        <b-tooltip target="divisionSolution"
+                                                            :title="divisionSolutionDesc" />
+
                                                     </span>
                                                 </b-col>
                                             </b-row>
@@ -627,7 +628,7 @@
                 return `Multiplicamos los exponentes ${this.sameBaseMultiExpo1} y ${this.sameBaseMultiExpo2}`;
             },
             divisionSolutionDesc() {
-                return '';
+                return 'Simplificamos todos los factores comunes que se pueda en una division';
             }
         },
     }
