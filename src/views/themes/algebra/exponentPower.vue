@@ -406,7 +406,16 @@
                                                     <sup class="expo">m</sup>
                                                 </b-col>
                                             </b-row>
-
+                                            <b-row class="mt-2">
+                                                <b-col>
+                                                    <b-icon id="divisionExpoRestriction2" icon="info-circle"
+                                                        scale="0.75" shift-v="0.75" aria-hidden="true"></b-icon>
+                                                    <b-tooltip target="divisionExpoRestriction2"
+                                                        title="Esta condición siempre y cuando b sea diferente de 0">
+                                                    </b-tooltip>
+                                                    <span>Para b ≠0</span>
+                                                </b-col>
+                                            </b-row>
                                         </b-col>
                                         <b-col cols="12" md="8" class="mt-2">
                                             <b-row>
