@@ -491,6 +491,94 @@
                             </b-card-body>
                         </b-collapse>
                     </b-card>
+                    <!--Exponente fraccionario-->
+                    <b-card no-body class="mb-1">
+                        <b-card-header header-tag="header" role="tab">
+                            <b-button block v-b-toggle.accordion-6 variant="info">Exponente fraccionario
+                            </b-button>
+                        </b-card-header>
+                        <b-collapse id="accordion-6" visible accordion="my-accordion" role="tabpanel">
+                            <b-card-body>
+                                <b-card-text>
+                                    <b-row>
+                                        <b-col cols="12" md="4" class="mb-2">
+                                            <b-row>
+                                                <b-col>
+                                                    <p>Cuando tienen una base elevado a un exponentes fraccionario</p>
+                                                    <span class="description">a</span>
+                                                    <sup class="expo">m / n</sup>
+                                                    <span> = </span>
+                                                    <sup class="square">n</sup>
+                                                    <span class="description">√</span>
+                                                    <span style="border-top:1px solid" class="description">a</span>
+                                                    <sup class="expo">m</sup>
+                                                </b-col>
+                                            </b-row>
+
+                                        </b-col>
+                                        <b-col cols="12" md="8" class="mt-2">
+                                            <b-row>
+                                                <b-col>
+                                                    <p style="text-align: left;">Ejemplo</p>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="12" md="6">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="sameBaseDivisionExpo1" :max="50"
+                                                                :min="2" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row class="mb-4">
+                                                        <b-col>
+                                                            <span>Exponente m : {{sameBaseDivisionExpo1}}</span>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                                <b-col cols="12" md="6">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="sameBaseDivisionExpo2" :max="50"
+                                                                :min="2" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row class="mb-4">
+                                                        <b-col>
+                                                            <span>Exponente n : {{sameBaseDivisionExpo2}}</span>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>
+                                                        <span class="description">a</span>
+                                                        <sup id="multiExpoSolution"
+                                                            class="expo">{{sameBaseDivisionExpo1}}
+                                                            /
+                                                            {{sameBaseDivisionExpo2}}</sup>
+                                                    </span>
+                                                    <span> = </span>
+                                                    <sup class="square">{{sameBaseDivisionExpo1}}</sup>
+                                                    <span class="description">√</span>
+                                                    <span style="border-top:1px solid" class="description">a</span>
+                                                    <sup class="expo">{{sameBaseDivisionExpo2}}</sup>
+                                                    <span v-if="sameBaseDivisionExpo1 % sameBaseDivisionExpo2 == 0">
+                                                        <span> = </span>
+                                                        <span class="description">a</span>
+                                                        <sup v-if="sameBaseDivisionExpo1 / sameBaseDivisionExpo2>1"
+                                                            id="multiExpoSolution"
+                                                            class="expo">{{sameBaseDivisionExpo1 / sameBaseDivisionExpo2}}</sup>
+                                                    </span>
+                                                </b-col>
+                                            </b-row>
+                                        </b-col>
+                                    </b-row>
+                                </b-card-text>
+                            </b-card-body>
+                        </b-collapse>
+                    </b-card>
                 </div>
             </b-col>
         </b-row>
@@ -503,16 +591,24 @@
             return {
                 sameBaseSumExpo1: 2,
                 sameBaseSumExpo2: 3,
+
                 sameBaseLessExpo1: 8,
                 sameBaseLessExpo2: 4,
+
                 sameBaseMultiExpo1: 3,
                 sameBaseMultiExpo2: 4,
+
                 comunBaseMultiExpo: 5,
                 comunBaseMultiFactor1: 2,
                 comunBaseMultiFactor2: 3,
+
                 comunBaseDivisionExpo: 5,
                 comunBaseDivisionFactor1: 2,
-                comunBaseDivisionFactor2: 3
+                comunBaseDivisionFactor2: 3,
+
+                sameBaseDivisionExpo1: 10,
+                sameBaseDivisionExpo2: 20,
+
             }
         },
         computed: {
@@ -539,5 +635,10 @@
 
     .expo {
         top: -1.0em;
+    }
+
+    .square {
+        top: -2.0em;
+        right: -1em;
     }
 </style>
