@@ -1,13 +1,17 @@
 <template>
     <div v-if="courses">
         <div v-for="course in courses" :key="course.CourseId" class="courseItem">
-            <b-card header-tag="header">
+            <b-card no-body header-tag="header">
                 <template v-slot:header>
-                    <h4 class="mb-0 courseTitle">{{course.Title}}</h4>
-                    <img :src="'/assets/'+course.Icon" width="40px" style="margin: 0px 0px 10px 10px;" />
+                    <div class="header">
+                        <h4 class="mb-0 courseTitle">{{course.Title}}</h4>
+                        <img :src="'/assets/'+course.Icon" width="40px" style="margin: 0px 0px 10px 10px;" />
+                    </div>
                 </template>
-                <b-card-text>Header and footers using slots.</b-card-text>
-                <b-button @click="selectTheme(course)" variant="info">Leer más</b-button>
+                <b-card-body class="body">
+                    <b-card-text>{{course.Description}}</b-card-text>
+                    <b-button @click="selectTheme(course)" variant="info">Ver temas</b-button>
+                </b-card-body>
             </b-card>
         </div>
     </div>
@@ -35,9 +39,17 @@
     }
 </script>
 <style lang="scss" scoped>
+    .header:hover {}
+
+    .body {
+        height: 142px;
+    }
+
     .courseItem {
-        display: inline-flex;
+        display: inline-block;
         margin: 10px;
+        width: 300px;
+        height: 219px;
     }
 
     .courseTitle {
