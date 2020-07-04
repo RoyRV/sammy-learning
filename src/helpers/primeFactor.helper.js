@@ -7,7 +7,7 @@ const decomposePrimeFactor = (number) => {
         factorCounter = 0;
 
         while ((number % primeFactor) == 0) {
-            //encotrado factor
+            //factor encontrado
             ++factorCounter;
             number /= primeFactor;
         }

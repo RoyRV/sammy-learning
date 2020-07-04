@@ -7,14 +7,17 @@ const themes = [
     { CourseId: 1, ThemeId: 5, ThemeTitle: 'Mayor/Menor', redirectTo: 'greaterOrLess' },
     { CourseId: 1, ThemeId: 6, ThemeTitle: 'Exponenciación', redirectTo: 'exponentiation' },
     { CourseId: 1, ThemeId: 7, ThemeTitle: 'Raices', redirectTo: 'square' },
-    { CourseId: 1, ThemeId: 8, ThemeTitle: 'Fracciones', redirectTo: 'fractions' },
-    { CourseId: 1, ThemeId: 9, ThemeTitle: 'Porcentaje', redirectTo: 'percentage' },
-    { CourseId: 1, ThemeId: 10, ThemeTitle: 'MCM', redirectTo: 'mcm' },
-    { CourseId: 1, ThemeId: 11, ThemeTitle: 'MCD', redirectTo: 'mcd' },
-    { CourseId: 1, ThemeId: 12, ThemeTitle: 'Operaciones Combinadas', redirectTo: 'mixedOperations' },
-    { CourseId: 1, ThemeId: 13, ThemeTitle: 'Sistemas Númericos', redirectTo: 'numericSystem' },
+    { CourseId: 1, ThemeId: 8, ThemeTitle: 'Operaciones Combinadas', redirectTo: 'mixedOperations' },
+
+    { CourseId: 2, ThemeId: 9, ThemeTitle: 'Fracciones', redirectTo: 'fractions' },
+    { CourseId: 2, ThemeId: 10, ThemeTitle: 'Porcentaje', redirectTo: 'percentage' },
+    { CourseId: 2, ThemeId: 11, ThemeTitle: 'Factor Primo', redirectTo: 'primeFactor' },
+    { CourseId: 2, ThemeId: 12, ThemeTitle: 'MCM', redirectTo: 'mcm' },
+    { CourseId: 2, ThemeId: 13, ThemeTitle: 'MCD', redirectTo: 'mcd' },
+    { CourseId: 2, ThemeId: 14, ThemeTitle: 'Sistemas Númericos', redirectTo: 'numericSystem' },
+
     //Algebra
-    { CourseId: 3, ThemeId: 14, ThemeTitle: 'Teoria de Exponentes', redirectTo: 'exponentPower' },
+    { CourseId: 3, ThemeId: 15, ThemeTitle: 'Teoria de Exponentes', redirectTo: 'exponentPower' },
 ];
 
 const getThemesByCourseId = function (courseId) {

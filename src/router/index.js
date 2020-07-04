@@ -8,12 +8,15 @@ import CourseDetail from '../views/courses/CourseDetail.vue';
 //MathRoutes
 import { MathRouter } from './mathRouter';
 import { AlgebraRouter } from './algebraRouter';
+import { ArithmeticRouter } from './arithmeticRouter';
 
 Vue.use(VueRouter)
 
 let routes = [];
 routes = routes.concat(MathRouter.getMathRouters());
 routes = routes.concat(AlgebraRouter.getAlgebraRouters());
+routes = routes.concat(AlgebraRouter.getAlgebraRouters());
+routes = routes.concat(ArithmeticRouter.getArithmeticRouters());
 
 routes = routes.concat([
   {
