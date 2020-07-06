@@ -4,6 +4,7 @@ import Mcd from '@/views/themes/arithmetic/mcd.vue';
 import Percentage from '@/views/themes/arithmetic/percentage.vue';
 import NumericSystem from '@/views/themes/arithmetic/numericSystem.vue';
 import PrimeFactor from '@/views/themes/arithmetic/primeFactor.vue';
+import Summations from '@/views/themes/arithmetic/summations.vue';
 
 const getArithmeticRouters = () => {
     return [
@@ -13,6 +14,7 @@ const getArithmeticRouters = () => {
         { path: '/percentage', name: 'percentage', component: Percentage, },
         { path: '/numericSystem', name: 'numericSystem', component: NumericSystem, },
         { path: '/primeFactor', name: 'primeFactor', component: PrimeFactor, },
+        { path: '/summations', name: 'summations', component: Summations, },
     ];
 }
 

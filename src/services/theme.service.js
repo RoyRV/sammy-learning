@@ -15,9 +15,10 @@ const themes = [
     { CourseId: 2, ThemeId: 12, ThemeTitle: 'MCM', redirectTo: 'mcm' },
     { CourseId: 2, ThemeId: 13, ThemeTitle: 'MCD', redirectTo: 'mcd' },
     { CourseId: 2, ThemeId: 14, ThemeTitle: 'Sistemas Númericos', redirectTo: 'numericSystem' },
+    { CourseId: 2, ThemeId: 15, ThemeTitle: 'Sumatorias', redirectTo: 'summations' },
 
     //Algebra
-    { CourseId: 3, ThemeId: 15, ThemeTitle: 'Teoria de Exponentes', redirectTo: 'exponentPower' },
+    { CourseId: 3, ThemeId: 1, ThemeTitle: 'Teoria de Exponentes', redirectTo: 'exponentPower' },
 ];
 
 const getThemesByCourseId = function (courseId) {
