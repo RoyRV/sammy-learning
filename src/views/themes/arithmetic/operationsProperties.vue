@@ -171,9 +171,160 @@
                         <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
                             <b-card-body>
                                 <b-card-text>
-                                    <b-row>
+                                    <b-tabs content-class="mt-3">
+                                        <b-tab title="Explicación" active>
+                                            <b-row class="mb-4">
+                                                <b-col cols="12" md="6">
+                                                    <p style="text-align: left;">Donde:</p>
+                                                    <span class="description">a + b = S</span>
+                                                    <br>
+                                                    <span class="description">a / b = Q</span>
+                                                </b-col>
+                                                <b-col cols="12" md="6">
+                                                    <p style="text-align: left;">Entonces:</p>
+                                                    <span class="description">a = (S * Q)/(Q + 1)</span>
+                                                    <br>
+                                                    <span class="description">b = ( S )/(Q + 1)</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col style="text-align: left;">
+                                                    <p>Ejemplo : </p>
+                                                    <p>Donde sabemos que la suma de a y b es 25</p>
+                                                    <p>Donde sabemos que el cociente de a y b es 4</p>
+                                                    <p>En la suma, convertimos <strong>a</strong> en función de
+                                                        <strong>b</strong> => <span>a = 25 - b .... (1)</span>
+                                                    </p>
+                                                    <p>En el cociente, convertimos <strong>a</strong> en función de
+                                                        <strong>b</strong> => <span>a = 4b .... (2)</span>
+                                                    </p>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>Igualamos los valores de a, de las dos ecuaciones 1 y 2</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>25 - b = 4b</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>25 = 5b (paso b a sumar al otro lado)</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>25 / 5 = b (obtengo el resultado)</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>b = 5</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row class="mt-4">
+                                                <b-col style="text-align: left;">
+                                                    <p>Para obtener el valor de la variable "a" podriamos usar 2
+                                                        técnicas</p>
+                                                    <ul>
+                                                        <li>
+                                                            Reemplazar el valor de la variable a en la ecuación S o Q
+                                                        </li>
+                                                        <li>
+                                                            Reemplazar el valor de la variable a en la ecuación (1) o
+                                                            (2)
+                                                        </li>
+                                                    </ul>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <p>Reemplazando a en S</p>
+                                                    <span>a + b = S</span> <br>
+                                                    <span>a + 5 = 25</span> <br>
+                                                    <span>a =25 - 5</span> <br>
+                                                    <span>a = 20</span> <br>
+                                                </b-col>
+                                            </b-row>
+                                        </b-tab>
+                                        <b-tab title="Ejemplo Descriptivo">
+                                            <b-row>
+                                                <b-col cols="12" md="6">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="exampleTwoSummatory" :max="100"
+                                                                :min="1" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row class="mb-4">
+                                                        <b-col>
+                                                            <p>Dada la <strong>suma</strong> de 2 números A y B es igual
+                                                                a
+                                                                {{exampleTwoSummatory}}</p>
+                                                            <p>A + B = {{exampleTwoSummatory}}</p>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                                <b-col cols="12" md="6">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="exampleTwoQuotient" :max="100"
+                                                                :min="1" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row class="mb-4">
+                                                        <b-col>
+                                                            <p>Dada la <strong>división</strong> de 2 números A y B es
+                                                                igual a
+                                                                {{exampleTwoQuotient}}</p>
+                                                            <p>A / B = {{exampleTwoQuotient}}</p>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="12" md="6">
+                                                    <p>Entonces para determinar A</p>
+                                                    <p><strong>Expresamos B</strong> en función de A</p>
+                                                    <p>(De la suma) B = {{exampleTwoSummatory}} - A ... (1)</p>
+                                                    <p>(De la división) B = A / {{exampleTwoQuotient}} ... (2)</p>
+                                                    <p>Igualamos la expresión 1 y 2</p>
+                                                    <p>{{exampleTwoSummatory}} - A = A / {{exampleTwoQuotient}}</p>
+                                                    <p>{{exampleTwoSummatory}} = (A / {{exampleTwoQuotient}}) + A</p>
+                                                    <p>{{exampleTwoSummatory}} = ({{exampleTwoQuotient}} A + A )/
+                                                        {{exampleTwoQuotient}}</p>
+                                                    <p>{{exampleTwoSummatory}} = ({{exampleTwoQuotient + 1 }} A
+                                                        )/{{exampleTwoQuotient}}</p>
+                                                    <p>{{exampleTwoSummatory}} * {{exampleTwoQuotient}} =
+                                                        ({{exampleTwoQuotient + 1 }} A)</p>
+                                                    <p>{{exampleTwoSummatory * exampleTwoQuotient}} =
+                                                        ({{exampleTwoQuotient + 1 }} A)</p>
+                                                    <p>{{exampleTwoSummatory * exampleTwoQuotient}} /
+                                                        {{exampleTwoQuotient + 1 }} = A</p>
+                                                    <p v-if="!exampleTwoCanSimplifyA"> {{getSimplifiedFraction (exampleTwoSummatory * exampleTwoQuotient,
+                                                        exampleTwoQuotient + 1 )}} = A</p>
+                                                </b-col>
 
-                                    </b-row>
+                                                <b-col cols="12" md="6">
+                                                    <p>Entonces para determinar B</p>
+                                                    <p><strong>Expresamos A</strong> en función de B</p>
+                                                    <p>(De la suma) A = {{exampleTwoSummatory}} - B ... (1)</p>
+                                                    <p>(De la división) A = {{exampleTwoQuotient}} B ... (2)</p>
+                                                    <p>Igualamos la expresión 1 y 2</p>
+                                                    <p>{{exampleTwoSummatory}} - B = {{exampleTwoQuotient}} B</p>
+                                                    <p>{{exampleTwoSummatory}} = {{exampleTwoQuotient }}B + B</p>
+                                                    <p>{{exampleTwoSummatory}} = ({{exampleTwoQuotient + 1}} B )</p>
+                                                    <p>{{exampleTwoSummatory}} / {{exampleTwoQuotient + 1}} = B</p>
+
+                                                    <p v-if="!exampleTwoCanSimplifyA"> {{getSimplifiedFraction (exampleTwoSummatory,
+                                                        exampleTwoQuotient + 1 )}} = B</p>
+                                                </b-col>
+                                            </b-row>
+                                        </b-tab>
+                                    </b-tabs>
                                 </b-card-text>
                             </b-card-body>
                         </b-collapse>
@@ -210,14 +361,44 @@
     </div>
 </template>
 <script>
+    import { mathHelper } from '@/helpers';
     export default {
         name: 'OperationsProperties',
         data() {
             return {
                 exampleOneSummatory: 80,
-                exampleOneSubstraction: 16
-
+                exampleOneSubstraction: 16,
+                exampleTwoSummatory: 80,
+                exampleTwoQuotient: 16,
+                exampleTwoCanSimplifyA: false
             }
+        },
+        methods: {
+            getSimplifiedFraction(n1, n2) {
+                var value = mathHelper.getSimplifiedFraction(n1, n2);
+                this.exampleTwoCanSimplifyA = value.indexOf(`/ ${n2}`) !== -1;
+                return value == '' ? '1' : value;
+            }
+        },
+        watch: {
+            exampleTwoSummatory: {
+                immediate: false,
+                deep: true,
+                handler() {
+                    let n1 = this.exampleTwoSummatory * this.exampleTwoQuotient;
+                    let n2 = this.exampleTwoQuotient + 1;
+                    this.getSimplifiedFraction(n1, n2);
+                }
+            },
+            exampleTwoQuotient: {
+                immediate: false,
+                deep: true,
+                handler() {
+                    let n1 = this.exampleTwoSummatory;
+                    let n2 = this.exampleTwoQuotient + 1;
+                    this.getSimplifiedFraction(n1, n2);
+                }
+            },
         },
     }
 </script>
