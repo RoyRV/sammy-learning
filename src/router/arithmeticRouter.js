@@ -5,6 +5,7 @@ import Percentage from '@/views/themes/arithmetic/percentage.vue';
 import NumericSystem from '@/views/themes/arithmetic/numericSystem.vue';
 import PrimeFactor from '@/views/themes/arithmetic/primeFactor.vue';
 import Summations from '@/views/themes/arithmetic/summations.vue';
+import OperationsProperties from '@/views/themes/arithmetic/operationsProperties.vue';
 
 const getArithmeticRouters = () => {
     return [
@@ -15,6 +16,7 @@ const getArithmeticRouters = () => {
         { path: '/numericSystem', name: 'numericSystem', component: NumericSystem, },
         { path: '/primeFactor', name: 'primeFactor', component: PrimeFactor, },
         { path: '/summations', name: 'summations', component: Summations, },
+        { path: '/operationsProperties', name: 'operationsProperties', component: OperationsProperties, },
     ];
 }
 

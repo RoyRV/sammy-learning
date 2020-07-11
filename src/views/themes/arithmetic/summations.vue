@@ -261,10 +261,7 @@
                     this.oddData.push(index);
                 else
                     this.evenData.push(index);
-
             }
-            console.log(this.evenData)
-            console.log(this.oddData)
         },
         data() {
             return {

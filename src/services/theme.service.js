@@ -16,6 +16,7 @@ const themes = [
     { CourseId: 2, ThemeId: 13, ThemeTitle: 'MCD', redirectTo: 'mcd' },
     { CourseId: 2, ThemeId: 14, ThemeTitle: 'Sistemas Númericos', redirectTo: 'numericSystem' },
     { CourseId: 2, ThemeId: 15, ThemeTitle: 'Sumatorias', redirectTo: 'summations' },
+    { CourseId: 2, ThemeId: 16, ThemeTitle: 'Hallar 2 números, sabiendo...', redirectTo: 'operationsProperties' },
 
     //Algebra
     { CourseId: 3, ThemeId: 1, ThemeTitle: 'Teoria de Exponentes', redirectTo: 'exponentPower' },
