@@ -304,10 +304,9 @@
                                                         ({{exampleTwoQuotient + 1 }} A)</p>
                                                     <p>{{exampleTwoSummatory * exampleTwoQuotient}} /
                                                         {{exampleTwoQuotient + 1 }} = A</p>
-                                                    <p v-if="!exampleTwoCanSimplifyA"> {{getSimplifiedFraction (exampleTwoSummatory * exampleTwoQuotient,
+                                                    <p v-if="!exampleTwoCanSimplify"> {{getSimplifiedFraction (exampleTwoSummatory * exampleTwoQuotient,
                                                         exampleTwoQuotient + 1 )}} = A</p>
                                                 </b-col>
-
                                                 <b-col cols="12" md="6">
                                                     <p>Entonces para determinar B</p>
                                                     <p><strong>Expresamos A</strong> en función de B</p>
@@ -319,8 +318,75 @@
                                                     <p>{{exampleTwoSummatory}} = ({{exampleTwoQuotient + 1}} B )</p>
                                                     <p>{{exampleTwoSummatory}} / {{exampleTwoQuotient + 1}} = B</p>
 
-                                                    <p v-if="!exampleTwoCanSimplifyA"> {{getSimplifiedFraction (exampleTwoSummatory,
+                                                    <p v-if="!exampleTwoCanSimplify"> {{getSimplifiedFraction (exampleTwoSummatory,
                                                         exampleTwoQuotient + 1 )}} = B</p>
+                                                </b-col>
+                                            </b-row>
+                                        </b-tab>
+                                        <b-tab title="Ejemplo/Formula">
+                                            <b-row>
+                                                <b-col cols="12" md="6">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="exampleTwoSummatory" :max="100"
+                                                                :min="1" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row class="mb-4">
+                                                        <b-col>
+                                                            <p>Dada la <strong>suma</strong> de 2 números A y B es igual
+                                                                a
+                                                                {{exampleTwoSummatory}}</p>
+                                                            <p>A + B = {{exampleTwoSummatory}}</p>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                                <b-col cols="12" md="6">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="exampleTwoQuotient" :max="100"
+                                                                :min="1" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row class="mb-4">
+                                                        <b-col>
+                                                            <p>Dada la <strong>división</strong> de 2 números A y B es
+                                                                igual a
+                                                                {{exampleTwoQuotient}}</p>
+                                                            <p>A / B = {{exampleTwoQuotient}}</p>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="12" md="6">
+                                                    <p>Entonces para determinar A</p>
+                                                    <p>
+                                                        A = ({{exampleTwoSummatory}} * {{exampleTwoQuotient}}) /
+                                                        ({{exampleTwoQuotient}} + 1)
+                                                    </p>
+                                                    <p>
+                                                        A = ({{exampleTwoSummatory * exampleTwoQuotient}}) /
+                                                        ({{exampleTwoQuotient + 1 }})
+                                                    </p>
+                                                    <p v-if="!exampleTwoCanSimplify">
+                                                        A= {{getSimplifiedFraction (exampleTwoSummatory * exampleTwoQuotient,
+                                                            exampleTwoQuotient + 1 )}} </p>
+                                                </b-col>
+                                                <b-col cols="12" md="6">
+                                                    <p>Entonces para determinar B</p>
+                                                    <p>
+                                                        B = ({{exampleTwoSummatory}}) /
+                                                        ({{exampleTwoQuotient}} + 1)
+                                                    </p>
+                                                    <p>
+                                                        B = ({{exampleTwoSummatory}}) /
+                                                        ({{exampleTwoQuotient + 1}})
+                                                    </p>
+                                                    <p v-if="!exampleTwoCanSimplify">
+                                                        B =
+                                                        {{getSimplifiedFraction (exampleTwoSummatory , exampleTwoQuotient + 1 )}}
+                                                    </p>
                                                 </b-col>
                                             </b-row>
                                         </b-tab>
@@ -370,13 +436,13 @@
                 exampleOneSubstraction: 16,
                 exampleTwoSummatory: 80,
                 exampleTwoQuotient: 16,
-                exampleTwoCanSimplifyA: false
+                exampleTwoCanSimplify: false
             }
         },
         methods: {
             getSimplifiedFraction(n1, n2) {
                 var value = mathHelper.getSimplifiedFraction(n1, n2);
-                this.exampleTwoCanSimplifyA = value.indexOf(`/ ${n2}`) !== -1;
+                this.exampleTwoCanSimplify = value.indexOf(`/ ${n2}`) !== -1;
                 return value == '' ? '1' : value;
             }
         },
