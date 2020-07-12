@@ -9,7 +9,7 @@
             <b-col cols="6" md="3">
                 <b-row>
                     <b-col>
-                        <vue-slider v-model="numbers[0]" :max="10" />
+                        <vue-slider v-model="numbers[0]" :max="20" :min="10" />
                     </b-col>
                 </b-row>
                 <b-row>
@@ -74,7 +74,7 @@
         components: { FigureComponent, /*CanvasDrawComponent */ },
         data() {
             return {
-                numbers: [4, 2]
+                numbers: [12, 2]
             }
         },
         computed: {

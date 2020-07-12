@@ -9,7 +9,7 @@
             <b-col cols="6" md="3">
                 <b-row>
                     <b-col>
-                        <vue-slider v-model="numbers[0]" :max="10" />
+                        <vue-slider v-model="numbers[0]" :max="25" />
                     </b-col>
                 </b-row>
                 <b-row>
@@ -32,7 +32,7 @@
             <b-col cols="6" md="3">
                 <b-row>
                     <b-col>
-                        <vue-slider v-model="numbers[1]" :max="10" />
+                        <vue-slider v-model="numbers[1]" :max="25" />
                     </b-col>
                 </b-row>
                 <b-row>

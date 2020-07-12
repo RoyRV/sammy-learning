@@ -190,8 +190,8 @@
                                             <b-row>
                                                 <b-col style="text-align: left;">
                                                     <p>Ejemplo : </p>
-                                                    <p>Donde sabemos que la suma de a y b es 25</p>
-                                                    <p>Donde sabemos que el cociente de a y b es 4</p>
+                                                    <p>Donde sabemos que la suma de a y b es 25 => (a + b = 25)</p>
+                                                    <p>Donde sabemos que el cociente de a y b es 4 => (a / b = 4)</p>
                                                     <p>En la suma, convertimos <strong>a</strong> en función de
                                                         <strong>b</strong> => <span>a = 25 - b .... (1)</span>
                                                     </p>
@@ -250,7 +250,7 @@
                                                 </b-col>
                                             </b-row>
                                         </b-tab>
-                                        <b-tab title="Ejemplo Descriptivo">
+                                        <b-tab title="Ej. Descriptivo">
                                             <b-row>
                                                 <b-col cols="12" md="6">
                                                     <b-row>
@@ -305,7 +305,7 @@
                                                     <p>{{exampleTwoSummatory * exampleTwoQuotient}} /
                                                         {{exampleTwoQuotient + 1 }} = A</p>
                                                     <p v-if="!exampleTwoCanSimplify"> {{getSimplifiedFraction (exampleTwoSummatory * exampleTwoQuotient,
-                                                        exampleTwoQuotient + 1 )}} = A</p>
+                                                        exampleTwoQuotient + 1 ,'exampleTwoCanSimplify')}} = A</p>
                                                 </b-col>
                                                 <b-col cols="12" md="6">
                                                     <p>Entonces para determinar B</p>
@@ -319,11 +319,11 @@
                                                     <p>{{exampleTwoSummatory}} / {{exampleTwoQuotient + 1}} = B</p>
 
                                                     <p v-if="!exampleTwoCanSimplify"> {{getSimplifiedFraction (exampleTwoSummatory,
-                                                        exampleTwoQuotient + 1 )}} = B</p>
+                                                        exampleTwoQuotient + 1,'exampleTwoCanSimplify' )}} = B</p>
                                                 </b-col>
                                             </b-row>
                                         </b-tab>
-                                        <b-tab title="Ejemplo/Formula">
+                                        <b-tab title="Ej. Formula">
                                             <b-row>
                                                 <b-col cols="12" md="6">
                                                     <b-row>
@@ -403,7 +403,228 @@
                         <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
                             <b-card-body>
                                 <b-card-text>
-                                    <span>La diferencia y el cociente</span>
+                                    <b-tabs content-class="mt-3">
+                                        <b-tab title="Explicación" active>
+                                            <b-row class="mb-4">
+                                                <b-col cols="12" md="6">
+                                                    <p style="text-align: left;">Donde:</p>
+                                                    <span class="description">a - b = D</span>
+                                                    <br>
+                                                    <span class="description">a / b = Q</span>
+                                                </b-col>
+                                                <b-col cols="12" md="6">
+                                                    <p style="text-align: left;">Entonces:</p>
+                                                    <span class="description">a = (D * Q)/(Q - 1)</span>
+                                                    <br>
+                                                    <span class="description">b = ( D )/(Q - 1)</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col style="text-align: left;">
+                                                    <p>Ejemplo : </p>
+                                                    <p>Donde sabemos que la resta de a y b es 25 => (a - b = 25)</p>
+                                                    <p>Donde sabemos que el cociente de a y b es 6 => (a / b = 6)</p>
+                                                    <p>En la resta, convertimos <strong>a</strong> en función de
+                                                        <strong>b</strong> => <span>a = 25 + b .... (1)</span>
+                                                    </p>
+                                                    <p>En el cociente, convertimos <strong>a</strong> en función de
+                                                        <strong>b</strong> => <span>a = 6b .... (2)</span>
+                                                    </p>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>Igualamos los valores de a, de las dos ecuaciones 1 y 2</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>25 + b = 6b</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>25 = 6b -b (paso b a restar al otro lado)</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>25 = 5b (paso b a dividir al otro lado)</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>25/5 = b (obtengo resultado)</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <span>5 = b (valor final)</span>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row class="mt-4">
+                                                <b-col style="text-align: left;">
+                                                    <p>Para obtener el valor de la variable "a" podriamos usar 2
+                                                        técnicas</p>
+                                                    <ul>
+                                                        <li>
+                                                            Reemplazar el valor de la variable a en la ecuación D o Q
+                                                        </li>
+                                                        <li>
+                                                            Reemplazar el valor de la variable a en la ecuación (1) o
+                                                            (2)
+                                                        </li>
+                                                    </ul>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <p>Reemplazando a en D</p>
+                                                    <span>a - b = D</span> <br>
+                                                    <span>a - 5 = 25</span> <br>
+                                                    <span>a =25 + 5</span> <br>
+                                                    <span>a = 30</span> <br>
+                                                </b-col>
+                                            </b-row>
+                                        </b-tab>
+                                        <b-tab title="Ej. Descriptivo">
+                                            <b-row>
+                                                <b-col cols="12" md="6">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="exampleThreeSubstraction" :max="100"
+                                                                :min="1" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row class="mb-4">
+                                                        <b-col>
+                                                            <p>Dada la <strong>diferencia</strong> de 2 números A y B es
+                                                                igual a {{exampleThreeSubstraction}}</p>
+                                                            <p>A - B = {{exampleThreeSubstraction}}</p>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                                <b-col cols="12" md="6">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="exampleThreeQuotient" :max="100"
+                                                                :min="1" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row class="mb-4">
+                                                        <b-col>
+                                                            <p>Dada la <strong>división</strong> de 2 números A y B es
+                                                                igual a
+                                                                {{exampleThreeQuotient}}</p>
+                                                            <p>A / B = {{exampleThreeQuotient}}</p>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="12" md="6">
+                                                    <p>Entonces para determinar A</p>
+                                                    <p><strong>Expresamos B</strong> en función de A</p>
+                                                    <p>(De la resta) B = A - {{exampleThreeSubstraction}} ... (1)</p>
+                                                    <p>(De la división) B = A / {{exampleThreeQuotient}} ... (2)</p>
+                                                    <p>Igualamos la expresión 1 y 2</p>
+                                                    <p>A - {{exampleThreeSubstraction}} = A / {{exampleThreeQuotient}}
+                                                    </p>
+                                                    <p>A - (A / {{exampleThreeQuotient}}) = {{exampleThreeSubstraction}}
+                                                    </p>
+                                                    <p>({{exampleThreeQuotient}}A - A) / {{exampleThreeQuotient}} =
+                                                        {{exampleThreeSubstraction}}</p>
+                                                    <p>({{exampleThreeQuotient-1}}A) / {{exampleThreeQuotient}} =
+                                                        {{exampleThreeSubstraction}}</p>
+                                                    <p>A = ({{exampleThreeSubstraction}} * {{exampleThreeQuotient}}) /
+                                                        {{exampleThreeQuotient - 1}}</p>
+                                                    <p>A = ({{exampleThreeSubstraction * exampleThreeQuotient}}) /
+                                                        {{exampleThreeQuotient - 1}}</p>
+                                                    <p v-if="!exampleThreeCanSimplify">
+                                                        A = {{getSimplifiedFraction
+                                                             (exampleThreeSubstraction * exampleThreeQuotient,
+                                                              exampleThreeQuotient - 1,
+                                                              'exampleThreeCanSimplify' )}}
+                                                    </p>
+                                                </b-col>
+                                            </b-row>
+                                        </b-tab>
+                                        <b-tab title="Ej. Formula">
+                                            <b-row>
+                                                <b-col cols="12" md="6">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="exampleThreeSubstraction" :max="100"
+                                                                :min="1" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row class="mb-4">
+                                                        <b-col>
+                                                            <p>Dada la <strong>diferencia (resta)</strong> de 2 números
+                                                                A y B es igual
+                                                                a
+                                                                {{exampleThreeSubstraction}}</p>
+                                                            <p>A - B = {{exampleThreeSubstraction}}</p>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                                <b-col cols="12" md="6">
+                                                    <b-row>
+                                                        <b-col>
+                                                            <vue-slider v-model="exampleThreeQuotient" :max="100"
+                                                                :min="1" />
+                                                        </b-col>
+                                                    </b-row>
+                                                    <b-row class="mb-4">
+                                                        <b-col>
+                                                            <p>Dada la <strong>división</strong> de 2 números A y B es
+                                                                igual a
+                                                                {{exampleThreeQuotient}}</p>
+                                                            <p>A / B = {{exampleThreeQuotient}}</p>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="12" md="6">
+                                                    <p>Entonces para determinar A</p>
+                                                    <p>
+                                                        A = ({{exampleThreeSubstraction}} * {{exampleThreeQuotient}}) /
+                                                        ({{exampleThreeQuotient}} - 1)
+                                                    </p>
+                                                    <p>
+                                                        A = ({{exampleThreeSubstraction * exampleThreeQuotient}}) /
+                                                        ({{exampleThreeQuotient - 1}})
+                                                    </p>
+                                                    <p v-if="!exampleThreeCanSimplify">
+                                                        A =
+                                                        {{getSimplifiedFraction
+                                                        (exampleThreeSubstraction * exampleThreeQuotient,
+                                                        exampleThreeQuotient - 1,
+                                                        'exampleThreeCanSimplify' )}}
+                                                    </p>
+                                                </b-col>
+                                                <b-col cols="12" md="6">
+                                                    <p>Entonces para determinar B</p>
+                                                    <p>
+                                                        B = ({{exampleThreeSubstraction}}) /
+                                                        ({{exampleThreeQuotient}} - 1)
+                                                    </p>
+                                                    <p>
+                                                        B = ({{exampleThreeSubstraction }}) /
+                                                        ({{exampleThreeQuotient - 1}})
+                                                    </p>
+                                                    <p v-if="!exampleThreeCanSimplify">
+                                                        B =
+                                                        {{getSimplifiedFraction
+                                                        (exampleThreeSubstraction ,
+                                                        exampleThreeQuotient - 1,
+                                                        'exampleThreeCanSimplify' )}}
+                                                    </p>
+                                                </b-col>
+                                            </b-row>
+                                        </b-tab>
+                                    </b-tabs>
                                 </b-card-text>
                             </b-card-body>
                         </b-collapse>
@@ -436,13 +657,16 @@
                 exampleOneSubstraction: 16,
                 exampleTwoSummatory: 80,
                 exampleTwoQuotient: 16,
-                exampleTwoCanSimplify: false
+                exampleTwoCanSimplify: false,
+                exampleThreeSubstraction: 80,
+                exampleThreeQuotient: 16,
+                exampleThreeCanSimplify: false,
             }
         },
         methods: {
-            getSimplifiedFraction(n1, n2) {
-                var value = mathHelper.getSimplifiedFraction(n1, n2);
-                this.exampleTwoCanSimplify = value.indexOf(`/ ${n2}`) !== -1;
+            getSimplifiedFraction(n1, n2, keyName) {
+                let value = mathHelper.getSimplifiedFraction(n1, n2);
+                this[keyName] = value.indexOf(`/ ${n2}`) !== -1;
                 return value == '' ? '1' : value;
             }
         },
@@ -453,7 +677,7 @@
                 handler() {
                     let n1 = this.exampleTwoSummatory * this.exampleTwoQuotient;
                     let n2 = this.exampleTwoQuotient + 1;
-                    this.getSimplifiedFraction(n1, n2);
+                    this.getSimplifiedFraction(n1, n2, 'exampleTwoCanSimplify');
                 }
             },
             exampleTwoQuotient: {
@@ -462,9 +686,27 @@
                 handler() {
                     let n1 = this.exampleTwoSummatory;
                     let n2 = this.exampleTwoQuotient + 1;
-                    this.getSimplifiedFraction(n1, n2);
+                    this.getSimplifiedFraction(n1, n2, 'exampleTwoCanSimplify');
                 }
             },
+            exampleThreeSubstraction: {
+                immediate: false,
+                deep: true,
+                handler() {
+                    let n1 = this.exampleThreeSubstraction * this.exampleThreeQuotient;
+                    let n2 = this.exampleThreeQuotient - 1;
+                    this.getSimplifiedFraction(n1, n2, 'exampleThreeCanSimplify');
+                }
+            },
+            exampleThreeQuotient: {
+                immediate: false,
+                deep: true,
+                handler() {
+                    let n1 = this.exampleThreeSubstraction;
+                    let n2 = this.exampleThreeQuotient - 1;
+                    this.getSimplifiedFraction(n1, n2, 'exampleThreeCanSimplify');
+                }
+            }
         },
     }
 </script>
