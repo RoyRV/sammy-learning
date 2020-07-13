@@ -166,7 +166,7 @@
                                         </b-col>
                                         <b-col>
                                             <div class="mixedPercentageResult">
-                                                <span>Resultado : {{mixedPercentageResult}}</span>
+                                                <strong>Resultado : {{mixedPercentageResult}}</strong>
                                             </div>
                                         </b-col>
                                     </b-row>

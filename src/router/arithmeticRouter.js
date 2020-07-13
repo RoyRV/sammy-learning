@@ -1,4 +1,5 @@
 import Fractions from '@/views/themes/arithmetic/fractions.vue';
+import CompareFractions from '@/views/themes/arithmetic/compareFractions.vue';
 import Mcm from '@/views/themes/arithmetic/mcm.vue';
 import Mcd from '@/views/themes/arithmetic/mcd.vue';
 import Percentage from '@/views/themes/arithmetic/percentage.vue';
@@ -10,6 +11,7 @@ import OperationsProperties from '@/views/themes/arithmetic/operationsProperties
 const getArithmeticRouters = () => {
     return [
         { path: '/fractions', name: 'fractions', component: Fractions, },
+        { path: '/compareFractions', name: 'compareFractions', component: CompareFractions, },
         { path: '/mcm', name: 'mcm', component: Mcm, },
         { path: '/mcd', name: 'mcd', component: Mcd, },
         { path: '/percentage', name: 'percentage', component: Percentage, },

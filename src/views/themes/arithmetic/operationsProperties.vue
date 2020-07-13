@@ -629,19 +629,7 @@
                             </b-card-body>
                         </b-collapse>
                     </b-card>
-                    <!--El producto el cociente-->
-                    <b-card no-body class="mb-1">
-                        <b-card-header header-tag="header" role="tab">
-                            <b-button block v-b-toggle.accordion-4 variant="info">El producto y el cociente</b-button>
-                        </b-card-header>
-                        <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
-                            <b-card-body>
-                                <b-card-text>
-                                    <span>El producto y el cociente</span>
-                                </b-card-text>
-                            </b-card-body>
-                        </b-collapse>
-                    </b-card>
+
                 </div>
             </b-col>
         </b-row>
