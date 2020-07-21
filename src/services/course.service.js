@@ -1,5 +1,9 @@
 const courses = [
     {
+        CourseId: 8, Title: "Adivinanzas", Icon: 'guess.svg',
+        Description: 'Adivinanzas'
+    },
+    {
         CourseId: 1, Title: "Matemática", Icon: 'math.svg',
         Description: 'Temas como : 4 operaciones , conceptos básicos.'
     },
@@ -27,6 +31,7 @@ const courses = [
         CourseId: 7, Title: "R.M.", Icon: 'rm.svg',
         Description: 'Temas como : Operadores, Ecuaciones, Edades'
     },
+
 ];
 
 const getCourses = () => {

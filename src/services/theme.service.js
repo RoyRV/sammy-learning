@@ -28,6 +28,15 @@ const themes = [
     { CourseId: 7, ThemeId: 701, ThemeTitle: 'Regla de 3 simple', redirectTo: 'ruleOf3Simple' },
     { CourseId: 7, ThemeId: 702, ThemeTitle: 'Regla de 3 compuesto', redirectTo: 'ruleOf3Compound' },
     { CourseId: 7, ThemeId: 703, ThemeTitle: 'Problema sobre edades', redirectTo: 'ageProblems' },
+
+    //Adivinanzas
+    { CourseId: 8, ThemeId: 801, ThemeTitle: 'Adivinanzas de animales', redirectTo: 'guessAnimals' },
+    { CourseId: 8, ThemeId: 802, ThemeTitle: 'Adivinanzas de comida', redirectTo: 'guessFood' },
+    { CourseId: 8, ThemeId: 803, ThemeTitle: 'Adivinanzas de instrumentos musicales', redirectTo: 'guessMusic' },
+    { CourseId: 8, ThemeId: 804, ThemeTitle: 'Adivinanzas de familiares', redirectTo: 'guessFamily' },
+    { CourseId: 8, ThemeId: 805, ThemeTitle: 'Adivinanzas de cosas de la casa', redirectTo: 'guessHouseThings' },
+    { CourseId: 8, ThemeId: 806, ThemeTitle: 'Adivinanzas de ropa', redirectTo: 'guessCloths' },
+
 ];
 
 const getThemesByCourseId = function (courseId) {

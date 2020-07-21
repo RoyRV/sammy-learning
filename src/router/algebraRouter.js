@@ -1,5 +1,4 @@
 //ALGEBRA
-
 import ExponentPower from '@/views/themes/algebra/exponentPower.vue';
 const getAlgebraRouters = () => {
     return [

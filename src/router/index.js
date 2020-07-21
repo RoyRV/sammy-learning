@@ -9,6 +9,7 @@ import CourseDetail from '../views/courses/CourseDetail.vue';
 import { MathRouter } from './mathRouter';
 import { AlgebraRouter } from './algebraRouter';
 import { ArithmeticRouter } from './arithmeticRouter';
+import { GuessRouter } from './guessRouter';
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,7 @@ routes = routes.concat(MathRouter.getMathRouters());
 routes = routes.concat(AlgebraRouter.getAlgebraRouters());
 routes = routes.concat(AlgebraRouter.getAlgebraRouters());
 routes = routes.concat(ArithmeticRouter.getArithmeticRouters());
+routes = routes.concat(GuessRouter.getGuessRouters());
 
 routes = routes.concat([
   {
