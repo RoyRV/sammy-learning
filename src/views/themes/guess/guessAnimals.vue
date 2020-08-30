@@ -15,8 +15,8 @@
                     <p class="btnContainer">
                         <b-button class="btnAnswer" variant="info" @click=toogleAnswer(index)>
                             {{riddle.showAnswer?'Ocultar':'Ver'}} respuesta
-                            <b-icon v-if="!riddle.showAnswer" class="btnIcon" icon="eye"></b-icon>
-                            <b-icon v-if="riddle.showAnswer" class="btnIcon" icon="eye-slash"></b-icon>
+                            <b-icon v-if="!riddle.showAnswer" class="btnIcon" icon="eye-fill"></b-icon>
+                            <b-icon v-if="riddle.showAnswer" class="btnIcon" icon="eye-slash-fill"></b-icon>
                         </b-button>
                     </p>
                 </b-card>
@@ -36,6 +36,12 @@
                     { statement: 'Vuelo de noche, duermo de día y nunca verás plumas en ala mía.', answer: 'El murciélago', showAnswer: false },
                     { statement: '¿Cuál es el animal que camina con las patas en la cabeza?', answer: 'El piojo', showAnswer: false },
                     { statement: 'Cuando nada en los ríos parece un tronco flotante, pero si muestra sus dientes todos huyen al instante.', answer: 'El cocodrilo', showAnswer: false },
+                    { statement: 'Viste de chaleco blanco, y también de saco negro , es un ave que no vuela,pero nada. ¿Quien será?.', answer: 'El pingüino', showAnswer: false },
+                    { statement: 'Este es un animal,de tal modo original,que al ponerse cara arriba,ya no se llama igual.', answer: 'El escarabajo', showAnswer: false },
+                    { statement: 'Si hay una carrera en el mar,¿quién es el último en llegar?.', answer: 'El delfin', showAnswer: false },
+                    { statement: 'Alas de mil colores y se pierden entre las flores.', answer: 'La mariposa', showAnswer: false },
+                    { statement: 'Aunque no soy florista,trabajo con flores y el hombre disfruta el fruto de mis labores.', answer: 'La abeja', showAnswer: false },
+                    { statement: '¿Quién es este que se arrima trayendo su casa arriba?', answer: 'El caracol', showAnswer: false },
                 ]
             }
         },
