@@ -541,9 +541,32 @@
                                                     <p>A = ({{exampleThreeSubstraction * exampleThreeQuotient}}) /
                                                         {{exampleThreeQuotient - 1}}</p>
                                                     <p v-if="!exampleThreeCanSimplify">
-                                                        A = {{getSimplifiedFraction
-                                                             (exampleThreeSubstraction * exampleThreeQuotient,
-                                                              exampleThreeQuotient - 1,
+                                                        A =
+                                                        {{getSimplifiedFraction
+                                                                                                             (exampleThreeSubstraction * exampleThreeQuotient,
+                                                                                                              exampleThreeQuotient - 1,
+                                                                                                              'exampleThreeCanSimplify' )}}
+                                                    </p>
+                                                </b-col>
+                                                <b-col cols="12" md="6">
+                                                    <p>Entonces para determinar B</p>
+                                                    <p><strong>Expresamos A</strong> en función de B</p>
+                                                    <p>(De la resta) A = B + {{exampleThreeSubstraction}} ... (1)</p>
+                                                    <p>(De la división) A = {{exampleThreeQuotient}} B ... (2)</p>
+                                                    <p>Igualamos la expresión 1 y 2</p>
+                                                    <p>B + {{exampleThreeSubstraction}} = {{exampleThreeQuotient}} B
+                                                    </p>
+                                                    <p>{{exampleThreeSubstraction}} = {{exampleThreeQuotient}} B - B
+                                                    </p>
+                                                    <p>{{exampleThreeSubstraction}} = {{exampleThreeQuotient - 1}} B
+                                                    </p>
+                                                    <p>{{exampleThreeSubstraction}} / {{exampleThreeQuotient - 1}} = B
+                                                    </p>
+
+                                                    <p v-if="!exampleThreeCanSimplify">
+                                                        B = {{getSimplifiedFraction
+                                                             (exampleThreeSubstraction,
+                                                            exampleThreeQuotient - 1,
                                                               'exampleThreeCanSimplify' )}}
                                                     </p>
                                                 </b-col>
