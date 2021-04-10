@@ -164,6 +164,65 @@
                                         </b-card-body>
                                     </b-collapse>
                                 </b-card>
+
+                                <b-card no-body class="mb-1">
+                                    <b-card-header header-tag="header" role="tab">
+                                        <b-button block v-b-toggle.properties-2 class="btnProperty">Termino N, sabiendo 1°termino</b-button>
+                                    </b-card-header>
+                                    <b-collapse id="properties-2" accordion="my-accordion1" role="tabpanel">
+                                        <b-card-body>
+                                            <b-card-text>
+                                                <b-row class="mt-1">
+                                                    <b-col cols="12" md="12">
+                                                        <p>El término general está dado por la fórmula</p>
+                                                        <span class="description">a</span><em><sub>n</sub></em>
+                                                        <span class="description"> =  a </span><em><sub>1</sub></em>
+                                                        <span class="description"> <em><sub> x</sub></em> (r)<sup>(n-1)</sup> </span>
+                                                    </b-col>
+                                                </b-row>
+                                                <b-row class="mt-1">
+                                                    <b-col cols="12" md="6">
+                                                        <p style="text-align: left;">Ejemplo</p>
+                                                        <p class="description">2,6,18,54,162,...</p>
+                                                        <p style="text-align: left;">Sabiendo que el 1° termino es <strong style="color:lime">2</strong></p>
+                                                        <p style="text-align: left;">Sabiendo que la razón es <strong style="color:blue">3</strong></p>
+                                                        <ul style="text-align: left;">
+                                                            <li>
+                                                                <span class="description">n </span><em><sub style="color:red">2</sub></em>
+                                                                <span class="description"> = </span>
+                                                                <span class="description" style="color:lime">2</span>
+                                                                <span class="description"> <em><sub> x</sub></em>(</span>
+                                                                <span class="description" style="color:blue"> 3 </span>
+                                                                <span class="description" >)<sup>( <span style="color:red">2</span>-1)</sup></span>
+                                                                <span class="description"> = 6</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="description">n </span><em><sub style="color:red">3</sub></em>
+                                                                <span class="description"> = </span>
+                                                                <span class="description" style="color:lime">2</span>
+                                                                <span class="description"> <em><sub> x</sub></em>(</span>
+                                                                <span class="description" style="color:blue"> 3 </span>
+                                                                <span class="description" >)<sup>( <span style="color:red">3</span>-1)</sup></span>
+                                                                <span class="description"> = 18</span>
+                                                            </li>
+                                                            <li>...</li>
+                                                            <li>
+                                                                <span class="description">n </span><em><sub style="color:red">10</sub></em>
+                                                                <span class="description"> = </span>
+                                                                <span class="description" style="color:lime">2</span>
+                                                                <span class="description"> <em><sub> x</sub></em>(</span>
+                                                                <span class="description" style="color:blue"> 3 </span>
+                                                                <span class="description" >)<sup>( <span style="color:red">10</span>-1)</sup></span>
+                                                                <br/>
+                                                                <span class="description">= 39366</span>
+                                                            </li>
+                                                        </ul>
+                                                    </b-col>
+                                                </b-row>
+                                            </b-card-text>
+                                        </b-card-body>
+                                    </b-collapse>
+                                </b-card>
                             </b-col>
                         </b-row>
                     </b-col>
