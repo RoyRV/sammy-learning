@@ -67,6 +67,108 @@
                     </b-col>
                 </b-row>
             </b-tab>
+            <b-tab title="Propiedades">
+                <b-row>
+                    <b-col cols="12" class="mt-4">
+                        <p style="text-align: left;">Dada la progresión geometrica:</p>
+                        <p>
+                            <span class="description">a</span><em><sub>1</sub></em>
+                            <span class="description"> , a </span><em><sub>2</sub></em>
+                            <span class="description"> , a </span><em><sub>3</sub></em>
+                            <span class="description"> , a </span><em><sub>4</sub></em>
+                            <span class="description"> ... </span>
+                            <span class="description"> , a </span><em><sub>n-2</sub></em>
+                            <span class="description"> , a </span><em><sub>n-1</sub></em>
+                            <span class="description"> , a </span><em><sub>n</sub></em>
+                        </p>
+                    </b-col> 
+                    <b-col cols="12">
+                        <b-row>
+                            <b-col>
+                                <span>Una progresión geometrica hemos dicho que cada término (excepto el primero, a1) 
+                                    se obtiene multiplicando al anterior por la razón, que vamos a designar con la letra <strong><i>r</i></strong></span><br />
+                            </b-col>
+                        </b-row>
+                        <b-row>
+                            <b-col class="mt-4">
+                                <b-card no-body class="mb-1">
+                                    <b-card-header header-tag="header" role="tab">
+                                        <b-button block v-b-toggle.properties-1
+                                            class="btnProperty">La Razón</b-button>
+                                    </b-card-header>
+                                    <b-collapse id="properties-1" accordion="my-accordion1" role="tabpanel">
+                                        <b-card-body>
+                                            <b-card-text>
+                                                <b-row class="mt-1">
+                                                    <b-col cols="12" md="4">
+                                                        <p style="text-align: left;">Se deduce que: </p>
+                                                        <ul style="text-align: left;">
+                                                            <li>
+                                                                <span class="description">a</span><em><sub>2</sub></em>
+                                                                <span class="description">=a</span><em><sub>1</sub></em>
+                                                                <span class="description"><em><sub> x</sub></em> r</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="description">a</span><em><sub>3</sub></em>
+                                                                <span class="description">=a</span><em><sub>2</sub></em>
+                                                                <span class="description"><em><sub> x</sub></em> r</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="description">a</span><em><sub>4</sub></em>
+                                                                <span class="description">=a</span><em><sub>3</sub></em>
+                                                                <span class="description"><em><sub> x</sub></em> r</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="description">a</span><em><sub>n</sub></em> 
+                                                                <span class="description"> = a</span><em><sub>(n-1)</sub></em>
+                                                                <span class="description"><em><sub> x</sub></em> r</span>
+                                                            </li>
+                                                        </ul>
+                                                    </b-col> <b-col cols="12" md="4">
+                                                        <p style="text-align: left;">Por lo tanto : </p>
+                                                        <ul style="text-align: left;">
+                                                            <li>
+                                                                <span class="description">r=</span>
+                                                                <span class="description">a</span><em><sub>2</sub></em>
+                                                                <span class="description">/a</span><em><sub>1</sub></em>
+                                                            </li>
+                                                            <li>
+                                                                <span class="description">r=</span>
+                                                                <span class="description">a</span><em><sub>3</sub></em>
+                                                                <span class="description">/a</span><em><sub>2</sub></em>
+                                                            </li>
+                                                            <li>
+                                                                <span class="description">r=</span>
+                                                                <span class="description">a</span><em><sub>4</sub></em>
+                                                                <span class="description">/a</span><em><sub>3</sub></em>
+                                                            </li>
+                                                            <li>
+                                                                <span class="description">r=</span>
+                                                                <span class="description">a</span><em><sub>n</sub></em>
+                                                                <span class="description">/a</span><em><sub>(n-1)</sub></em>
+                                                            </li>
+                                                        </ul>
+                                                    </b-col>
+                                                    <b-col cols="12" md="4">
+                                                        <p style="text-align: left;">Ejemplo: </p>
+                                                        <p class="description">2,6,18,54,162,...</p>
+                                                        <p style="text-align: left;">Entonces:</p>
+                                                        <ul style="text-align: left;">
+                                                            <li><span class="description">r = </span><span class="description">6 / 2 = 3</span></li>
+                                                            <li><span class="description">r = </span><span class="description">18 / 6 = 3</span></li>
+                                                        </ul>
+                                                        <p style="text-align: left;" class="description">∴ r = 3</p>
+                                                    </b-col>
+                                                </b-row>
+                                            </b-card-text>
+                                        </b-card-body>
+                                    </b-collapse>
+                                </b-card>
+                            </b-col>
+                        </b-row>
+                    </b-col>
+                </b-row>
+            </b-tab>
         </b-tabs>
     </div>
 </template>
