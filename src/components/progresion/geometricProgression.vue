@@ -218,6 +218,47 @@
                                                             </li>
                                                         </ul>
                                                     </b-col>
+                                                    <b-col cols="12" md="6">
+                                                        <b-row><b-col><p style="text-align: left;">Ejemplo</p></b-col></b-row>
+                                                        <b-row>
+                                                            <b-col>
+                                                                <span>1° termino : {{examplOne.firstNumber}}</span>
+                                                            </b-col>
+                                                        </b-row>
+                                                        <b-row>
+                                                            <b-col>
+                                                                <vue-slider v-model="examplOne.firstNumber" :max="10" :min="1" />
+                                                            </b-col>
+                                                        </b-row>
+                                                        <b-row>
+                                                            <b-col>
+                                                                <span>La razón : {{examplOne.constant}}</span>
+                                                            </b-col>
+                                                        </b-row>
+                                                        <b-row>
+                                                            <b-col>
+                                                                <vue-slider v-model="examplOne.constant" :max="10" :min="1" />
+                                                            </b-col>
+                                                        </b-row>
+                                                        <b-row>
+                                                            <b-col>
+                                                                <span>valor de N : {{examplOne.NValue}}</span>
+                                                            </b-col>
+                                                        </b-row>
+                                                        <b-row>
+                                                            <b-col>
+                                                                <vue-slider v-model="examplOne.NValue" :max="20" :min="1" />
+                                                            </b-col>
+                                                        </b-row>
+                                                        <b-row class="mt-1">
+                                                            <b-col style="text-align: left;">
+                                                                <span>El termino N ó</span>
+                                                                <span class="description"> n </span><em><sub>{{examplOne.NValue}}</sub></em>
+                                                                <span> es : </span>
+                                                                <strong> {{examplOne.firstNumber * Math.pow(examplOne.constant,(examplOne.NValue-1)) }}</strong>
+                                                            </b-col>
+                                                        </b-row>
+                                                    </b-col>
                                                 </b-row>
                                             </b-card-text>
                                         </b-card-body>
@@ -234,6 +275,15 @@
 <script>
     export default {
         name: 'GeometricProgressionComponent',
+        data() {
+            return {
+                examplOne: {
+                    firstNumber: 2,
+                    constant: 3,
+                    NValue: 4
+                },
+            }
+        },
     }
 </script>
 <style scoped>
