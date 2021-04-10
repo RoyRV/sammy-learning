@@ -408,7 +408,6 @@
                                         </b-collapse>
                                     </b-card>
                                 </div>
-
                             </b-col>
                         </b-row>
                     </b-col>
