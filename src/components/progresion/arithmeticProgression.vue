@@ -2,8 +2,6 @@
     <div>
         <b-tabs>
             <b-tab title="Explicación" active>
-                <b-row>
-                </b-row>
                 <b-row class="mt-1">
                     <b-col cols="12" style="text-align:left;">
                         <h3>Definición :</h3>
