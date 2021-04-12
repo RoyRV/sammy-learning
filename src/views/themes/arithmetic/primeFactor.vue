@@ -14,22 +14,16 @@
             </b-col>
         </b-row>
         <b-row class="mt-3">
-            <b-col>
+            <b-col cols="12">
                 <p style="text-align: left;">Ejemplo : </p>
             </b-col>
-        </b-row>
-        <b-row class="mt-1">
-            <b-col>
+            <b-col cols="12">
                 <vue-slider v-model="number" :min="2" :max="300" />
             </b-col>
-        </b-row>
-        <b-row class="mt-1">
-            <b-col>
+            <b-col cols="12">
                 <span> Número: {{number}} </span>
             </b-col>
-        </b-row>
-        <b-row>
-            <b-col>
+            <b-col cols="12">
                 <PrimeFactorComponent :number="number" />
             </b-col>
         </b-row>
