@@ -24,6 +24,9 @@
                 <span> Número: {{number}} </span>
             </b-col>
             <b-col cols="12">
+                <SuccessiveDivisionsComponent :number="number"/>
+            </b-col>
+            <b-col cols="12">
                 <PrimeFactorComponent :number="number" />
             </b-col>
         </b-row>
@@ -31,9 +34,10 @@
 </template>
 <script>
     import PrimeFactorComponent from '@/components/primeFactorComponent.vue';
+    import SuccessiveDivisionsComponent from '@/components/successiveDivisionsComponent.vue';
     export default {
         class: 'PrimeFactor',
-        components: { PrimeFactorComponent },
+        components: { PrimeFactorComponent ,SuccessiveDivisionsComponent},
         data() {
             return {
                 number: 20
