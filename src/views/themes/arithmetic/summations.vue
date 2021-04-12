@@ -140,14 +140,23 @@
                                                     </b-col>
                                                 </b-row>
                                                 <b-row class="mb-4">
-                                                    <b-col>
-                                                        <span>Donde n es : {{evenNumber}}</span>
+                                                    <b-col cols="12">
+                                                        <span>Donde 2n es : {{evenNumber}}</span>
+                                                    </b-col>
+                                                    <b-col cols="12">
+                                                        <span>=> 2n = {{evenNumber}}</span>
+                                                    </b-col>
+                                                    <b-col cols="12">
+                                                        <span>=> n = {{evenNumber}} / 2</span>
+                                                    </b-col>
+                                                    <b-col cols="12">
+                                                        <span>=> n = {{evenNumber / 2 }} </span>
                                                     </b-col>
                                                 </b-row>
                                                 <b-row>
                                                     <b-col cols="12">
                                                         <span class="">
-                                                            ({{evenNumber}}) * ({{evenNumber}} + 1)
+                                                            ({{evenNumber/2}}) * ({{evenNumber/2}} + 1)
                                                         </span>
                                                     </b-col>
                                                 </b-row>
@@ -155,7 +164,7 @@
                                                     <b-col cols="12">
                                                         <span> => </span>
                                                         <span class="">
-                                                            ({{evenNumber}}) * ({{evenNumber + 1}})
+                                                            ({{evenNumber/2}}) * ({{evenNumber/2 + 1}})
                                                         </span>
                                                     </b-col>
                                                 </b-row>
@@ -163,7 +172,7 @@
                                                     <b-col cols="12">
                                                         <span> => </span>
                                                         <span class="description">
-                                                            {{ evenNumber * (evenNumber + 1 ) }}
+                                                            {{ evenNumber/2 * (evenNumber/2 + 1 ) }}
                                                         </span>
                                                     </b-col>
                                                 </b-row>
@@ -223,20 +232,38 @@
                                                 </b-row>
                                                 <b-row class="mb-4">
                                                     <b-col>
-                                                        <span>Donde n es : {{oddNumber}}</span>
+                                                        <span>Donde 2n-1 es : {{oddNumber}}</span>
                                                     </b-col>
                                                 </b-row>
-                                                <b-row>
+                                                <b-row class="mb-4">
                                                     <b-col cols="12">
-                                                        {{oddNumber}}
+                                                        <span>=> 2n-1 = {{oddNumber}}</span>
+                                                    </b-col>
+                                                    <b-col cols="12">
+                                                        <span>=> 2n = {{oddNumber}} +1 </span>
+                                                    </b-col>
+                                                    
+                                                    <b-col cols="12">
+                                                        <span>=> 2n = {{oddNumber + 1 }} </span>
+                                                    </b-col>
+                                                    <b-col cols="12">
+                                                        <span>=> n = {{oddNumber + 1 }} / 2</span>
+                                                    </b-col>
+                                                    
+                                                    <b-col cols="12">
+                                                        <span>=> n = {{(oddNumber + 1 )/2}}</span>
+                                                    </b-col>
+                                              
+                                                    <b-col cols="12">
+                                                        => {{(oddNumber + 1 )/2}}
                                                         <sup class="expo">2</sup>
                                                     </b-col>
                                                 </b-row>
                                                 <b-row>
                                                     <b-col cols="12">
-                                                        <span> => </span>
+                                                        <span> = </span>
                                                         <span class="description">
-                                                            {{ oddNumber * oddNumber }}
+                                                            {{ Math.pow(((oddNumber + 1 )/2),2)}}
                                                         </span>
                                                     </b-col>
                                                 </b-row>
