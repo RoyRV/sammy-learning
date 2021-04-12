@@ -49,10 +49,10 @@
                 for (let index = 0; index < this.primeFactors.length; index++) {
                     let primeFactor = this.primeFactors[index];
                     for (let expoIndex = 0; expoIndex < primeFactor.exponential; expoIndex++) {
-                        console.log('number antes', number)
+                        // console.log('number antes', number)
                         this.divisors.push(primeFactor.base);
                         number = number/primeFactor.base;
-                        console.log('number despues', number)
+                        // console.log('number despues', number)
                         this.quotients.push(number);
                     }
                 }
