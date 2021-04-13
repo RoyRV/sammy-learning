@@ -190,7 +190,7 @@
                                                         <span class="description">a</span><em><sub>n</sub></em>
                                                         <span class="description"> = a </span><em><sub>1</sub></em>
                                                         <span class="description"> <em><sub> x</sub></em>
-                                                            (r)<sup>(n-1)</sup> </span>
+                                                            r<sup> (n-1)</sup> </span>
                                                     </b-col>
                                                 </b-row>
                                                 <b-row class="mt-1">
@@ -426,6 +426,66 @@
                                                     </b-row>
                                                 </b-col>
                                             </b-row>
+                                        </b-card-body>
+                                    </b-collapse>
+                                </b-card>
+
+                                <b-card no-body class="mb-1">
+                                    <b-card-header header-tag="header" role="tab">
+                                        <b-button block v-b-toggle.properties-4 class="btnProperty">Sumatoria
+                                        </b-button>
+                                    </b-card-header>
+                                    <b-collapse id="properties-4" accordion="my-accordion1" role="tabpanel">
+                                        <b-card-body>
+                                            <b-card-text>
+                                                <b-row class="mt-1">
+                                                    <b-col cols="12" md="12">
+                                                        <p>La sumatoria esta dada por 2 formulas dependiendo de los
+                                                            datos conocidos</p>
+                                                    </b-col>
+                                                    <b-col cols="12" md="6">
+                                                        <b-row>
+                                                            <b-col cols="12">
+                                                                <span class="description">Σ <em><sub>n</sub></em> = </span>
+                                                                <span class="description">a</span><em><sub>1</sub></em>
+                                                                <span class="description"><em><sub> x</sub></em>
+                                                                    [(r<sup> n</sup> - 1) / (r - 1)]</span>
+                                                            </b-col>
+                                                            <b-col class="mt-3" cols="12" style="text-align: left;">
+                                                                <span>
+                                                                    Necesitamos saber los datos como :
+                                                                    <ul class="mt-2">
+                                                                        <li>el 1° termino</li>
+                                                                        <li>el valor de n</li>
+                                                                        <li>el valor de la rázon</li>
+                                                                    </ul>
+                                                                </span>
+                                                            </b-col>
+                                                        </b-row>
+                                                    </b-col>
+                                                    <b-col cols="12" md="6">
+                                                        <b-row>
+                                                            <b-col cols="12">
+                                                                <span class="description">Σ <em><sub>n</sub></em> = </span>
+                                                                <span class="description">a</span><em><sub>n</sub></em>
+                                                                <span class="description"><em><sub> x</sub></em></span>
+                                                                <span class="description">[(r - a</span><em><sub>1</sub></em>
+                                                                <span class="description">) / (r - 1)]</span> 
+                                                            </b-col>
+                                                            <b-col class="mt-3" cols="12" style="text-align: left;">
+                                                                <span>
+                                                                    Necesitamos saber los datos como :
+                                                                    <ul class="mt-2">
+                                                                        <li>el 1° termino</li>
+                                                                        <li>el valor del termino enesimo</li>
+                                                                        <li>el valor de la rázon</li>
+                                                                    </ul>
+                                                                </span>
+                                                            </b-col>
+                                                        </b-row>
+                                                    </b-col> 
+                                                </b-row>
+                                            </b-card-text>
                                         </b-card-body>
                                     </b-collapse>
                                 </b-card>

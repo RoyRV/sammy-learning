@@ -32,28 +32,28 @@
                     <b-col cols="12" md="6">
                         <p style="text-align: left;">
                             <span>Donde :</span>
-                            <ul>
-                                <li>
-                                    <span class="description">a</span><em><sub>1</sub></em>
-                                    <span class="description"> : </span>
-                                    <span>El primer termino de la sucesión</span>
-                                </li>
-                                <li>
-                                    <span class="description">a</span><em><sub>n</sub></em>
-                                    <span class="description"> : </span>
-                                    <span>El útimo termino de la sucesión</span>
-                                </li>
-                                <li>
-                                    <span class="description">n</span>
-                                    <span class="description"> : </span>
-                                    <span>La cantidad de terminos de la sucesión</span>
-                                </li>
-                                <li>
-                                    <span class="description">d</span>
-                                    <span class="description"> : </span>
-                                    <span>Diferencia <b>constante</b> entre los miembros de la sucesión</span>
-                                </li>
-                            </ul>
+                        <ul>
+                            <li>
+                                <span class="description">a</span><em><sub>1</sub></em>
+                                <span class="description"> : </span>
+                                <span>El primer termino de la sucesión</span>
+                            </li>
+                            <li>
+                                <span class="description">a</span><em><sub>n</sub></em>
+                                <span class="description"> : </span>
+                                <span>El útimo termino de la sucesión</span>
+                            </li>
+                            <li>
+                                <span class="description">n</span>
+                                <span class="description"> : </span>
+                                <span>La cantidad de terminos de la sucesión</span>
+                            </li>
+                            <li>
+                                <span class="description">d</span>
+                                <span class="description"> : </span>
+                                <span>Diferencia <b>constante</b> entre los miembros de la sucesión</span>
+                            </li>
+                        </ul>
                         </p>
 
                     </b-col>
@@ -88,8 +88,9 @@
                     <b-col cols="12">
                         <b-row>
                             <b-col>
-                                <span>Una progresión aritmética hemos dicho que cada término (excepto el primero, a1) 
-                                    se obtiene sumando al anterior la diferencia, que vamos a designar con la letra d</span><br />
+                                <span>Una progresión aritmética hemos dicho que cada término (excepto el primero, a1)
+                                    se obtiene sumando al anterior la diferencia, que vamos a designar con la letra
+                                    d</span><br />
                             </b-col>
                         </b-row>
                         <b-row>
@@ -97,11 +98,10 @@
                                 <div role="tablist">
                                     <b-card no-body class="mb-1">
                                         <b-card-header header-tag="header" role="tab">
-                                            <b-button block v-b-toggle.properties-1
-                                                class="btnProperty">La Diferencia</b-button>
+                                            <b-button block v-b-toggle.properties-1 class="btnProperty">La Diferencia
+                                            </b-button>
                                         </b-card-header>
-                                        <b-collapse id="properties-1"
-                                            accordion="my-accordion1" role="tabpanel">
+                                        <b-collapse id="properties-1" accordion="my-accordion1" role="tabpanel">
                                             <b-card-body>
                                                 <b-card-text>
                                                     <b-row class="mt-1">
@@ -109,23 +109,31 @@
                                                             <p style="text-align: left;">Se deduce que: </p>
                                                             <ul style="text-align: left;">
                                                                 <li>
-                                                                    <span class="description">a</span><em><sub>2</sub></em>
-                                                                    <span class="description">=a</span><em><sub>1</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>2</sub></em>
+                                                                    <span
+                                                                        class="description">=a</span><em><sub>1</sub></em>
                                                                     <span class="description">+d</span>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="description">a</span><em><sub>3</sub></em>
-                                                                    <span class="description">=a</span><em><sub>2</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>3</sub></em>
+                                                                    <span
+                                                                        class="description">=a</span><em><sub>2</sub></em>
                                                                     <span class="description">+d</span>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="description">a</span><em><sub>4</sub></em>
-                                                                    <span class="description">=a</span><em><sub>3</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>4</sub></em>
+                                                                    <span
+                                                                        class="description">=a</span><em><sub>3</sub></em>
                                                                     <span class="description">+d</span>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="description">a</span><em><sub>n</sub></em> 
-                                                                    <span class="description"> = a</span><em><sub>(n-1)</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>n</sub></em>
+                                                                    <span class="description"> =
+                                                                        a</span><em><sub>(n-1)</sub></em>
                                                                     <span class="description"> + d</span>
                                                                 </li>
                                                             </ul>
@@ -135,23 +143,31 @@
                                                             <ul style="text-align: left;">
                                                                 <li>
                                                                     <span class="description">d=</span>
-                                                                    <span class="description">a</span><em><sub>2</sub></em>
-                                                                    <span class="description">-a</span><em><sub>1</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>2</sub></em>
+                                                                    <span
+                                                                        class="description">-a</span><em><sub>1</sub></em>
                                                                 </li>
                                                                 <li>
                                                                     <span class="description">d=</span>
-                                                                    <span class="description">a</span><em><sub>3</sub></em>
-                                                                    <span class="description">-a</span><em><sub>2</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>3</sub></em>
+                                                                    <span
+                                                                        class="description">-a</span><em><sub>2</sub></em>
                                                                 </li>
                                                                 <li>
                                                                     <span class="description">d=</span>
-                                                                    <span class="description">a</span><em><sub>4</sub></em>
-                                                                    <span class="description">-a</span><em><sub>3</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>4</sub></em>
+                                                                    <span
+                                                                        class="description">-a</span><em><sub>3</sub></em>
                                                                 </li>
                                                                 <li>
                                                                     <span class="description">d=</span>
-                                                                    <span class="description">a</span><em><sub>n</sub></em>
-                                                                    <span class="description">-a</span><em><sub>(n-1)</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>n</sub></em>
+                                                                    <span
+                                                                        class="description">-a</span><em><sub>(n-1)</sub></em>
                                                                 </li>
                                                             </ul>
                                                         </b-col>
@@ -160,8 +176,10 @@
                                                             <p class="description">2,5,8,11,14,17...</p>
                                                             <p style="text-align: left;">Entonces:</p>
                                                             <ul style="text-align: left;">
-                                                                <li><span class="description">d=</span><span class="description">5 - 2 = 3</span></li>
-                                                                <li><span class="description">d=</span><span class="description">8 - 5 = 3</span></li>
+                                                                <li><span class="description">d=</span><span
+                                                                        class="description">5 - 2 = 3</span></li>
+                                                                <li><span class="description">d=</span><span
+                                                                        class="description">8 - 5 = 3</span></li>
                                                             </ul>
                                                             <p style="text-align: left;" class="description">∴ d = 3</p>
                                                         </b-col>
@@ -173,7 +191,8 @@
 
                                     <b-card no-body class="mb-1">
                                         <b-card-header header-tag="header" role="tab">
-                                            <b-button block v-b-toggle.properties-2 class="btnProperty">Termino N, sabiendo 1°termino</b-button>
+                                            <b-button block v-b-toggle.properties-2 class="btnProperty">Termino N,
+                                                sabiendo 1°termino</b-button>
                                         </b-card-header>
                                         <b-collapse id="properties-2" accordion="my-accordion1" role="tabpanel">
                                             <b-card-body>
@@ -182,7 +201,7 @@
                                                         <b-col cols="12" md="12">
                                                             <p>El término general está dado por la fórmula</p>
                                                             <span class="description">a</span><em><sub>n</sub></em>
-                                                            <span class="description"> =  a </span><em><sub>1</sub></em>
+                                                            <span class="description"> = a </span><em><sub>1</sub></em>
                                                             <span class="description"> + (n-1) </span>
                                                             <span>x</span><span class="description"> d</span>
                                                         </b-col>
@@ -191,43 +210,64 @@
                                                         <b-col cols="12" md="6">
                                                             <p style="text-align: left;">Ejemplo</p>
                                                             <p class="description">2,5,8,11,14,17...</p>
-                                                            <p style="text-align: left;">Sabiendo que el 1° termino es <strong style="color:lime">2</strong></p>
-                                                            <p style="text-align: left;">Sabiendo que la diferencia es <strong style="color:blue">3</strong></p>
+                                                            <p style="text-align: left;">Sabiendo que el 1° termino es
+                                                                <strong style="color:lime">2</strong>
+                                                            </p>
+                                                            <p style="text-align: left;">Sabiendo que la diferencia es
+                                                                <strong style="color:blue">3</strong>
+                                                            </p>
                                                             <ul style="text-align: left;">
                                                                 <li>
-                                                                    <span class="description">n </span><em><sub style="color:red">2</sub></em>
+                                                                    <span class="description">n </span><em><sub
+                                                                            style="color:red">2</sub></em>
                                                                     <span class="description"> = </span>
-                                                                    <span class="description" style="color:lime">2</span>
+                                                                    <span class="description"
+                                                                        style="color:lime">2</span>
                                                                     <span class="description">+(</span>
-                                                                    <span class="description" style="color:red"> 2 </span>
+                                                                    <span class="description" style="color:red"> 2
+                                                                    </span>
                                                                     <span class="description"> - 1 )</span>
-                                                                    <span>x</span><span class="description" style="color:blue"> 3 </span>
+                                                                    <span>x</span><span class="description"
+                                                                        style="color:blue"> 3 </span>
                                                                     <span class="description"> = 5</span>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="description">n</span><em><sub style="color:red">3</sub></em>
-                                                                    <span class="description"> = </span><span class="description" style="color:lime">2</span>
-                                                                    <span class="description">+(</span> 
-                                                                    <span class="description" style="color:red"> 3 </span>
-                                                                    <span class="description"> - 1 )</span><span>x</span>
-                                                                    <span class="description" style="color:blue"> 3 </span>
+                                                                    <span class="description">n</span><em><sub
+                                                                            style="color:red">3</sub></em>
+                                                                    <span class="description"> = </span><span
+                                                                        class="description" style="color:lime">2</span>
+                                                                    <span class="description">+(</span>
+                                                                    <span class="description" style="color:red"> 3
+                                                                    </span>
+                                                                    <span class="description"> - 1
+                                                                        )</span><span>x</span>
+                                                                    <span class="description" style="color:blue"> 3
+                                                                    </span>
                                                                     <span class="description"> = 8</span>
                                                                 </li>
                                                                 <li>...</li>
                                                                 <li>
-                                                                    <span class="description">n </span><em><sub style="color:red">20</sub></em>
+                                                                    <span class="description">n </span><em><sub
+                                                                            style="color:red">20</sub></em>
                                                                     <span class="description"> = </span>
-                                                                    <span class="description" style="color:lime">2</span>
+                                                                    <span class="description"
+                                                                        style="color:lime">2</span>
                                                                     <span class="description">+(</span>
-                                                                    <span class="description" style="color:red"> 20 </span>
+                                                                    <span class="description" style="color:red"> 20
+                                                                    </span>
                                                                     <span class="description">- 1)</span><span>x</span>
-                                                                    <span class="description" style="color:blue"> 3 </span>
+                                                                    <span class="description" style="color:blue"> 3
+                                                                    </span>
                                                                     <span class="description"> = 59</span>
                                                                 </li>
                                                             </ul>
                                                         </b-col>
                                                         <b-col cols="12" md="6">
-                                                            <b-row><b-col><p style="text-align: left;">Ejemplo</p></b-col></b-row>
+                                                            <b-row>
+                                                                <b-col>
+                                                                    <p style="text-align: left;">Ejemplo</p>
+                                                                </b-col>
+                                                            </b-row>
                                                             <b-row>
                                                                 <b-col>
                                                                     <span>1° termino : {{examplOne.firstNumber}}</span>
@@ -235,7 +275,8 @@
                                                             </b-row>
                                                             <b-row>
                                                                 <b-col>
-                                                                    <vue-slider v-model="examplOne.firstNumber" :max="10" :min="1" />
+                                                                    <vue-slider v-model="examplOne.firstNumber"
+                                                                        :max="10" :min="1" />
                                                                 </b-col>
                                                             </b-row>
                                                             <b-row>
@@ -245,7 +286,8 @@
                                                             </b-row>
                                                             <b-row>
                                                                 <b-col>
-                                                                    <vue-slider v-model="examplOne.difference" :max="10" :min="1" />
+                                                                    <vue-slider v-model="examplOne.difference" :max="10"
+                                                                        :min="1" />
                                                                 </b-col>
                                                             </b-row>
                                                             <b-row>
@@ -255,15 +297,19 @@
                                                             </b-row>
                                                             <b-row>
                                                                 <b-col>
-                                                                    <vue-slider v-model="examplOne.numberN" :max="20" :min="1" />
+                                                                    <vue-slider v-model="examplOne.numberN" :max="20"
+                                                                        :min="1" />
                                                                 </b-col>
                                                             </b-row>
                                                             <b-row class="mt-1">
                                                                 <b-col style="text-align: left;">
                                                                     <span>El termino N ó</span>
-                                                                    <span class="description"> n </span><em><sub>{{examplOne.numberN}}</sub></em>
+                                                                    <span class="description"> n
+                                                                    </span><em><sub>{{examplOne.numberN}}</sub></em>
                                                                     <span> es : </span>
-                                                                    <strong> {{examplOne.firstNumber + ((examplOne.numberN-1) * examplOne.difference)}}</strong>
+                                                                    <strong> {{examplOne.firstNumber +
+                                                                        ((examplOne.numberN-1) *
+                                                                        examplOne.difference)}}</strong>
                                                                 </b-col>
                                                             </b-row>
                                                         </b-col>
@@ -276,8 +322,8 @@
 
                                     <b-card no-body>
                                         <b-card-header header-tag="header" role="tab">
-                                            <b-button block v-b-toggle.properties-3
-                                                class="btnProperty">Termino N, sabiendo 1 termino cualquiera</b-button>
+                                            <b-button block v-b-toggle.properties-3 class="btnProperty">Termino N,
+                                                sabiendo 1 termino cualquiera</b-button>
                                         </b-card-header>
                                         <b-collapse id="properties-3" accordion="my-accordion1" role="tabpanel">
                                             <b-card-body>
@@ -314,28 +360,40 @@
                                                             <span class="description">a</span><em><sub>n-1</sub></em>
                                                             <span> , </span>
                                                             <span class="description">a</span><em><sub>n</sub></em>
-                                                            <p class="mt-3" style="text-align: left;">Sabiendo que el 9° termino es <strong style="color:lime">44</strong></p>
-                                                            <p style="text-align: left;">Sabiendo que la diferencia es <strong style="color:blue">5</strong></p>
+                                                            <p class="mt-3" style="text-align: left;">Sabiendo que el 9°
+                                                                termino es <strong style="color:lime">44</strong></p>
+                                                            <p style="text-align: left;">Sabiendo que la diferencia es
+                                                                <strong style="color:blue">5</strong>
+                                                            </p>
                                                             <ul style="text-align: left;">
                                                                 <li>
-                                                                    <span class="description">a</span><em><sub style="color:red">10</sub></em>
+                                                                    <span class="description">a</span><em><sub
+                                                                            style="color:red">10</sub></em>
                                                                     <span class="description"> = </span>
-                                                                    <span class="description" style="color:lime">44</span>
+                                                                    <span class="description"
+                                                                        style="color:lime">44</span>
                                                                     <span class="description">+(</span>
-                                                                    <span class="description" style="color:red">10</span><span class="description">-9)</span>
+                                                                    <span class="description"
+                                                                        style="color:red">10</span><span
+                                                                        class="description">-9)</span>
                                                                     <span>x</span>
-                                                                    <span class="description" style="color:blue">5 </span>
+                                                                    <span class="description" style="color:blue">5
+                                                                    </span>
                                                                     <span class="description">= 49</span>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="description">a </span><em><sub style="color:red">13</sub></em>
+                                                                    <span class="description">a </span><em><sub
+                                                                            style="color:red">13</sub></em>
                                                                     <span class="description">= </span>
-                                                                    <span class="description" style="color:lime">44</span> 
+                                                                    <span class="description"
+                                                                        style="color:lime">44</span>
                                                                     <span class="description">+(</span>
-                                                                    <span class="description" style="color:red">13</span>
+                                                                    <span class="description"
+                                                                        style="color:red">13</span>
                                                                     <span class="description">-9)</span>
                                                                     <span>x</span>
-                                                                    <span class="description" style="color:blue">5 </span>
+                                                                    <span class="description" style="color:blue">5
+                                                                    </span>
                                                                     <span class="description"> = 64</span>
                                                                 </li>
                                                             </ul>
@@ -354,24 +412,28 @@
                                                             <b-row>
                                                                 <b-col>
                                                                     <span>Termino</span>
-                                                                    <span class="description">a</span><em><sub>{{exampleTwo.numberN}}</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>{{exampleTwo.numberN}}</sub></em>
                                                                 </b-col>
                                                             </b-row>
                                                             <b-row>
                                                                 <b-col>
-                                                                    <vue-slider v-model="exampleTwo.numberN" :max="10" :min="1" />
+                                                                    <vue-slider v-model="exampleTwo.numberN" :max="10"
+                                                                        :min="1" />
                                                                 </b-col>
                                                             </b-row>
 
                                                             <b-row>
                                                                 <b-col>
-                                                                    <span>El valor de <span class="description">a</span><em><sub>{{exampleTwo.numberN}}</sub></em>
+                                                                    <span>El valor de <span
+                                                                            class="description">a</span><em><sub>{{exampleTwo.numberN}}</sub></em>
                                                                         = {{exampleTwo.valueOfNumberN}}</span>
                                                                 </b-col>
                                                             </b-row>
                                                             <b-row>
                                                                 <b-col>
-                                                                    <vue-slider v-model="exampleTwo.valueOfNumberN" :max="200" :min="1" />
+                                                                    <vue-slider v-model="exampleTwo.valueOfNumberN"
+                                                                        :max="200" :min="1" />
                                                                 </b-col>
                                                             </b-row>
                                                             <b-row>
@@ -381,24 +443,96 @@
                                                             </b-row>
                                                             <b-row>
                                                                 <b-col>
-                                                                    <vue-slider v-model="exampleTwo.difference" :max="10" :min="1" />
+                                                                    <vue-slider v-model="exampleTwo.difference"
+                                                                        :max="10" :min="1" />
                                                                 </b-col>
                                                             </b-row>
 
                                                             <b-row class="mt-1">
-                                                                <b-col style="text-align: left;"> 
-                                                                    <span>Hallar el termino {{exampleTwo.findNumberN}} ó</span>
-                                                                    <span class="description">n</span><em><sub>{{exampleTwo.findNumberN}}</sub></em>
+                                                                <b-col style="text-align: left;">
+                                                                    <span>Hallar el termino {{exampleTwo.findNumberN}}
+                                                                        ó</span>
+                                                                    <span
+                                                                        class="description">n</span><em><sub>{{exampleTwo.findNumberN}}</sub></em>
                                                                 </b-col>
                                                             </b-row>
                                                             <b-row>
                                                                 <b-col>
-                                                                    <vue-slider v-model="exampleTwo.findNumberN" :max="20" :min="11" />
+                                                                    <vue-slider v-model="exampleTwo.findNumberN"
+                                                                        :max="20" :min="11" />
                                                                 </b-col>
                                                             </b-row>
                                                             <b-row>
                                                                 <b-col>
-                                                                    El valor es : {{exampleTwo.valueOfNumberN + ((exampleTwo.findNumberN-exampleTwo.numberN)*exampleTwo.difference)}}
+                                                                    El valor es : {{exampleTwo.valueOfNumberN +
+                                                                    ((exampleTwo.findNumberN-exampleTwo.numberN)*exampleTwo.difference)}}
+                                                                </b-col>
+                                                            </b-row>
+                                                        </b-col>
+                                                    </b-row>
+                                                </b-card-text>
+                                            </b-card-body>
+                                        </b-collapse>
+                                    </b-card>
+
+                                    <b-card no-body class="mb-1">
+                                        <b-card-header header-tag="header" role="tab">
+                                            <b-button block v-b-toggle.properties-4 class="btnProperty">Sumatoria
+                                            </b-button>
+                                        </b-card-header>
+                                        <b-collapse id="properties-4" accordion="my-accordion1" role="tabpanel">
+                                            <b-card-body>
+                                                <b-card-text>
+                                                    <b-row class="mt-1">
+                                                        <b-col cols="12" md="12">
+                                                            <p>La sumatoria esta dada por 2 formulas dependiendo de los
+                                                                datos conocidos</p>
+                                                        </b-col>
+                                                        <b-col cols="12" md="6">
+                                                            <b-row>
+                                                                <b-col cols="12">
+                                                                    <span class="description">Σ <em><sub>n</sub></em> = [</span>
+                                                                    <span class="description">n</span><em><sub>x</sub></em>
+                                                                    <span class="description">(</span>
+                                                                    <span class="description">a</span><em><sub>1</sub></em>
+                                                                    <span class="description">+</span>
+                                                                    <span class="description">a</span><em><sub>n</sub></em>
+                                                                    <span class="description">)]</span>
+                                                                    <span class="description"> /2 </span>
+                                                                </b-col>
+                                                                <b-col class="mt-3" cols="12" style="text-align: left;">
+                                                                    <span>
+                                                                        Necesitamos saber los datos como :
+                                                                        <ul class="mt-2">
+                                                                            <li>el 1° termino</li>
+                                                                            <li>el valor de n</li>
+                                                                            <li>el termino enesimo</li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </b-col>
+                                                            </b-row>
+                                                        </b-col>
+                                                        <b-col cols="12" md="6">
+                                                            <b-row>
+                                                                <b-col cols="12">
+                                                                    <span class="description">Σ <em><sub>n</sub></em> = </span>
+                                                                    <span class="description">n </span><em><sub>x</sub></em>
+                                                                    <span class="description"> a</span><em><sub>1</sub></em>
+                                                                    <span class="description">+[</span>
+                                                                    <span class="description">d</span><em><sub> x </sub></em>
+                                                                    <span class="description">n</span><em><sub> x </sub></em>
+                                                                    <span class="description">(n - 1)</span>
+                                                                    <span class="description"> /2 ]</span>
+                                                                </b-col>
+                                                                <b-col class="mt-3" cols="12" style="text-align: left;">
+                                                                    <span>
+                                                                        Necesitamos saber los datos como :
+                                                                        <ul class="mt-2">
+                                                                            <li>el 1° termino</li>
+                                                                            <li>el valor de n</li>
+                                                                            <li>el valor de la diferencia</li>
+                                                                        </ul>
+                                                                    </span>
                                                                 </b-col>
                                                             </b-row>
                                                         </b-col>
