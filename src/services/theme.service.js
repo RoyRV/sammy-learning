@@ -19,7 +19,7 @@ const themes = [
     { CourseId: 2, ThemeId: 207, ThemeTitle: 'Sumatorias', redirectTo: 'summations' },
     { CourseId: 2, ThemeId: 208, ThemeTitle: 'Hallar 2 números, sabiendo...', redirectTo: 'operationsProperties' },
     { CourseId: 2, ThemeId: 209, ThemeTitle: 'Progresiones', redirectTo: 'progressions' },
-    { CourseId: 2, ThemeId: 210, ThemeTitle: 'Promedios', redirectTo: 'average' },
+    { CourseId: 2, ThemeId: 210, ThemeTitle: 'Promedios', redirectTo: 'averages' },
     //Algebra
     { CourseId: 3, ThemeId: 300, ThemeTitle: 'Teoria de Exponentes', redirectTo: 'exponentPower' },
 
