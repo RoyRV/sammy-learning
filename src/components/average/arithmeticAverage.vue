@@ -141,7 +141,6 @@
                 this.numbers.splice(index, 1);
             },
             getArithmeticAverage () {
-                
                let sum =  this.sumValue;
                let average = sum/this.numbers.length;
                let decimals = this.countDecimals(average);
