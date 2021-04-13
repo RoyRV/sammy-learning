@@ -20,6 +20,18 @@
                             </b-card-body>
                         </b-collapse>
                     </b-card>
+                    <b-card no-body class="mb-1">
+                        <b-card-header header-tag="header" role="tab">
+                            <b-button block v-b-toggle.accordion-2 variant="info">Promedio Geométrico / Media Geométrica (M.G.)</b-button>
+                        </b-card-header>
+                        <b-collapse id="accordion-2" visible accordion="my-accordion" role="tabpanel">
+                            <b-card-body>
+                                <b-card-text>
+                                   <GeometricAverage></GeometricAverage>
+                                </b-card-text>
+                            </b-card-body>
+                        </b-collapse>
+                    </b-card>
                 </div>
             </b-col>
         </b-row>
@@ -27,8 +39,9 @@
 </template>
 <script>
     import ArithmeticAverage from '@/components/average/arithmeticAverage.vue';
+    import GeometricAverage from '@/components/average/geometricAverage.vue';
      export default {
         name: 'Average',
-        components : {ArithmeticAverage}
+        components : {ArithmeticAverage , GeometricAverage}
      }
 </script>

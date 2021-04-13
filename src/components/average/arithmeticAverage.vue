@@ -71,47 +71,43 @@
                                 </b-row>
                             </b-col>
                         </b-row>
-
-
                     </b-col>
                 </b-row>
-                <b-row class="mt-4">
-                    <b-col cols="12">
-                        <p style="text-align: left;">Ejemplo , tenemos la siguiente lista de números
-                            {{numbers.join(',')}}</p>
-                    </b-col>
-                    <b-col cols="12">
-                        <draggable v-model="numbers">
-                            <div v-for="(value, index) in numbers" :key="index" class="draggableNumber">
-                                <b-row>
-                                    <b-col>
-                                        <b-icon :id="'numbers' + index" icon="arrows-move" class="moveNumber"></b-icon>
-                                        <span>{{numbers[index]}}</span>
+            </b-col>
+            <b-col cols="12" class="mt-4">
+                <p style="text-align: left;">Ejemplo , tenemos la siguiente lista de números
+                    {{numbers.join(',')}}</p>
+            </b-col>
+            <b-col cols="12">
+                <draggable v-model="numbers">
+                    <div v-for="(value, index) in numbers" :key="index" class="draggableNumber">
+                        <b-row>
+                            <b-col>
+                                <b-icon :id="'numbers' + index" icon="arrows-move" class="moveNumber"></b-icon>
+                                <span>{{numbers[index]}}</span>
 
-                                        <b-icon icon="plus-circle" class="removeNumber right ml-2" @click="addNumber">
-                                        </b-icon>
-                                        <b-icon v-if="numbers.length>1" icon="trash" class="removeNumber"
-                                            @click="removeNumber(index)"></b-icon>
-                                    </b-col>
-                                </b-row>
-                                <b-row>
-                                    <b-col>
-                                        <vue-slider v-model="numbers[index]" />
-                                    </b-col>
-                                </b-row>
-                                <b-tooltip v-if="numbers.length>1" :target="'numbers' + index"
-                                    title="Puedes cambiar el orden, solo arrastrame arriba o abajo" />
-                            </div>
-                        </draggable>
-                    </b-col>
-                    <b-col cols="12">
-                        <p style="text-align: left;">Solución :</p>
-                        <p style="text-align: left;">Tendriamos los números {{numbers.join(',')}}, la sumatoria es : {{sumValue}}</p>
-                        <p style="text-align: left;">Tendriamos la cantidad de números {{numbers.length}}</p>
-                        <p style="text-align: left;">Tendriamos que dividir : {{sumValue}} / {{numbers.length}}</p>
-                        <p style="text-align: left;">=> la M.A. <span> {{isInexact?"≈":"="}} </span>  {{ getArithmeticAverage().toFixed(2)}}</p>
-                    </b-col>
-                </b-row>
+                                <b-icon icon="plus-circle" class="removeNumber right ml-2" @click="addNumber">
+                                </b-icon>
+                                <b-icon v-if="numbers.length>1" icon="trash" class="removeNumber"
+                                    @click="removeNumber(index)"></b-icon>
+                            </b-col>
+                        </b-row>
+                        <b-row>
+                            <b-col>
+                                <vue-slider v-model="numbers[index]" />
+                            </b-col>
+                        </b-row>
+                        <b-tooltip v-if="numbers.length>1" :target="'numbers' + index"
+                            title="Puedes cambiar el orden, solo arrastrame arriba o abajo" />
+                    </div>
+                </draggable>
+            </b-col>
+            <b-col cols="12">
+                <p style="text-align: left;">Solución :</p>
+                <p style="text-align: left;">Tendriamos los números {{numbers.join(',')}}, la sumatoria es : {{sumValue}}</p>
+                <p style="text-align: left;">Tendriamos la cantidad de números {{numbers.length}}</p>
+                <p style="text-align: left;">Tendriamos que dividir : {{sumValue}} / {{numbers.length}}</p>
+                <p style="text-align: left;">=> la M.A. <span> {{isInexact?"≈":"="}} </span>  {{ getArithmeticAverage().toFixed(2)}}</p>
             </b-col>
         </b-row>
     </div>

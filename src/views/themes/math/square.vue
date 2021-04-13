@@ -137,8 +137,8 @@
                                     </b-row>
                                     <b-row class="mt-4">
                                         <b-col>
-                                            <span>Se expresa </span><sup>{{radix}}</sup><span>√</span><span
-                                                style="border-top:1px solid">{{number}}</span>
+                                            <span>Se expresa </span><sup>{{radix}}</sup><span>√</span>
+                                            <span style="border-top:1px solid">{{number}}</span>
                                         </b-col>
                                     </b-row>
                                     <b-row class="mt-4">
