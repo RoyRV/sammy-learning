@@ -86,12 +86,85 @@
                     </b-col>
                 </b-row>
             </b-col>
+            <b-col cols="12" class="mt-4">
+                <p style="text-align: left;">Ejemplo , tenemos la siguiente lista de números
+                    {{numbers.join(',')}}</p>
+            </b-col>
+            <b-col cols="12">
+                <draggable v-model="numbers">
+                    <div v-for="(value, index) in numbers" :key="index" class="draggableNumber">
+                        <b-row>
+                            <b-col>
+                                <b-icon :id="'numbers' + index" icon="arrows-move" class="moveNumber"></b-icon>
+                                <span>{{numbers[index]}}</span>
+
+                                <b-icon icon="plus-circle" class="removeNumber right ml-2" @click="addNumber">
+                                </b-icon>
+                                <b-icon v-if="numbers.length>1" icon="trash" class="removeNumber"
+                                    @click="removeNumber(index)"></b-icon>
+                            </b-col>
+                        </b-row>
+                        <b-row>
+                            <b-col>
+                                <vue-slider v-model="numbers[index]" :min="1"/>
+                            </b-col>
+                        </b-row>
+                        <b-tooltip v-if="numbers.length>1" :target="'numbers' + index"
+                            title="Puedes cambiar el orden, solo arrastrame arriba o abajo" />
+                    </div>
+                </draggable>
+            </b-col>
+            <b-col cols="12">
+                <p style="text-align: left;">Solución :</p>
+                <p style="text-align: left;">Tendriamos la cantidad de números {{numbers.length}}</p>
+                <p style="text-align: left;">Tendriamos los números {{numbers.join(',')}}, la suma de sus inversas es :
+                    {{sumValue}}</p>
+                <p style="text-align: left;">Dividiriamos  {{numbers.length}} / {{sumValue}}</p>
+                 <p style="text-align: left;">=> la M.G. <span> {{isInexact?"≈":"="}} </span>  {{ getArmonicAverage().toFixed(4)}}</p> 
+            </b-col>
         </b-row>
     </div>
 </template>
 <script>
+    import { mathHelper } from '@/helpers';
+    import draggable from 'vuedraggable'
     export default {
         name: 'ArmonicAveragenComponent',
+        components: { draggable },
+        data() {
+            return {
+                numbers: [6, 3, 45],
+                isInexact: false
+            }
+        },
+        methods: {
+            addNumber() {
+                this.numbers.push(mathHelper.getRandomNumber());
+            },
+            removeNumber(index) {
+                this.numbers.splice(index, 1);
+            },
+            getArmonicAverage() {
+                let invertedSums = this.sumValue;
+                let average = this.numbers.length / invertedSums;
+                let decimals = this.countDecimals(average);
+                this.isInexact = decimals > 2;
+                return average;
+            },
+            countDecimals(number) {
+                if (Math.floor(number.valueOf()) === number.valueOf()) return 0;
+                return number.toString().split(".")[1].length || 0;
+            }
+        },
+        computed: {
+            sumValue() {
+                let value = 0;
+                this.numbers.forEach(element => {
+                    value += (1 / element); 
+                });
+                return value
+            }
+        },
     }
 </script>
 <style scoped>
@@ -101,5 +174,24 @@
         font-weight: normal;
         line-height: normal;
         font-size: 35px;
+    }
+
+    .draggableNumber {
+        border: 1px solid #ced4da;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .moveNumber {
+        height: 100%;
+        float: left;
+    }
+
+    .removeNumber {
+        height: 100%;
+        float: right;
     }
 </style>
