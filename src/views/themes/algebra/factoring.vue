@@ -2,6 +2,7 @@
     <div>
         <b-row>
             <b-col cols="12">
+                <!-- //TODO : -->
                 <h2>Factorización</h2>
             </b-col>
             <b-col cols="12" class="mt-2">
