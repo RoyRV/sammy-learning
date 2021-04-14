@@ -1,8 +1,12 @@
 <template>
     <div>
         <b-row>
-            <b-col>
+            <b-col cols="12">
                 <h2>Exponenciación</h2>
+            </b-col>
+            <b-col cols="12" class="mt-3">
+                <p style="text-align: justify;">Es una operación matemática en la que dada una base real <strong>a</strong> elevada a un exponente entero <strong>n</strong>, hallaremos una expresión llamada potencia <strong>P</strong></p>
+                <p  style="text-align: justify;">Significa que multiplicaremos la base  <strong>(a)</strong> tantas veces como el valor del exponente <strong>(n)</strong></p>
             </b-col>
         </b-row>
         <b-row class="mt-4">
