@@ -100,10 +100,26 @@
                         </b-row>
                         <b-row v-for="(object, index) in numbers" :key="index">
                             <b-col cols="5" style="border: 1px solid;">
-                                {{object.number}}
+                                <b-row>
+                                    <b-col cols="12">
+                                        <span>{{object.number}}</span>
+                                    </b-col>
+                                    
+                                    <b-col cols="12">
+                                        <vue-slider v-model="object.number" :min="1"/>
+                                    </b-col>
+                                </b-row>
+                                
                             </b-col>
                             <b-col cols="5" style="border: 1px solid;">
-                                {{object.weight}}
+                                <b-row>
+                                    <b-col cols="12">
+                                        <span>{{object.weight}}</span>
+                                    </b-col>                                
+                                    <b-col cols="12">
+                                        <vue-slider v-model="object.weight" :min="1"/>
+                                    </b-col>
+                                </b-row>
                             </b-col>
                             <b-col cols="2" style="border: 1px solid;">
                                 <b-icon icon="plus-circle" class="removeNumber right" style="margin: 0px 5px " @click="addNumber" />
