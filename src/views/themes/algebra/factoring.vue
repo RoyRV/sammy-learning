@@ -1,0 +1,9 @@
+<template>
+    <div>
+        <b-row>
+            <b-col>
+                <h2>Factorización</h2>
+            </b-col>
+        </b-row>
+    </div>
+</template>
