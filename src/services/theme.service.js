@@ -22,7 +22,8 @@ const themes = [
     { CourseId: 2, ThemeId: 210, ThemeTitle: 'Promedios', redirectTo: 'averages' },
     //Algebra
     { CourseId: 3, ThemeId: 300, ThemeTitle: 'Teoria de Exponentes', redirectTo: 'exponentPower' },
-    { CourseId: 3, ThemeId: 301, ThemeTitle: 'Factorizacion', redirectTo: 'factoring' },
+    { CourseId: 3, ThemeId: 301, ThemeTitle: 'Productos Notables', redirectTo: 'notableProducs' },
+    { CourseId: 3, ThemeId: 302, ThemeTitle: 'Factorizacion', redirectTo: 'factoring' },
 
     //Algebra
     { CourseId: 7, ThemeId: 700, ThemeTitle: 'Unidades de medida', redirectTo: 'measurementUnits' },
