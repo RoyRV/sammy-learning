@@ -154,7 +154,7 @@
                                     <span> =  {{weightSum}}</span>
                                 </p>
                                 <p>Finalmente dividimos ambos resultados {{productValue}} /  {{weightSum}}</p>
-                                <p style="text-align: left;">=> la M.G. <span> {{isInexact?"≈":"="}} </span>  {{ getWeightAverage().toFixed(4)}}</p> 
+                                <p style="text-align: left;">=> la P.P. <span> {{isInexact?"≈":"="}} </span>  {{ getWeightAverage().toFixed(4)}}</p> 
                             </b-col>
                         </b-row>
                     </b-col>
