@@ -5,16 +5,22 @@
                 <h2>Productos Notables</h2>
             </b-col>
             <b-col>
-                <CuadraticSum></CuadraticSum>
+                <div role="tablist">
+                    <Introduction></Introduction>
+                    <CuadraticSum></CuadraticSum>
+                    <CuadraticSubstraction></CuadraticSubstraction>
+                </div>
             </b-col>
         </b-row>
     </div>
 </template>
 <script>
+    import Introduction from '@/components/algebra/notableProducts/introduction.vue'
     import CuadraticSum from '@/components/algebra/notableProducts/cuadraticSum.vue'
+    import CuadraticSubstraction from '@/components/algebra/notableProducts/cuadraticSubstraction.vue'
     export default {
         name: 'NotableProducts',
-        components: { CuadraticSum }
+        components: { Introduction, CuadraticSum, CuadraticSubstraction }
     }
 </script>
 <style>

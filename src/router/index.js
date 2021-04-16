@@ -16,7 +16,6 @@ Vue.use(VueRouter)
 let routes = [];
 routes = routes.concat(MathRouter.getMathRouters());
 routes = routes.concat(AlgebraRouter.getAlgebraRouters());
-routes = routes.concat(AlgebraRouter.getAlgebraRouters());
 routes = routes.concat(ArithmeticRouter.getArithmeticRouters());
 routes = routes.concat(GuessRouter.getGuessRouters());
 
