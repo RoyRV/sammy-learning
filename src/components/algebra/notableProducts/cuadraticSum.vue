@@ -39,7 +39,7 @@
                                             <p style="text-align: left;">Como ya sabemos, la exponenciación es multiplicar el mismo valor x si mismo <strong>n</strong> veces, en este caso 2</p>
                                             <p>
                                                 <span class="description">( a + b ) <sup>2</sup></span>
-                                                <span class="description"> = ( a + b ) <em><sub>x</sub></em> ( a + b )</span>
+                                                <span class="description"> = (a + b) <em><sub>x</sub></em> (a + b)</span>
                                             </p>
                                             <p style="text-align: left;">Se opera el producto aplicando la tecnica de multiplicacion en cada miembro</p>
                                             <p>
@@ -51,7 +51,7 @@
                                             <p>
                                                 <span class="description"> = a<sup>2</sup> </span>
                                                 <span class="description"> + a<em><sub> x </sub></em>b</span>
-                                                <span>(el orden de los productos no afecta el resultado)</span>
+                                                <span>(el orden de los factores no afecta el producto)</span>
                                                 <span class="description"> + a<em><sub> x </sub></em>b  </span>
                                                 <span class="description"> + b<sup>2</sup> </span>
                                             </p>
