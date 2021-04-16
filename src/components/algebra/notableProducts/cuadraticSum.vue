@@ -3,7 +3,7 @@
         <b-card-header header-tag="header" role="tab">
             <b-button block v-b-toggle.accordion-1 variant="info">( a + b ) <sup>2</sup></b-button>
         </b-card-header>
-        <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel" >
+        <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
             <b-card-body>
                 <b-card-text>
                     <b-tabs>
@@ -21,16 +21,22 @@
                                     <p style="text-align: left;">Se opera el producto aplicando la tecnica de
                                         multiplicacion en cada miembro</p>
                                     <p>
+                                        <span class="description"> = a<em><sub> x </sub></em></span>
+                                        <span class="description"> ( a + b )</span>
+                                        <span class="description"> + b <em><sub> x </sub></em> </span>
+                                        <span class="description"> ( a + b )</span>
+                                    </p>
+                                    <p>
                                         <span class="description"> = a<em><sub> x </sub></em>a</span>
-                                        <span class="description"> + b<em><sub> x </sub></em>a</span>
                                         <span class="description"> + a<em><sub> x </sub></em>b </span>
+                                        <span class="description"> + b<em><sub> x </sub></em>a</span>
                                         <span class="description"> + b<em><sub> x </sub></em>b</span>
                                     </p>
                                     <p>
                                         <span class="description"> = a<sup>2</sup> </span>
+                                        <span class="description"> + a<em><sub> x </sub></em>b </span>
                                         <span class="description"> + a<em><sub> x </sub></em>b</span>
                                         <span>(el orden de los factores no afecta el producto)</span>
-                                        <span class="description"> + a<em><sub> x </sub></em>b </span>
                                         <span class="description"> + b<sup>2</sup> </span>
                                     </p>
                                 </b-col>

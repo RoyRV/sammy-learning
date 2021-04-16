@@ -9,6 +9,7 @@
                     <Introduction></Introduction>
                     <CuadraticSum></CuadraticSum>
                     <CuadraticSubstraction></CuadraticSubstraction>
+                    <CubiccSum></CubiccSum>
                 </div>
             </b-col>
         </b-row>
@@ -18,12 +19,13 @@
     import Introduction from '@/components/algebra/notableProducts/introduction.vue'
     import CuadraticSum from '@/components/algebra/notableProducts/cuadraticSum.vue'
     import CuadraticSubstraction from '@/components/algebra/notableProducts/cuadraticSubstraction.vue'
+    import CubiccSum from '@/components/algebra/notableProducts/cubicSum.vue'
     export default {
         name: 'NotableProducts',
-        components: { Introduction, CuadraticSum, CuadraticSubstraction }
+        components: { Introduction, CuadraticSum, CuadraticSubstraction , CubiccSum }
     }
 </script>
-<style>
+<style scoped>
     .description {
         font-family: "MathJax_Math-italic";
         font-style: normal;

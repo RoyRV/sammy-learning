@@ -36,7 +36,7 @@
                         PotenciaDeDivisionExponentes, PotenciaFraccionExponentes, PotenciaDeCeroExponentes, PotenciaNegativaExponentes },
     }
 </script>
-<style>
+<style scoped>
     .description {
         font-family: "MathJax_Math-italic";
         font-style: normal;

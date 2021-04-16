@@ -21,26 +21,32 @@
                                         </p>
                                         <p style="text-align: left;">Se opera el producto aplicando la tecnica de
                                             multiplicacion en cada miembro</p>
+                                            <p>
+                                                <span class="description"> = a<em><sub> x </sub></em></span>
+                                                <span class="description"> ( a + b )</span>
+                                                <span class="description"> - b <em><sub> x </sub></em> </span>
+                                                <span class="description"> ( a + b )</span>
+                                            </p>
                                         <p>
                                             <span class="description"> = a<em><sub> x </sub></em>a</span>
-                                            <span class="description"> + (-b)<em><sub> x </sub></em>a</span>
-                                            <span class="description"> + a<em><sub> x </sub></em> (-b) </span>
+                                            <span class="description"> + a <em><sub> x </sub></em> (-b)</span>
+                                            <span class="description"> + (-b)<em><sub> x </sub></em> a </span>
                                             <span class="description"> + (-b)<em><sub> x </sub></em>(-b)</span>
                                         </p>
                                         <p>
                                             <span class="description"> = a<sup>2</sup> </span>
-                                            <span class="description"> - b<em><sub> x </sub></em>a </span>
-                                            <span> ( un valor positivo por uno negativo sale negativo)</span>
                                             <span class="description"> - a<em><sub> x </sub></em>b</span>                                            
+                                            <span> ( un valor positivo por uno negativo sale negativo)</span>
+                                            <span class="description"> - b<em><sub> x </sub></em>a </span>
                                             <span> ( un valor positivo por uno negativo sale negativo)</span>
                                             <span class="description"> + b<sup>2</sup> </span>
                                             <span> ( un valor negativo por uno negativo sale positivo)</span>
                                         </p>
                                         <p>
                                             <span class="description"> = a<sup>2</sup> </span>
+                                            <span class="description"> - a<em><sub> x </sub></em>b </span>
                                             <span class="description"> - a<em><sub> x </sub></em>b</span>
-                                            <span>(el orden de los factores no afecta el producto)</span>
-                                            <span class="description"> + a<em><sub> x </sub></em>b </span>
+                                            <span> (el orden de los factores no afecta el producto)</span>
                                             <span class="description"> + b<sup>2</sup> </span>
                                         </p>
                                     </b-col>
