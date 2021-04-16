@@ -491,12 +491,16 @@
                                                         <b-col cols="12" md="6">
                                                             <b-row>
                                                                 <b-col cols="12">
-                                                                    <span class="description">Σ <em><sub>n</sub></em> = [</span>
-                                                                    <span class="description">n</span><em><sub>x</sub></em>
+                                                                    <span class="description">Σ <em><sub>n</sub></em> =
+                                                                        [</span>
+                                                                    <span
+                                                                        class="description">n</span><em><sub>x</sub></em>
                                                                     <span class="description">(</span>
-                                                                    <span class="description">a</span><em><sub>1</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>1</sub></em>
                                                                     <span class="description">+</span>
-                                                                    <span class="description">a</span><em><sub>n</sub></em>
+                                                                    <span
+                                                                        class="description">a</span><em><sub>n</sub></em>
                                                                     <span class="description">)]</span>
                                                                     <span class="description"> /2 </span>
                                                                 </b-col>
@@ -515,12 +519,17 @@
                                                         <b-col cols="12" md="6">
                                                             <b-row>
                                                                 <b-col cols="12">
-                                                                    <span class="description">Σ <em><sub>n</sub></em> = </span>
-                                                                    <span class="description">n </span><em><sub>x</sub></em>
-                                                                    <span class="description"> a</span><em><sub>1</sub></em>
+                                                                    <span class="description">Σ <em><sub>n</sub></em> =
+                                                                    </span>
+                                                                    <span class="description">n
+                                                                    </span><em><sub>x</sub></em>
+                                                                    <span class="description">
+                                                                        a</span><em><sub>1</sub></em>
                                                                     <span class="description">+[</span>
-                                                                    <span class="description">d</span><em><sub> x </sub></em>
-                                                                    <span class="description">n</span><em><sub> x </sub></em>
+                                                                    <span class="description">d</span><em><sub> x
+                                                                        </sub></em>
+                                                                    <span class="description">n</span><em><sub> x
+                                                                        </sub></em>
                                                                     <span class="description">(n - 1)</span>
                                                                     <span class="description"> /2 ]</span>
                                                                 </b-col>
@@ -593,5 +602,15 @@
     .btnProperty:hover {
         background-color: #17a2b8 !important;
         border-color: #17a2b8 !important;
+    }
+
+    @media(max-width:504px) {
+        p {
+            font-size: 13px;
+        }
+
+        .description {
+            font-size: 20px;
+        }
     }
 </style>

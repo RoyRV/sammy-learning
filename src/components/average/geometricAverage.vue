@@ -63,15 +63,15 @@
                     {{numbers.join(',')}}</p>
             </b-col>
             <b-col cols="12">
-                <draggable v-model="numbers">
+                <!-- <draggable v-model="numbers"> -->
                     <div v-for="(value, index) in numbers" :key="index" class="draggableNumber">
                         <b-row>
                             <b-col>
-                                <b-icon :id="'numbers' + index" icon="arrows-move" class="moveNumber"></b-icon>
+                                <!-- <b-icon :id="'numbers' + index" icon="arrows-move" class="moveNumber"></b-icon> -->
                                 <span>{{numbers[index]}}</span>
 
-                                <b-icon icon="plus-circle" class="removeNumber right ml-2" @click="addNumber">
-                                </b-icon>
+                                <b-icon v-if="numbers.length<11" icon="plus-circle" class="removeNumber right ml-2"
+                                 @click="addNumber"> </b-icon>
                                 <b-icon v-if="numbers.length>2" icon="trash" class="removeNumber"
                                     @click="removeNumber(index)"></b-icon>
                             </b-col>
@@ -81,10 +81,10 @@
                                 <vue-slider v-model="numbers[index]" />
                             </b-col>
                         </b-row>
-                        <b-tooltip v-if="numbers.length>1" :target="'numbers' + index"
-                            title="Puedes cambiar el orden, solo arrastrame arriba o abajo" />
+                        <!-- <b-tooltip v-if="numbers.length>1" :target="'numbers' + index"
+                            title="Puedes cambiar el orden, solo arrastrame arriba o abajo" /> -->
                     </div>
-                </draggable>
+                <!-- </draggable> -->
             </b-col>
             <b-col cols="12">
                 <p style="text-align: left;">Solución :</p>
@@ -97,11 +97,11 @@
     </div>
 </template>
 <script>
-    import draggable from 'vuedraggable'
+    // import draggable from 'vuedraggable'
     import { mathHelper } from '@/helpers';
     export default {
         name: 'GeometricAveragenComponent',
-        components: { draggable },
+        // components: { draggable },
         data() {
             return {
                 numbers: [6, 4, 9],
@@ -110,7 +110,7 @@
         },
         methods: {
             addNumber() {
-                this.numbers.push(mathHelper.getRandomNumber());
+                    this.numbers.push(mathHelper.getRandomNumber());
             },
             removeNumber(index) {
                 this.numbers.splice(index, 1);

@@ -540,4 +540,13 @@
         background-color: #17a2b8 !important;
         border-color: #17a2b8 !important;
     }
+    @media(max-width:504px) {
+        p {
+            font-size: 13px;
+        }
+
+        .description {
+            font-size: 20px;
+        }
+    }
 </style>

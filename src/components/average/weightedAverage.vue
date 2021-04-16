@@ -122,7 +122,7 @@
                                 </b-row>
                             </b-col>
                             <b-col cols="2" style="border: 1px solid;">
-                                <b-icon icon="plus-circle" class="removeNumber right" style="margin: 0px 5px " @click="addNumber" />
+                                <b-icon v-if="numbers.length<11" icon="plus-circle" class="removeNumber right" style="margin: 0px 5px " @click="addNumber" />
                                 <b-icon v-if="numbers.length>2" icon="trash" class="removeNumber" style="margin: 0px 5px ;" @click="removeNumber(index)"/>
                             </b-col>
                         </b-row>
