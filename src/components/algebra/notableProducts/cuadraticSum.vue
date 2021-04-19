@@ -57,7 +57,7 @@
                                     </p>
                                 </b-col>
                                 <b-col cols="12">
-                                    <b-img src="/assets/algebra/Binomio_al_cuadrado.png" fluid />
+                                    <b-img src="/assets/algebra/suma_al_cuadrado.png" fluid />
                                 </b-col>
                                 <b-col cols="12">
                                     <p style="text-align: left;">

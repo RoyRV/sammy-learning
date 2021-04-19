@@ -7,6 +7,7 @@
             <b-col>
                 <div role="tablist">
                     <Introduction></Introduction>
+                    <SumaMultiplicacion></SumaMultiplicacion>
                     <CuadraticSum></CuadraticSum>
                     <CuadraticSubstraction></CuadraticSubstraction>
                     <CubiccSum></CubiccSum>
@@ -17,12 +18,13 @@
 </template>
 <script>
     import Introduction from '@/components/algebra/notableProducts/introduction.vue'
+    import SumaMultiplicacion from '@/components/algebra/notableProducts/sumaMultiplicacion.vue'
     import CuadraticSum from '@/components/algebra/notableProducts/cuadraticSum.vue'
     import CuadraticSubstraction from '@/components/algebra/notableProducts/cuadraticSubstraction.vue'
     import CubiccSum from '@/components/algebra/notableProducts/cubicSum.vue'
     export default {
         name: 'NotableProducts',
-        components: { Introduction, CuadraticSum, CuadraticSubstraction , CubiccSum }
+        components: { Introduction, SumaMultiplicacion, CuadraticSum, CuadraticSubstraction , CubiccSum  }
     }
 </script>
 <style scoped>
