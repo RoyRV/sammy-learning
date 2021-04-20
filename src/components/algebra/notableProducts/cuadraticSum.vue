@@ -107,34 +107,35 @@
                                         </b-col>
                                     </b-row>
                                 </b-col>
-                            </b-row>
-                            <b-col cols="12" style="text-align: left;">
-                                <p>Teniendo estos lados , el lado total de cuadrado seria {{ primerFactor +
-                                    segundoFactor}} </p>
-                                <p>
-                                    Si resolvemos la ecuación por producto notable seria
-                                    <span> {{primerFactor}} <sup>2</sup></span>
-                                    <span> + 2 <em><sub>x</sub></em> {{primerFactor}} <em><sub>x</sub></em>
-                                        {{segundoFactor}}</span>
-                                    <span> + {{segundoFactor}} <sup>2</sup></span>
-                                </p>
-                                <p>
-                                    =>
-                                    <span> {{primerFactor * primerFactor}} <sup></sup></span>
-                                    <span> + {{2 * primerFactor * segundoFactor}}</span>
-                                    <span> + {{segundoFactor * segundoFactor}} </span>
-                                </p>
-                                <p>
-                                    =>
-                                    <span> El resultado sería : {{ Math.pow(primerFactor+ segundoFactor, 2)}} </span>
-                                </p>
+                                <b-col cols="12" style="text-align: left;">
+                                    <p>Teniendo estos lados , el lado total de cuadrado seria {{ primerFactor +
+                                        segundoFactor}} </p>
+                                    <p>
+                                        Si resolvemos la ecuación por producto notable seria
+                                        <span> {{primerFactor}} <sup>2</sup></span>
+                                        <span> + 2 <em><sub>x</sub></em> {{primerFactor}} <em><sub>x</sub></em>
+                                            {{segundoFactor}}</span>
+                                        <span> + {{segundoFactor}} <sup>2</sup></span>
+                                    </p>
+                                    <p>
+                                        =>
+                                        <span> {{primerFactor * primerFactor}} </span>
+                                        <span> + {{2 * primerFactor * segundoFactor}}</span>
+                                        <span> + {{segundoFactor * segundoFactor}} </span>
+                                    </p>
+                                    <p>
+                                        =>
+                                        <span> El resultado sería : {{ Math.pow(primerFactor+ segundoFactor, 2)}}
+                                        </span>
+                                    </p>
 
-                                <p>
-                                    Igualmente si hacemos el cuadrado de la suma
-                                    <span> {{ primerFactor+ segundoFactor}} <sup>2</sup> = {{ Math.pow(primerFactor+
-                                        segundoFactor, 2)}} </span>
-                                </p>
-                            </b-col>
+                                    <p>
+                                        Igualmente si hacemos el cuadrado de la suma
+                                        <span> {{ primerFactor+ segundoFactor}} <sup>2</sup> = {{ Math.pow(primerFactor+
+                                            segundoFactor, 2)}} </span>
+                                    </p>
+                                </b-col>
+                            </b-row>
                         </b-tab>
                     </b-tabs>
                 </b-card-text>
