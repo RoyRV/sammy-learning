@@ -11,7 +11,7 @@
                             <b-row>
                                 <b-col cols="12">
                                     <p style="text-align: left;">Dado dos números , a y b , y queremos encontrar el
-                                        valor del cuadrado de la suma de ellos, es decir (a+b)<sup>3</sup></p>
+                                        valor del cubo de la suma de ellos, es decir (a+b)<sup>3</sup></p>
                                     <p style="text-align: left;">Como ya sabemos, la exponenciación es multiplicar el
                                         mismo valor x si mismo <strong>n</strong> veces, en este caso 3</p>
                                     <p>
