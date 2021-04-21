@@ -187,11 +187,5 @@
     }
 </script>
 <style scoped>
-    .description {
-        font-family: "MathJax_Math-italic";
-        font-style: normal;
-        font-weight: normal;
-        line-height: normal;
-        font-size: 25px;
-    }
+
 </style>
