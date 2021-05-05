@@ -37,7 +37,7 @@
                                         <b-col cols="6" md="3">
                                             <b-row>
                                                 <b-col>
-                                                    <vue-slider v-model="exactDivision[1]" :max="50" />
+                                                    <vue-slider v-model="exactDivision[1]" :max="50" :min="1" />
                                                 </b-col>
                                             </b-row>
                                             <b-row>
@@ -56,13 +56,7 @@
                                     <hr />
                                     <b-row class="mt-4">
                                         <b-col>
-                                            <b-row v-if="exactDivision[1]===0">
-                                                <b-col>
-                                                    <FigureComponent v-bind:number="-1"
-                                                        errormsg='Operación no permitida' />
-                                                </b-col>
-                                            </b-row>
-                                            <b-row v-else>
+                                            <b-row >
                                                 <b-col>
                                                     <div style="margin:0 10px">
                                                         <h4>Le tocaria a cada uno {{exactQuotient}}</h4>

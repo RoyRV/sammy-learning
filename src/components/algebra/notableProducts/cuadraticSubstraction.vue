@@ -2,9 +2,9 @@
     <div role="tablist">
         <b-card no-body class="mb-1">
             <b-card-header header-tag="header" role="tab">
-                <b-button block v-b-toggle.accordion-2 variant="info">( a - b ) <sup>2</sup></b-button>
+                <b-button block v-b-toggle.accordion-3 variant="info">( a - b ) <sup>2</sup></b-button>
             </b-card-header>
-            <b-collapse id="accordion-2" visible accordion="my-accordion" role="tabpanel">
+            <b-collapse id="accordion-3" visible accordion="my-accordion" role="tabpanel">
                 <b-card-body>
                     <b-card-text>
                         <b-tabs>
@@ -24,9 +24,9 @@
                                             multiplicacion en cada miembro</p>
                                         <p>
                                             <span class="description"> = a<em><sub> x </sub></em></span>
-                                            <span class="description"> ( a + b )</span>
+                                            <span class="description"> ( a - b )</span>
                                             <span class="description"> - b <em><sub> x </sub></em> </span>
-                                            <span class="description"> ( a + b )</span>
+                                            <span class="description"> ( a - b )</span>
                                         </p>
                                         <p>
                                             <span class="description"> = a<em><sub> x </sub></em>a</span>

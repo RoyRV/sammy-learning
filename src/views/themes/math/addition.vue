@@ -55,12 +55,16 @@
         <hr />
         <b-row>
             <b-col>
-                <span>Tendré en total </span>
-                <b-icon id="additionResult" icon="question-circle" font-scale="1" />
-                <b-tooltip target="additionResult" :title="total.toString()" />
+                <span>Tendré en total <strong> {{showAnswer? total : 'X?'}} </strong>manzanas</span>
+                <br/>
+                <b-button class="btnAnswer" variant="info" @click=toogleAnswer()>
+                    {{showAnswer?'Ocultar':'Ver'}} respuesta
+                    <b-icon v-if="!showAnswer" class="btnIcon" icon="eye-fill"></b-icon>
+                    <b-icon v-if="showAnswer" class="btnIcon" icon="eye-slash-fill"></b-icon>
+                </b-button>
             </b-col>
         </b-row>
-        <b-row>
+        <b-row class="mt-2">
             <b-col>
                 <FigureComponent v-bind:number="total" style="display: inline-block;margin:5px 0px" />
             </b-col>
@@ -74,7 +78,13 @@
         components: { FigureComponent },
         data() {
             return {
-                numbers: [2, 4]
+                numbers: [2, 4],
+                showAnswer : false
+            }
+        },
+        methods: {
+            toogleAnswer() {
+                this.showAnswer = !this.showAnswer;
             }
         },
         computed: {

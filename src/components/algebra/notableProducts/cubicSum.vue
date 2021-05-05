@@ -1,9 +1,9 @@
 <template>
     <b-card no-body class="mb-1">
         <b-card-header header-tag="header" role="tab">
-            <b-button block v-b-toggle.accordion-3 variant="info">( a + b ) <sup>3</sup></b-button>
+            <b-button block v-b-toggle.accordion-4 variant="info">( a + b ) <sup>3</sup></b-button>
         </b-card-header>
-        <b-collapse id="accordion-3" visible accordion="my-accordion" role="tabpanel" >
+        <b-collapse id="accordion-4" visible accordion="my-accordion" role="tabpanel" >
             <b-card-body>
                 <b-card-text>
                     <b-tabs>
@@ -84,7 +84,7 @@
                                     </p>
                                 </b-col>
                                 <b-col cols="12">
-                                    <b-img src="/assets/algebra/suma_al_cubo.png" fluid />
+                                    <b-img src="/assets/algebra/suma_al_cubo.png" fluid width="500"/>
                                 </b-col>
                                 <b-col cols="12">
                                     <p style="text-align: left;">
@@ -186,6 +186,3 @@
         },
     }
 </script>
-<style scoped>
-
-</style>

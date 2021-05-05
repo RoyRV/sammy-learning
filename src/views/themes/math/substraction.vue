@@ -55,9 +55,13 @@
         <hr />
         <b-row v-if="total>=0">
             <b-col>
-                <span>Me quedara en total </span>
-                <b-icon id="substractionResult" icon="question-circle" font-scale="1" />
-                <b-tooltip target="substractionResult" :title="total.toString()" />
+                <span>Me quedara en total  <strong> {{showAnswer? total : 'X?'}} </strong>manzanas</span>
+                <br/>
+                <b-button class="btnAnswer" variant="info" @click=toogleAnswer()>
+                    {{showAnswer?'Ocultar':'Ver'}} respuesta
+                    <b-icon v-if="!showAnswer" class="btnIcon" icon="eye-fill"></b-icon>
+                    <b-icon v-if="showAnswer" class="btnIcon" icon="eye-slash-fill"></b-icon>
+                </b-button>
             </b-col>
         </b-row>
         <b-row>
@@ -71,15 +75,21 @@
     import FigureComponent from '@/components/figureComponent.vue';
     export default {
         name: 'Substraction',
-        components: { FigureComponent, /*CanvasDrawComponent */ },
+        components: { FigureComponent },
         data() {
             return {
-                numbers: [12, 2]
+                numbers: [12, 2],
+                showAnswer : false
             }
         },
         computed: {
             total() {
                 return this.numbers[0] - this.numbers[1];
+            }
+        },
+        methods: {
+            toogleAnswer() {
+                this.showAnswer = !this.showAnswer;
             }
         },
     }

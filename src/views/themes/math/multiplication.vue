@@ -45,9 +45,14 @@
         <b-row class="mt-4">
             <b-col>
                 <p>Serian {{numbers[0]}} veces {{numbers[1]}}</p>
-                <span>Tendré en total</span>
-                <b-icon id="multiplicationResult" icon="question-circle" font-scale="1" />
-                <b-tooltip target="multiplicationResult" :title="(numbers[0]*numbers[1]).toString()" />
+                <span>Tendré en total <strong> {{showAnswer? (numbers[0]*numbers[1]) : 'X?'}} </strong></span>
+                <br/>
+                <b-button class="btnAnswer" variant="info" @click=toogleAnswer()>
+                    {{showAnswer?'Ocultar':'Ver'}} respuesta
+                    <b-icon v-if="!showAnswer" class="btnIcon" icon="eye-fill"></b-icon>
+                    <b-icon v-if="showAnswer" class="btnIcon" icon="eye-slash-fill"></b-icon>
+                </b-button>
+                
             </b-col>
         </b-row>
         <b-row class="mt-4">
@@ -75,7 +80,13 @@
         components: { FigureComponent },
         data() {
             return {
-                numbers: [2, 4]
+                numbers: [2, 4],
+                showAnswer : false
+            }
+        },
+        methods: {
+            toogleAnswer() {
+                this.showAnswer = !this.showAnswer;
             }
         },
     }
