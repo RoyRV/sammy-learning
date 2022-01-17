@@ -13,10 +13,6 @@ const getMcd = (numbers) => {
     return mcdHelper.getMcd(numbers);
 }
 
-const getRandomNumber = () => {
-    return Math.floor(Math.random() * (100 - 1)) + 1;
-}
-
 const canConvertBase = (number, currentBase) => {
     let numberAsText = number.toString();
     for (let index = 0; index < numberAsText.length; index++) {
@@ -39,6 +35,10 @@ const getSimplifiedFraction = (n1, n2) => {
     if (n1 / n2 == 1) return '';
     return simplify(n1 + '/' + n2).toString();
 }
+
+const getRandomNumber = (min = 1, max = 100) => {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
 
 
 export const mathHelper = {
